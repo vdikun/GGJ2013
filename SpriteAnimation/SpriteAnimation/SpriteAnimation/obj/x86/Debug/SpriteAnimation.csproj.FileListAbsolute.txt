@@ -1,0 +1,8 @@
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\Content\RunSprite.xnb
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\SpriteAnimation.exe
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\SpriteAnimation.pdb
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\obj\x86\Debug\SpriteAnimation.csprojResolveAssemblyReference.cache
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\obj\x86\Debug\SpriteAnimation.exe
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\obj\x86\Debug\SpriteAnimation.pdb
+c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\Content\JumpSprite.xnb

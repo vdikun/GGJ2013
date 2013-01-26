@@ -69,20 +69,25 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Accelerometer.cs" />
-    <Compile Include="Animation.cs" />
-    <Compile Include="AnimationPlayer.cs" />
-    <Compile Include="Circle.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="Gem.cs" />
-    <Compile Include="Level.cs" />
-    <Compile Include="PlatformerGame.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Accelerometer.cs" />
+    <Compile Include="Classes\Animation.cs" />
+    <Compile Include="Classes\AnimationPlayer.cs" />
+    <Compile Include="Classes\Circle.cs" />
+    <Compile Include="Classes\GameStates\CutsceneState.cs" />
+    <Compile Include="Classes\GameStates\MiniGameState.cs" />
+    <Compile Include="Classes\GameStates\PlatformState.cs" />
+    <Compile Include="Classes\GameStates\MenuState.cs" />
+    <Compile Include="Classes\GameStates\GameState.cs" />
+    <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\Gem.cs" />
+    <Compile Include="Classes\Level.cs" />
+    <Compile Include="Classes\PlatformerGame.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RectangleExtensions.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="TouchCollectionExtensions.cs" />
+    <Compile Include="Classes\RectangleExtensions.cs" />
+    <Compile Include="Classes\Tile.cs" />
+    <Compile Include="Classes\TouchCollectionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

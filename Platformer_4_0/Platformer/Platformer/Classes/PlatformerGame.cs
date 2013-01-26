@@ -23,6 +23,8 @@ namespace Platformer
     /// </summary>
     public class PlatformerGame : Microsoft.Xna.Framework.Game
     {
+        private GameState currentState = new MenuState();
+
         // Resources for drawing.
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
@@ -106,6 +108,8 @@ namespace Platformer
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            currentState.Update();
+            /*
             // Handle polling for our input and handling high-level input
             HandleInput();
 
@@ -113,7 +117,7 @@ namespace Platformer
             level.Update(gameTime, keyboardState, gamePadState, touchState, 
                          accelerometerState, Window.CurrentOrientation);
 
-            base.Update(gameTime);
+            base.Update(gameTime);*/
         }
 
         private void HandleInput()
@@ -180,7 +184,9 @@ namespace Platformer
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+            currentState.Draw();
+
+            /*graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
 
 
             spriteBatch.Begin();
@@ -191,7 +197,7 @@ namespace Platformer
 
             spriteBatch.End();
 
-            base.Draw(gameTime);
+            base.Draw(gameTime);*/
         }
 
         private void DrawHud()

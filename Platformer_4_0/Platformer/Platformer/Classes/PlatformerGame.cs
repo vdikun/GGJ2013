@@ -60,9 +60,10 @@ namespace Platformer
         public PlatformerGame()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 1280;
 
-            Accelerometer.Initialize();
+            Content.RootDirectory = "Content";
         }
 
         /// <summary>
@@ -78,7 +79,10 @@ namespace Platformer
             font = Content.Load<SpriteFont>("Fonts/Hud");
 
             // Load textures
-            placeholder = Content.Load<Texture2D>("Sprites/whitepixel"); 
+            placeholder = Content.Load<Texture2D>("Sprites/whitepixel");
+
+            FreePlatformState.LoadContent(Content);
+            PlatformState.LoadContent(Content);
 
             /*winOverlay = Content.Load<Texture2D>("Overlays/you_win");
             loseOverlay = Content.Load<Texture2D>("Overlays/you_lose");
@@ -101,7 +105,7 @@ namespace Platformer
         protected override void Update(GameTime gameTime)
         {
             HandleInput();
-            currentState.Update(this);
+            currentState.Update(this, gameTime);
         }
 
         private void HandleInput()

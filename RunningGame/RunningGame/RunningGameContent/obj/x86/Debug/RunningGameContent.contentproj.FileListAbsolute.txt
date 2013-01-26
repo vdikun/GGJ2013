@@ -1,1 +1,2 @@
 C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGameContent\obj\x86\Debug\RunningGameContent.contentprojResolveAssemblyReference.cache
+C:\Users\Devindra\Documents\GitHub\GGJ2013\RunningGame\RunningGame\RunningGameContent\obj\x86\Debug\RunningGameContent.contentprojResolveAssemblyReference.cache

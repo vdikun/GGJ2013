@@ -73,6 +73,8 @@
     <Compile Include="Classes\Animation.cs" />
     <Compile Include="Classes\AnimationPlayer.cs" />
     <Compile Include="Classes\Circle.cs" />
+    <Compile Include="Classes\Util.cs" />
+    <Compile Include="Classes\GameStates\FreePlatformState.cs" />
     <Compile Include="Classes\GameStates\CutsceneState.cs" />
     <Compile Include="Classes\GameStates\MiniGameState.cs" />
     <Compile Include="Classes\GameStates\PlatformState.cs" />

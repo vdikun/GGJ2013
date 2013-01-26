@@ -12,9 +12,16 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Platformer
 {
-    class PlatformState : GameState
+    class FreePlatformState : GameState
     {
         readonly int RUN_SPEED = 20;
+        readonly int DIRECTIONAL_INFLUENCE = 10;
+
+        readonly int LEFT_LIMIT = 50;
+        readonly int RIGHT_LIMIT = 800;
+
+        readonly int RIGHT_HITZONE = 200;
+        readonly int LEFT_HITZONE = 300;
 
         static Texture2D hitTexture;
         static Texture2D jumpTexture;
@@ -37,11 +44,13 @@ namespace Platformer
         int punchTimer;
 
         //Controls
-        static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
+        static Keys[] jumpKeys = new Keys[] { Keys.W, Keys.Space };
+        static Keys[] leftKeys = new Keys[] { Keys.A };
+        static Keys[] rightKeys = new Keys[] { Keys.D };
         static Keys[] slideKeys = new Keys[] { Keys.S };
-        static Keys[] punchKeys = new Keys[] { Keys.D };
+        static Keys[] punchKeys = new Keys[] { Keys.E };
 
-        public PlatformState()
+        public FreePlatformState()
         {
             playerPosition = new Vector2(100, 300);
             bgPosition = new Vector2(0, 0);
@@ -72,15 +81,27 @@ namespace Platformer
                 game.currentState = new MenuState();
             }
 
+            if (playerPosition.X > LEFT_LIMIT && Util.IsAnyKeyDown(game.keyboard, leftKeys))
+            {
+                playerPosition.X -= DIRECTIONAL_INFLUENCE;
+            }
+
+            if (playerPosition.X < RIGHT_LIMIT &&  Util.IsAnyKeyDown(game.keyboard, rightKeys))
+            {
+                playerPosition.X += DIRECTIONAL_INFLUENCE;
+            }
+
             if (Util.IsAnyKeyDown(game.keyboard, slideKeys))
             {
                 currentSprite = slideTexture;
             }
-            if (Util.IsAnyKeyDown(game.keyboard, punchKeys) && punchTimer < -5)
+
+            if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, punchKeys) && punchTimer < -5)
             {
                 punchTimer = 10;
             }
-            if (Util.IsAnyKeyDown(game.keyboard, jumpKeys) && jumpTimer < -10)
+
+            if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, jumpKeys) && jumpTimer < -10)
             {
                 jumpTimer = 40;
             }
@@ -123,7 +144,7 @@ namespace Platformer
                 }
             }
 
-            if (obstaclePosition.X < 300 && obstaclePosition.X > -200)
+            if (obstaclePosition.X < playerPosition.X + RIGHT_HITZONE && obstaclePosition.X > playerPosition.X - LEFT_HITZONE)
             {
                 if (currentObstacle == jumpObstacleTexture && currentSprite != jumpTexture)
                 {
@@ -157,7 +178,7 @@ namespace Platformer
             spriteBatch.Draw(currentObstacle, obstaclePosition, Color.White);
             spriteBatch.Draw(currentSprite, playerPosition, Color.White);
 
-            spriteBatch.DrawString(game.font, "Platform State", new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);
         }
     }
 }

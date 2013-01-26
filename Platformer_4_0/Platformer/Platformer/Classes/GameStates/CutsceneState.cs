@@ -9,7 +9,7 @@ namespace Platformer
 {
     class CutsceneState : GameState
     {
-        void GameState.Update(PlatformerGame game)
+        void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
 
         }

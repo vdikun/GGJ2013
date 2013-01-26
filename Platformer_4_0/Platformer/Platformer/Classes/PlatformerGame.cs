@@ -19,6 +19,9 @@ namespace Platformer
 {
     public class PlatformerGame : Microsoft.Xna.Framework.Game
     {
+        public readonly static float SCREEN_WIDTH;
+        public readonly static float SCREEN_HEIGHT = 720.0f;
+
         public GameState currentState = new MenuState();
 
         // Resources for drawing.
@@ -57,6 +60,12 @@ namespace Platformer
         private MouseState prevMouseState;
         public MouseState prevMouse { get { return prevMouseState; } }
 
+        static PlatformerGame()
+        {
+            SCREEN_WIDTH = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            SCREEN_HEIGHT = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        }
+
         public PlatformerGame()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -83,6 +92,7 @@ namespace Platformer
 
             FreePlatformState.LoadContent(Content);
             PlatformState.LoadContent(Content);
+            MenuState.LoadContent(Content);
 
             /*winOverlay = Content.Load<Texture2D>("Overlays/you_win");
             loseOverlay = Content.Load<Texture2D>("Overlays/you_lose");

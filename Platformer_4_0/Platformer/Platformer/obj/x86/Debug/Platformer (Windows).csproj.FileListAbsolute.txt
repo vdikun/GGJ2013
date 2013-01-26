@@ -60,3 +60,4 @@ C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\
 C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\SlideObstacle.xnb
 C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Sliding.xnb
 C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Standing.xnb
+C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Splash.xnb

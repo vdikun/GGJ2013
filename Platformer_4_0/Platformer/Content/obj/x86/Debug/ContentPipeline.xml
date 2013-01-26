@@ -470,6 +470,15 @@
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Standing.xnb</Output>
       <Time>2013-01-26T08:29:27.447-08:00</Time>
     </Item>
+    <Item>
+      <Source>Backgrounds\Splash.jpg</Source>
+      <Name>Backgrounds\Splash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Splash.xnb</Output>
+      <Time>2013-01-26T13:50:20.627-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

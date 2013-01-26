@@ -13,6 +13,13 @@ namespace Platformer
 {
     class MenuState : GameState
     {
+        //Controls
+        static Keys[] acceptKeys = new Keys[] { Keys.Enter, Keys.Space, Keys.D, Keys.Right };
+        static Keys[] cancelKeys = new Keys[] { Keys.Escape };
+        static Keys[] upKeys     = new Keys[] { Keys.W, Keys.Up };
+        static Keys[] downKeys   = new Keys[] { Keys.S, Keys.Down };
+        
+        //Buttons
         static int selectedButton = 0;
         static int totalButtons = 0;
 
@@ -41,24 +48,32 @@ namespace Platformer
             new Button("Mini Games", 60, 90, delegate(PlatformerGame game) {
                 game.currentState = new MiniGameState();
             }),
+            new Button("Exit", 60, 120, delegate(PlatformerGame game) {
+                game.Exit();
+            }),
         };
 
         private delegate void ButtonAction(PlatformerGame game);
 
         void GameState.Update(PlatformerGame game)
         {
-            if (game.keyboard.IsKeyDown(Keys.Enter))
+            if (IsAnyKeyDown(game.keyboard, cancelKeys))
+            {
+                game.Exit();
+            }
+
+            if (IsAnyKeyDown(game.keyboard, acceptKeys))
             {
                 buttons[selectedButton].action.BeginInvoke(game, null, null);
             }
 
-            if (game.keyboard.IsKeyDown(Keys.S) && game.prevKeyboard.IsKeyUp(Keys.S))
+            if (IsAnyKeyPressed(game.keyboard, game.prevKeyboard, downKeys))
             {
                 selectedButton++;
                 if (selectedButton >= totalButtons) selectedButton = 0;
             }
 
-            if (game.keyboard.IsKeyDown(Keys.W) && game.prevKeyboard.IsKeyUp(Keys.W))
+            if (IsAnyKeyPressed(game.keyboard, game.prevKeyboard, upKeys))
             {
                 selectedButton--;
                 if (selectedButton < 0) selectedButton = totalButtons-1;
@@ -74,6 +89,33 @@ namespace Platformer
                 spriteBatch.Draw(game.placeholderTexture, new Rectangle(button.x, button.y, 20, 20), color);
                 spriteBatch.DrawString(game.font, button.text, new Vector2(button.x + 25, button.y), color);
             }
+        }
+
+        bool IsAnyKeyDown(KeyboardState keyboard, Keys[] keys)
+        {
+            foreach (Keys key in keys) {
+                if (keyboard.IsKeyDown(key))
+                    return true;
+            }
+            return false;
+        }
+
+        bool IsAnyKeyUp(KeyboardState keyboard, Keys[] keys)
+        {
+            foreach (Keys key in keys) {
+                if (keyboard.IsKeyUp(key))
+                    return true;
+            }
+            return false;
+        }
+
+        bool IsAnyKeyPressed(KeyboardState keyboard, KeyboardState prevKeyboard, Keys[] keys)
+        {
+            foreach (Keys key in keys) {
+                if (keyboard.IsKeyDown(key) && prevKeyboard.IsKeyUp(key))
+                    return true;
+            }
+            return false;
         }
     }
 }

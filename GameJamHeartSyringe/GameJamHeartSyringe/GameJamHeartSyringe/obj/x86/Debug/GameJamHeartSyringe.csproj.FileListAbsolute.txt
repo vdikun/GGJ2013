@@ -1,0 +1,8 @@
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\GameJamHeartSyringe.exe
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\GameJamHeartSyringe.pdb
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.exe
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.pdb
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\heart.xnb
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\syringe.xnb

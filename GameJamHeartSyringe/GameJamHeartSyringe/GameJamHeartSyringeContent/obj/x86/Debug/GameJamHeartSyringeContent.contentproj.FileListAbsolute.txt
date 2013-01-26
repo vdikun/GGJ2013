@@ -1,0 +1,1 @@
+C:\Users\Jer\Documents\Visual Studio 2010\Projects\C#\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringeContent\obj\x86\Debug\ResolveAssemblyReference.cache

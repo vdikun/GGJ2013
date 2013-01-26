@@ -61,10 +61,10 @@ namespace Platformer
 
         //Controls
         static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
-        static Keys[] leftKeys  = new Keys[] { Keys.A };
-        static Keys[] rightKeys = new Keys[] { Keys.D };
+        static Keys[] leftKeys  = new Keys[] {  };
+        static Keys[] rightKeys = new Keys[] {  };
         static Keys[] slideKeys = new Keys[] { Keys.S };
-        static Keys[] punchKeys = new Keys[] { Keys.E };
+        static Keys[] punchKeys = new Keys[] { Keys.D };
 
         public FreePlatformState()
         {
@@ -152,7 +152,7 @@ namespace Platformer
                     heightModifier = (JUMP_MID_DURATION - jumpTimer) / JUMP_MID_DURATION;
                 }
                 Console.WriteLine(heightModifier);
-                playerPosition.Y = JUMP_HEIGHT*heightModifier;
+                playerPosition.Y = Util.offsetY((GROUND_HEIGHT-Util.OFFSET)*heightModifier);
             }
 
             if (obstaclePosition.X < OBSTACLE_CUT_OFF)
@@ -201,14 +201,16 @@ namespace Platformer
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
             float panelWidth = Util.scale(bgTexture.Width);
-            float coverage = 0;
+            /*float coverage = 0;
             for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH*1.5; i++)
             {
                 spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * i), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
                 coverage += panelWidth;
-            }
-            //spriteBatch.Draw(bgTexture, bgPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
-            //spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + Util.scale(bgTexture.Width), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+            }*/
+            spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * 0), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+            spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * 1), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+            spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * 2), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+
             spriteBatch.Draw(currentObstacle, obstaclePosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
             spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
 

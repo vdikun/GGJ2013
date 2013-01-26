@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Hit.png</Source>
+      <Name>Hit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Hit.xnb</Output>
+      <Time>2013-01-26T02:51:31.903728-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Jumping.png</Source>
+      <Name>Jumping</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Jumping.xnb</Output>
+      <Time>2013-01-26T02:50:44.1759312-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Running.png</Source>
+      <Name>Running</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Running.xnb</Output>
+      <Time>2013-01-26T02:53:41.7314072-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sliding.png</Source>
+      <Name>Sliding</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Sliding.xnb</Output>
+      <Time>2013-01-26T03:08:37.712942-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Standing.png</Source>
+      <Name>Standing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Standing.xnb</Output>
+      <Time>2013-01-26T02:48:17.0755939-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Punching.png</Source>
+      <Name>Punching</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Punching.xnb</Output>
+      <Time>2013-01-26T03:08:14.9791062-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Background.png</Source>
+      <Name>Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Background.xnb</Output>
+      <Time>2013-01-26T03:16:43.7475506-08:00</Time>
+    </Item>
+    <Item>
+      <Source>JumpObstacle.png</Source>
+      <Name>JumpObstacle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\JumpObstacle.xnb</Output>
+      <Time>2013-01-26T03:24:15.8261806-08:00</Time>
+    </Item>
+    <Item>
+      <Source>PunchObstacle.png</Source>
+      <Name>PunchObstacle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\PunchObstacle.xnb</Output>
+      <Time>2013-01-26T03:25:20.3877402-08:00</Time>
+    </Item>
+    <Item>
+      <Source>SlideObstacle.png</Source>
+      <Name>SlideObstacle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\SlideObstacle.xnb</Output>
+      <Time>2013-01-26T03:25:00.3710961-08:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{01734B0E-96DF-436C-9121-837EBCEB83F9}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-01-23T16:24:13.4245061-08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

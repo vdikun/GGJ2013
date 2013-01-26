@@ -1,0 +1,15 @@
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Hit.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Jumping.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Running.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Sliding.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Standing.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Punching.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\RunningGame.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\RunningGame.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\obj\x86\Debug\RunningGame.exe
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\obj\x86\Debug\RunningGame.pdb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\Background.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\JumpObstacle.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\PunchObstacle.xnb
+C:\Users\Scott\Documents\Visual Studio 2010\Projects\RunningGame\RunningGame\RunningGame\bin\x86\Debug\Content\SlideObstacle.xnb

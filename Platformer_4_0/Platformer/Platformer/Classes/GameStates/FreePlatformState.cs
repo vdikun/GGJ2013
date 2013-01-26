@@ -145,11 +145,11 @@ namespace Platformer
                 float heightModifier;
                 if (jumpTimer > JUMP_MID_DURATION)
                 {
-                    heightModifier = JUMP_MID_DURATION / (jumpTimer - JUMP_MID_DURATION);
+                    heightModifier = (jumpTimer - JUMP_MID_DURATION) / JUMP_MID_DURATION;
                 }
                 else
                 {
-                    heightModifier = JUMP_MID_DURATION / (JUMP_MID_DURATION - jumpTimer);
+                    heightModifier = (JUMP_MID_DURATION - jumpTimer) / JUMP_MID_DURATION;
                 }
                 Console.WriteLine(heightModifier);
                 playerPosition.Y = JUMP_HEIGHT*heightModifier;

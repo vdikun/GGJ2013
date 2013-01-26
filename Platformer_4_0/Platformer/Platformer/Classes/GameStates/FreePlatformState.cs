@@ -14,11 +14,14 @@ namespace Platformer
 {
     class FreePlatformState : GameState
     {
-        readonly int RUN_SPEED = 20;
-        readonly int DIRECTIONAL_INFLUENCE = 10;
+        readonly static int RUN_SPEED = 20;
+        readonly static int DIRECTIONAL_INFLUENCE = 10;
+        readonly static float SPEED_INFLUENCE = 0.01f;
+        readonly static float SPEED_ON_HIT = 0.9f;
 
-        readonly int LEFT_LIMIT = 50;
-        readonly int RIGHT_LIMIT = 800;
+        readonly static int LEFT_LIMIT = 50;
+        readonly static int RIGHT_LIMIT = 800;
+        readonly static int CENTER = (RIGHT_LIMIT - LEFT_LIMIT)/2 + LEFT_LIMIT;
 
         readonly int RIGHT_HITZONE = 200;
         readonly int LEFT_HITZONE = 300;
@@ -44,8 +47,8 @@ namespace Platformer
         int punchTimer;
 
         //Controls
-        static Keys[] jumpKeys = new Keys[] { Keys.W, Keys.Space };
-        static Keys[] leftKeys = new Keys[] { Keys.A };
+        static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
+        static Keys[] leftKeys  = new Keys[] { Keys.A };
         static Keys[] rightKeys = new Keys[] { Keys.D };
         static Keys[] slideKeys = new Keys[] { Keys.S };
         static Keys[] punchKeys = new Keys[] { Keys.E };
@@ -75,6 +78,8 @@ namespace Platformer
         {
             currentSprite = runTexture;
             playerPosition.Y = 300;
+            int screenAdjustment = RUN_SPEED;
+            screenAdjustment = RUN_SPEED - (int) ((CENTER - playerPosition.X) * SPEED_INFLUENCE);
 
             if (game.keyboard.IsKeyDown(Keys.Escape))
             {
@@ -120,9 +125,6 @@ namespace Platformer
             jumpTimer--;
             punchTimer--;
 
-            bgPosition.X -= RUN_SPEED;
-            if (bgPosition.X <= -1280) bgPosition.X = 0;
-
             if (obstaclePosition.X < -400)
             {
                 Random random = new Random();
@@ -146,17 +148,12 @@ namespace Platformer
 
             if (obstaclePosition.X < playerPosition.X + RIGHT_HITZONE && obstaclePosition.X > playerPosition.X - LEFT_HITZONE)
             {
-                if (currentObstacle == jumpObstacleTexture && currentSprite != jumpTexture)
-                {
+                if (currentObstacle == jumpObstacleTexture && currentSprite != jumpTexture
+                    || currentObstacle == slideObstacleTexture && currentSprite != slideTexture
+                    || currentObstacle == punchObstacleTexture && currentSprite != punchTexture) {
                     currentSprite = hitTexture;
-                }
-                if (currentObstacle == slideObstacleTexture && currentSprite != slideTexture)
-                {
-                    currentSprite = hitTexture;
-                }
-                if (currentObstacle == punchObstacleTexture && currentSprite != punchTexture)
-                {
-                    currentSprite = hitTexture;
+                    //float f = screenAdjustment * SPEED_ON_HIT;
+                    screenAdjustment = (int) (screenAdjustment * SPEED_ON_HIT);
                 }
             }
 
@@ -167,8 +164,11 @@ namespace Platformer
                     obstaclePosition.X = -500;
                 }
             }
-            obstaclePosition.X -= RUN_SPEED;
-            Console.WriteLine(obstaclePosition.X);
+
+            bgPosition.X -= screenAdjustment;
+            if (bgPosition.X <= -1280) bgPosition.X = 0;
+
+            obstaclePosition.X -= screenAdjustment;
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)

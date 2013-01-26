@@ -1,0 +1,6 @@
+c:\users\isha\documents\visual studio 2010\Projects\gamejam_isha_1\gamejam_isha_1\gamejam_isha_1\bin\x86\Debug\gamejam_isha_1.exe
+c:\users\isha\documents\visual studio 2010\Projects\gamejam_isha_1\gamejam_isha_1\gamejam_isha_1\bin\x86\Debug\gamejam_isha_1.pdb
+c:\users\isha\documents\visual studio 2010\Projects\gamejam_isha_1\gamejam_isha_1\gamejam_isha_1\obj\x86\Debug\gamejam_isha_1.csprojResolveAssemblyReference.cache
+c:\users\isha\documents\visual studio 2010\Projects\gamejam_isha_1\gamejam_isha_1\gamejam_isha_1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\isha\documents\visual studio 2010\Projects\gamejam_isha_1\gamejam_isha_1\gamejam_isha_1\obj\x86\Debug\gamejam_isha_1.exe
+c:\users\isha\documents\visual studio 2010\Projects\gamejam_isha_1\gamejam_isha_1\gamejam_isha_1\obj\x86\Debug\gamejam_isha_1.pdb

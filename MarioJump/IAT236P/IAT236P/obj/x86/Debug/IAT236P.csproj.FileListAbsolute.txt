@@ -1,0 +1,8 @@
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\bin\x86\Debug\Content\th_Mario.xnb
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\bin\x86\Debug\Content\MenuFont.xnb
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\bin\x86\Debug\IAT236P.exe
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\bin\x86\Debug\IAT236P.pdb
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\obj\x86\Debug\IAT236P.csprojResolveAssemblyReference.cache
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\obj\x86\Debug\IAT236P.exe
+C:\Users\Scott\Documents\GitHub\IAT236P\IAT236P\IAT236P\obj\x86\Debug\IAT236P.pdb

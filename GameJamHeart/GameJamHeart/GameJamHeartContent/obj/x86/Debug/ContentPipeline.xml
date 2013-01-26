@@ -7,15 +7,15 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeartContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeartContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeartContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeartContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-09-30T21:05:17.4089797-07:00</Value>
+        <Value>2013-01-24T21:07:38.2014-08:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

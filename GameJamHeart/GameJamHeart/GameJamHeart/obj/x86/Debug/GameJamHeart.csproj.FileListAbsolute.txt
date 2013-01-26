@@ -10,3 +10,9 @@ C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj
 C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\GameJamHeart.exe
 C:\Users\Jer\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\GameJamHeart.pdb
+C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\bin\x86\Debug\GameJamHeart.exe
+C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\bin\x86\Debug\GameJamHeart.pdb
+C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\GameJamHeart.csprojResolveAssemblyReference.cache
+C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\GameJamHeart.exe
+C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeart\GameJamHeart\GameJamHeart\obj\x86\Debug\GameJamHeart.pdb

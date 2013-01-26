@@ -416,6 +416,15 @@
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\Powerup.xnb</Output>
       <Time>2013-01-25T23:08:57.072-08:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\whitepixel.png</Source>
+      <Name>Sprites\whitepixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\whitepixel.xnb</Output>
+      <Time>2013-01-26T02:09:09.2176-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

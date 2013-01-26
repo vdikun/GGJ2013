@@ -13,14 +13,36 @@ namespace Platformer
 {
     class MenuState : GameState
     {
-        void GameState.Update()
-        {
+        int selectedButton = 0;
+        const int totalButtons = 2;
 
+        void GameState.Update(PlatformerGame game)
+        {
+            if (game.keyboard.IsKeyDown(Keys.S))
+            {
+                selectedButton++;
+                if (selectedButton > totalButtons) selectedButton = 0;
+            }
+
+            if (game.keyboard.IsKeyDown(Keys.W))
+            {
+                selectedButton--;
+                if (selectedButton < 0) selectedButton = totalButtons-1;
+            }
         }
 
-        void GameState.Draw()
+        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
-            Console.WriteLine("Menu State");
+            spriteBatch.DrawString(game.font, "Menu State", new Vector2(10, 10), Color.White);
+
+
+            Color color = Color.White;
+
+            color = selectedButton == 0 ? Color.Red : Color.White;
+            spriteBatch.Draw(game.placeholderTexture, new Rectangle(60, 60, 100, 20), color);
+
+            color = selectedButton == 1 ? Color.Red : Color.White;
+            spriteBatch.Draw(game.placeholderTexture, new Rectangle(60, 90, 100, 20), color);
         }
     }
 }

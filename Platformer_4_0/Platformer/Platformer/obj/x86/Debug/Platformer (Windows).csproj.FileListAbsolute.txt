@@ -54,3 +54,4 @@ C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\
 C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\obj\x86\Debug\Platformer.exe
 C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\obj\x86\Debug\Platformer.pdb
+C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\whitepixel.xnb

@@ -19,7 +19,7 @@ namespace Platformer
 {
     public class PlatformerGame : Microsoft.Xna.Framework.Game
     {
-        private GameState currentState = new MenuState();
+        public GameState currentState = new MenuState();
 
         // Resources for drawing.
         private GraphicsDeviceManager graphics;
@@ -46,10 +46,16 @@ namespace Platformer
         // then we use the same input state wherever needed
         private GamePadState gamePadState;
         public GamePadState gamePad { get { return gamePadState; } }
+        private GamePadState prevGamePadState;
+        public GamePadState prevGamePad { get { return prevGamePadState; } }
         private KeyboardState keyboardState;
         public KeyboardState keyboard { get { return keyboardState; } }
+        private KeyboardState prevKeyboardState;
+        public KeyboardState prevKeyboard { get { return prevKeyboardState; } }
         private MouseState mouseState;
         public MouseState mouse { get { return mouseState; } }
+        private MouseState prevMouseState;
+        public MouseState prevMouse { get { return prevMouseState; } }
 
         public PlatformerGame()
         {
@@ -101,8 +107,11 @@ namespace Platformer
         private void HandleInput()
         {
             // get all of our input states
+            prevKeyboardState = keyboardState;
             keyboardState = Keyboard.GetState();
+            prevMouseState = mouseState;
             mouseState = Mouse.GetState();
+            prevGamePadState = gamePadState;
             gamePadState = GamePad.GetState(PlayerIndex.One);
 
             // Exit the game when back is pressed.

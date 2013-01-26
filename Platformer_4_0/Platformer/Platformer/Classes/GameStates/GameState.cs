@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Platformer
 {
-    interface GameState
+    public interface GameState
     {
         void Update(PlatformerGame game);
         void Draw(PlatformerGame game, SpriteBatch spriteBatch);

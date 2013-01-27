@@ -103,6 +103,7 @@ namespace Platformer
             MiniGame3State.LoadContent(Content);
             MiniGame4State.LoadContent(Content);
             MiniGame5State.LoadContent(Content);
+            Heart.LoadContent(Content);
 
             music = Content.Load<SoundEffect>("Sounds/DrDozer_7");
 

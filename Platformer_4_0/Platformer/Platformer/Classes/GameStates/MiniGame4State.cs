@@ -82,28 +82,25 @@ namespace Platformer
                         shakeCounter--;
                     }
 
+                    if ((currentMouseState.X - oldMouseState.X) > 0)
+                    {
+                        int counter = random.Next(0, 1 * SHAKE_COUNTER);
+                        for (int i = 0; i < counter; i++)
+                        {
+                            //float angle = (float)(random.NextDouble() * Math.PI * 0.8 + Math.PI * 1.5);
+                            float angle = (float)(random.NextDouble() * MathHelper.TwoPi);
+                            particles.Add(new Vector4(heartPosition.X + random.Next(-30, 30) + heartTexture0.Width / 2, heartPosition.Y + heartTexture0.Height / 2, (float)Math.Cos(angle), (float)Math.Sin(angle)));
+                        }
+                    }
+
                     // if mouse has been moved with specified velocity, remove dirt (change texture)
                     if (shakeCounter == SHAKE_COUNTER/2)
                     {
                         heartState = 1;
-
-                        int count = random.Next(0, 15);
-                        for (int i = 0; i < count; i++)
-                        {
-                            float angle = random.Next(180, 360);
-                            particles.Add(new Vector4(heartPosition.X, heartPosition.Y, (float) Math.Cos(angle), (float) Math.Sin(angle)));
-                        }
                     }
                     else if (shakeCounter == 0)
                     {
                         heartState = 2;
-                        
-                        int count = random.Next(0, 20);
-                        for (int i = 0; i < count; i++)
-                        {
-                            float angle = random.Next(180, 360);
-                            particles.Add(new Vector4(heartPosition.X, heartPosition.Y, (float) Math.Cos(angle), (float) Math.Sin(angle)));
-                        }
                     }
 
                     oldMouseState = currentMouseState;
@@ -113,7 +110,7 @@ namespace Platformer
             for (int i = 0; i < particles.Count; i++)
             {
                 Vector4 particle = particles[i];
-                particle.W += 5.0f;
+                particle.Z += 0.1f;
                 particle.X += particle.W;
                 particle.Y += particle.Z;
                 particles[i] = particle;
@@ -122,11 +119,16 @@ namespace Platformer
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
+            foreach (Vector4 particle in particles)
+            {
+                spriteBatch.Draw(dirt, new Vector2(particle.X, particle.Y), null, Color.SaddleBrown, 0f, Vector2.Zero, (float) (1.0f + random.NextDouble()), SpriteEffects.None, 0f);
+            }
+
             spriteBatch.DrawString(game.font, "Mini Game 4 State", new Vector2(10, 10), Color.White);
 
             if (countdown != 0) spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
 
-            if (shakeCounter >= 3 && shakeCounter <= 8) spriteBatch.DrawString(game.font, "Almost there..", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            if (shakeCounter >= 3 && shakeCounter <= 10) spriteBatch.DrawString(game.font, "Almost there..", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
             
             switch (heartState)
             {
@@ -137,11 +139,6 @@ namespace Platformer
                 case 2: spriteBatch.Draw(heartTexture2, heartPosition, Color.White);
                         spriteBatch.DrawString(game.font, "GOOD!", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
                     break;
-            }
-
-            foreach (Vector4 particle in particles)
-            {
-                spriteBatch.Draw(dirt, new Vector2(particle.X, particle.Y), Color.SandyBrown);
             }
         }
     }

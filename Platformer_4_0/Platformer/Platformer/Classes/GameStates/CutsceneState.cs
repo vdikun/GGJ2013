@@ -14,21 +14,25 @@ namespace Platformer
     class CutsceneState : GameState
     {
         static Texture2D background;
-        SoundEffect music;
-        SoundEffectInstance musicLoop;
+        static SoundEffect music;
 
         public static void LoadContent(ContentManager manager)
         {
-            // Load textures
-
             background = manager.Load<Texture2D>("Backgrounds/Splash");
-
+            music = manager.Load<SoundEffect>("Sounds/victory_music");
         }
 
+        public CutsceneState()
+        {
+            PlatformerGame.music = music;
+        }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-
+            if (game.keyboard.IsKeyDown(Keys.Space))
+            {
+                game.currentState = new MenuState();
+            }
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)

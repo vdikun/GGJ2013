@@ -15,7 +15,10 @@ namespace Platformer
 {
     class MiniGame4State : GameState
     {
-        static Texture2D heartTexture0, heartTexture1, heartTexture2;
+        static Texture2D heartTexture0, heartTexture1, heartTexture2, dirt;
+        static Random random = new Random();
+
+        List<Vector4> particles = new List<Vector4>();
         Vector2 heartPosition = new Vector2(240, 240);
         MouseState oldMouseState, currentMouseState;
         int shakeCounter;
@@ -25,7 +28,7 @@ namespace Platformer
 
         // constants
         private const int CHANGE_X_PER_FRAME = 400;
-        private int SHAKE_COUNTER = 16; // how long you want to move mouse at specified speed to reduce dirt by 1
+        private int SHAKE_COUNTER = 14; // how long you want to move mouse at specified speed to reduce dirt by 1
         
 
         public MiniGame4State()
@@ -43,7 +46,7 @@ namespace Platformer
             heartTexture0 = manager.Load<Texture2D>("Minigames/heartDirty2");
             heartTexture1 = manager.Load<Texture2D>("Minigames/heartDirty1");
             heartTexture2 = manager.Load<Texture2D>("Minigames/heart");
-
+            dirt = manager.Load<Texture2D>("Sprites/whitepixel");
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
@@ -80,24 +83,46 @@ namespace Platformer
                     }
 
                     // if mouse has been moved with specified velocity, remove dirt (change texture)
-                    if (shakeCounter == 8)
+                    if (shakeCounter == SHAKE_COUNTER/2)
                     {
                         heartState = 1;
+
+                        int count = random.Next(0, 15);
+                        for (int i = 0; i < count; i++)
+                        {
+                            float angle = random.Next(180, 360);
+                            particles.Add(new Vector4(heartPosition.X, heartPosition.Y, (float) Math.Cos(angle), (float) Math.Sin(angle)));
+                        }
                     }
                     else if (shakeCounter == 0)
                     {
                         heartState = 2;
+                        
+                        int count = random.Next(0, 20);
+                        for (int i = 0; i < count; i++)
+                        {
+                            float angle = random.Next(180, 360);
+                            particles.Add(new Vector4(heartPosition.X, heartPosition.Y, (float) Math.Cos(angle), (float) Math.Sin(angle)));
+                        }
                     }
 
                     oldMouseState = currentMouseState;
                 }
             }
 
+            for (int i = 0; i < particles.Count; i++)
+            {
+                Vector4 particle = particles[i];
+                particle.W += 5.0f;
+                particle.X += particle.W;
+                particle.Y += particle.Z;
+                particles[i] = particle;
+            }
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(game.font, "Mini Game 3 State", new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(game.font, "Mini Game 4 State", new Vector2(10, 10), Color.White);
 
             if (countdown != 0) spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
 
@@ -112,6 +137,11 @@ namespace Platformer
                 case 2: spriteBatch.Draw(heartTexture2, heartPosition, Color.White);
                         spriteBatch.DrawString(game.font, "GOOD!", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
                     break;
+            }
+
+            foreach (Vector4 particle in particles)
+            {
+                spriteBatch.Draw(dirt, new Vector2(particle.X, particle.Y), Color.SandyBrown);
             }
         }
     }

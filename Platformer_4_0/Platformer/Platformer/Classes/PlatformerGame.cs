@@ -10,10 +10,12 @@
 using System;
 using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Input.Touch;
 
 namespace Platformer
 {
@@ -21,6 +23,9 @@ namespace Platformer
     {
         public readonly static float SCREEN_WIDTH;
         public readonly static float SCREEN_HEIGHT = 720.0f;
+
+        SoundEffect music;
+        SoundEffectInstance musicLoop;
 
         public GameState currentState = new MenuState();
 
@@ -97,6 +102,8 @@ namespace Platformer
             MiniGame2State.LoadContent(Content);
             MiniGame3State.LoadContent(Content);
 
+            music = Content.Load<SoundEffect>("Sounds/DrDozer_7");
+
             /*winOverlay = Content.Load<Texture2D>("Overlays/you_win");
             loseOverlay = Content.Load<Texture2D>("Overlays/you_lose");
             diedOverlay = Content.Load<Texture2D>("Overlays/you_died");*/
@@ -119,6 +126,9 @@ namespace Platformer
         {
             HandleInput();
             currentState.Update(this, gameTime);
+
+            if (musicLoop == null) musicLoop = music.CreateInstance();
+            if (musicLoop.State == SoundState.Stopped) musicLoop.Play();
         }
 
         private void HandleInput()

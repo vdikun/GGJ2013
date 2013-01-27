@@ -173,87 +173,6 @@
       <Time>2013-01-26T16:41:33.1877797-08:00</Time>
     </Item>
     <Item>
-      <Source>Backgrounds\Layer0_0.png</Source>
-      <Name>Backgrounds\Layer0_0</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer0_0.xnb</Output>
-      <Time>2013-01-26T16:41:32.9327476-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer0_1.png</Source>
-      <Name>Backgrounds\Layer0_1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer0_1.xnb</Output>
-      <Time>2013-01-26T16:41:32.9387493-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer0_2.png</Source>
-      <Name>Backgrounds\Layer0_2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer0_2.xnb</Output>
-      <Time>2013-01-26T16:41:32.9447493-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer1_0.png</Source>
-      <Name>Backgrounds\Layer1_0</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer1_0.xnb</Output>
-      <Time>2013-01-26T16:41:32.9567503-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer1_1.png</Source>
-      <Name>Backgrounds\Layer1_1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer1_1.xnb</Output>
-      <Time>2013-01-26T16:41:32.9727536-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer1_2.png</Source>
-      <Name>Backgrounds\Layer1_2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer1_2.xnb</Output>
-      <Time>2013-01-26T16:41:33.0297606-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer2_0.png</Source>
-      <Name>Backgrounds\Layer2_0</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer2_0.xnb</Output>
-      <Time>2013-01-26T16:41:33.0347598-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer2_1.png</Source>
-      <Name>Backgrounds\Layer2_1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer2_1.xnb</Output>
-      <Time>2013-01-26T16:41:33.0397614-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\Layer2_2.png</Source>
-      <Name>Backgrounds\Layer2_2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer2_2.xnb</Output>
-      <Time>2013-01-26T16:41:33.0497642-08:00</Time>
-    </Item>
-    <Item>
       <Source>Overlays\you_died.png</Source>
       <Name>Overlays\you_died</Name>
       <Importer>TextureImporter</Importer>
@@ -812,26 +731,6 @@
       <Time>2013-01-26T16:33:12-08:00</Time>
     </Item>
     <Item>
-      <Source>Sounds\DrDozer_7.mp3</Source>
-      <Name>Sounds\DrDozer_7</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\DrDozer_7.xnb</Output>
-      <Extra>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\DrDozer_7.wma</Extra>
-      <Time>2013-01-26T22:17:15.0759233-08:00</Time>
-    </Item>
-    <Item>
-      <Source>Sounds\GameJamContinue.mp3</Source>
-      <Name>Sounds\GameJamContinue</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\GameJamContinue.xnb</Output>
-      <Extra>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\GameJamContinue.wma</Extra>
-      <Time>2013-01-26T22:18:50.3392586-08:00</Time>
-    </Item>
-    <Item>
       <Source>Minigames\heartDirty1.png</Source>
       <Name>Minigames\heartDirty1</Name>
       <Importer>TextureImporter</Importer>
@@ -884,6 +783,60 @@
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Red.xnb</Output>
       <Time>2013-01-26T20:17:19.0504314-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background1.png</Source>
+      <Name>Backgrounds\background1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background1.xnb</Output>
+      <Time>2013-01-27T00:01:33.8403446-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background2.png</Source>
+      <Name>Backgrounds\background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background2.xnb</Output>
+      <Time>2013-01-27T00:01:37.9955968-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background3.png</Source>
+      <Name>Backgrounds\background3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background3.xnb</Output>
+      <Time>2013-01-27T00:01:41.8451761-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background4.png</Source>
+      <Name>Backgrounds\background4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background4.xnb</Output>
+      <Time>2013-01-27T00:01:46.2719351-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background5.png</Source>
+      <Name>Backgrounds\background5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background5.xnb</Output>
+      <Time>2013-01-27T00:01:54.0898347-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\DrDozer_7.wav</Source>
+      <Name>Sounds\DrDozer_7</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\DrDozer_7.xnb</Output>
+      <Time>2013-01-27T00:21:02-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -26,6 +26,9 @@ namespace Platformer
         bool attackedByBugs;
         float timer = 0F;
 
+        int countdown;
+        int frameCounter;
+
         // constants
         private const int BUG_SPEED = 5;
         private const int MAX_NUMBER_BUGS = 5;
@@ -44,6 +47,8 @@ namespace Platformer
                 bugTargetPositions.Add(new Vector2(random.Next(0, 1280), random.Next(0, 720)));
 
             }
+            countdown = 4;
+            frameCounter = 30;
 
         }
 
@@ -60,55 +65,70 @@ namespace Platformer
             {
                 game.currentState = new MenuState();
             }
-
-            timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            // Update heart position according to mouse position
-            MouseState currentMouseState = new MouseState();
-            currentMouseState = Mouse.GetState();
-            float posDiff = currentMouseState.X - heartPosition.X;
-            heartPosition.X += posDiff * 0.1f;
-            if (heartPosition.X < 0) heartPosition.X = 0;
-            if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
-            posDiff = currentMouseState.Y - heartPosition.Y;
-            heartPosition.Y += posDiff * 0.1f;
-            if (heartPosition.Y < 0) heartPosition.Y = 0;
-            if (heartPosition.Y > 720 - heartTexture.Height) heartPosition.Y = 720 - heartTexture.Height;
-
-            // bug moving randomly towards heart
-            for (int i = 0; i < bugPositions.Count; i++)
+            if (countdown != 0)
             {
-                Vector2 bug = new Vector2(bugPositions[i].X, bugPositions[i].Y);
-                Vector2 bugTarget = new Vector2(bugTargetPositions[i].X, bugTargetPositions[i].Y);
-                Random random = new Random();
-
-                if (bug.X < (bugTargetPositions[i].X + BUG_SPEED) && bug.X > (bugTargetPositions[i].X - BUG_SPEED))
-                    bugTarget.X = random.Next(-bugTexture.Width, (1280 - bugTexture.Width));
-                if (bug.Y < (bugTargetPositions[i].Y + BUG_SPEED) && bug.Y > (bugTargetPositions[i].Y - BUG_SPEED))
-                    bugTarget.Y = random.Next(-bugTexture.Height, (720 - bugTexture.Height));
-                if (bug.X < bugTargetPositions[i].X) bug.X += BUG_SPEED;
-                if (bug.X > bugTargetPositions[i].X) bug.X -= BUG_SPEED;
-                if (bug.Y < bugTargetPositions[i].Y) bug.Y += BUG_SPEED;
-                if (bug.Y > bugTargetPositions[i].Y) bug.Y -= BUG_SPEED;
-
-                bugPositions[i] = bug;
-                bugTargetPositions[i] = bugTarget;
+                frameCounter--;
+                if (frameCounter == 0) { countdown--; frameCounter = 40; }
             }
-
-            // check if heart touches any bug
-            foreach (Vector2 bug in bugPositions)
+            else
             {
-                float x = heartPosition.X + 70;
-                float y = heartPosition.Y + 120;
+                timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                if (x < (bug.X + 30) && x > (bug.X - 30) && y < (bug.Y + 50) && y > (bug.Y - 50))
-                    attackedByBugs = true;
+                // Update heart position according to mouse position
+                MouseState currentMouseState = new MouseState();
+                currentMouseState = Mouse.GetState();
+                float posDiff = currentMouseState.X - heartPosition.X;
+                heartPosition.X += posDiff * 0.1f;
+                if (heartPosition.X < 0) heartPosition.X = 0;
+                if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
+                posDiff = currentMouseState.Y - heartPosition.Y;
+                heartPosition.Y += posDiff * 0.1f;
+                if (heartPosition.Y < 0) heartPosition.Y = 0;
+                if (heartPosition.Y > 720 - heartTexture.Height) heartPosition.Y = 720 - heartTexture.Height;
+
+                // bug moving randomly towards heart
+                for (int i = 0; i < bugPositions.Count; i++)
+                {
+                    Vector2 bug = new Vector2(bugPositions[i].X, bugPositions[i].Y);
+                    Vector2 bugTarget = new Vector2(bugTargetPositions[i].X, bugTargetPositions[i].Y);
+                    Random random = new Random();
+
+                    if (bug.X < (bugTargetPositions[i].X + BUG_SPEED) && bug.X > (bugTargetPositions[i].X - BUG_SPEED))
+                        bugTarget.X = random.Next(-bugTexture.Width, (1280 - bugTexture.Width));
+                    if (bug.Y < (bugTargetPositions[i].Y + BUG_SPEED) && bug.Y > (bugTargetPositions[i].Y - BUG_SPEED))
+                        bugTarget.Y = random.Next(-bugTexture.Height, (720 - bugTexture.Height));
+                    if (bug.X < bugTargetPositions[i].X) bug.X += BUG_SPEED;
+                    if (bug.X > bugTargetPositions[i].X) bug.X -= BUG_SPEED;
+                    if (bug.Y < bugTargetPositions[i].Y) bug.Y += BUG_SPEED;
+                    if (bug.Y > bugTargetPositions[i].Y) bug.Y -= BUG_SPEED;
+
+                    bugPositions[i] = bug;
+                    bugTargetPositions[i] = bugTarget;
+                }
+
+                // check if heart touches any bug
+                foreach (Vector2 bug in bugPositions)
+                {
+                    float x = heartPosition.X + 70;
+                    float y = heartPosition.Y + 120;
+
+                    if (x < (bug.X + 30) && x > (bug.X - 30) && y < (bug.Y + 50) && y > (bug.Y - 50))
+                        attackedByBugs = true;
+                }
             }
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
             spriteBatch.DrawString(game.font, "Mini Game 5 State", new Vector2(10, 10), Color.White);
+            if (countdown == 4)
+            {
+                spriteBatch.DrawString(game.font, "AVOID", new Vector2(480, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
+            else if (countdown > 0)
+            {
+                spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
 
             if (attackedByBugs)
             {
@@ -127,5 +147,6 @@ namespace Platformer
                 spriteBatch.Draw(heartTexture, heartPosition, Color.White);
             }
         }
+
     }
 }

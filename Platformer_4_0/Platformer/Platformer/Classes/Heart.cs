@@ -29,7 +29,7 @@ namespace Platformer
         private MouseState previousMouseState;
         
         // constants
-        private const int BEAT_PATTERN_LENGTH = 3;
+        private const int BEAT_PATTERN_LENGTH = 2;
         public const int HEART_METER_UP_BOUND = 100;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
@@ -54,10 +54,11 @@ namespace Platformer
 
         public Heart()
         {
-            heartMeter = 40;    // Initial value of the Heart meter
+            heartMeter = 80;    // Initial value of the Heart meter
             beatPatternLength = BEAT_PATTERN_LENGTH;
-            beatPattern = new Click[beatPatternLength];
-            assignBeatPattern();    // assign click pattern + time width
+            beatPattern = new Click[] {Click.Left, Click.Right};
+            beatTimer = BEAT_TIMER;
+            // assignBeatPattern();    // assign random click pattern + time width
             clickPattern = new Click[beatPatternLength];    // to store clicks by user
             timeDiff = new float[beatPatternLength];    // to store time diff between clicks
             oldTime = 0F;
@@ -73,6 +74,7 @@ namespace Platformer
             { heartMeter = HEART_METER_LOW_BOUND; }
             else if ((heartMeter + change) > HEART_METER_UP_BOUND)
             { heartMeter = HEART_METER_UP_BOUND; }
+            Console.WriteLine("Heartmeter " + getHeartMeter());
         }
 
         void assignBeatPattern()
@@ -103,13 +105,16 @@ namespace Platformer
             avgTime /= beatPatternLength;
 
             // check if click pattern wasnt too slow/ too fast/ incorrect number/ wrong pattern
-            if (avgTime < beatTimer - 0.1F)
+            if (avgTime < (beatTimer - 0.15F))
             {
+                Console.WriteLine("Take it slow!");
                 return false;
             }
-            else if (avgTime > beatTimer + 0.1F)
+            else if (avgTime > (beatTimer + 0.15F))
             {
+                Console.WriteLine("Come on Grandma....");
                 return false;
+
             }
             else if (clickPattern.Length != beatPattern.Length)
                 return false;
@@ -190,7 +195,7 @@ namespace Platformer
             }
 
             // Update Progress bar with HeartMeter value
-            Console.WriteLine("Heartmeter " + getHeartMeter());
+            
 
             //save the current mouse state for the next frame
             previousMouseState = Mouse.GetState();

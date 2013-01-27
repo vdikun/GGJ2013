@@ -152,7 +152,7 @@ namespace Platformer
                 }
             }
             obstaclePosition.X -= RUN_SPEED;
-            Console.WriteLine(obstaclePosition.X);
+            // Console.WriteLine(obstaclePosition.X);
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)

@@ -37,9 +37,18 @@ namespace RunningGame
         Vector2 obstaclePosition;
 
         readonly int RUN_SPEED = 20;
+        readonly int ANIM_DELAY = 3;
+        readonly int FRAME_NUM = 8;
 
         int jumpTimer;
         int punchTimer;
+        int currentFrame = 0;
+
+        int actionWidth;
+        int actionHeight;
+        int runHeight;
+        int runWidth;
+        float runScale;
 
         public Game1()
         {
@@ -79,13 +88,20 @@ namespace RunningGame
             hitTexture = Content.Load<Texture2D>("Hit");
             jumpTexture = Content.Load<Texture2D>("Jumping");
             punchTexture = Content.Load<Texture2D>("Punching");
-            runTexture = Content.Load<Texture2D>("Running");
             slideTexture = Content.Load<Texture2D>("Sliding");
             standTexture = Content.Load<Texture2D>("Standing");
             bgTexture = Content.Load<Texture2D>("Background");
             jumpObstacleTexture = Content.Load<Texture2D>("JumpObstacle");
             slideObstacleTexture = Content.Load<Texture2D>("SlideObstacle");
             punchObstacleTexture = Content.Load<Texture2D>("punchObstacle");
+            runTexture = Content.Load<Texture2D>("RunSprite");
+
+            runHeight = runTexture.Height;
+            actionHeight = standTexture.Height;
+            runScale = actionHeight / runHeight;
+
+            actionWidth = standTexture.Width;
+            runWidth = runTexture.Width / FRAME_NUM;
 
             // TODO: use this.Content to load your game content here
         }
@@ -204,7 +220,20 @@ namespace RunningGame
             spriteBatch.Draw(bgTexture, bgPosition, Color.White);
             spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X+bgTexture.Width, 0), Color.White);
             spriteBatch.Draw(currentObstacle, obstaclePosition, Color.White);
-            spriteBatch.Draw(currentSprite, playerPosition, Color.White);
+            //spriteBatch.Draw(currentSprite, playerPosition, Color.White);
+            if (currentSprite == runTexture) // if player is running:
+            {
+                spriteBatch.Draw(currentSprite, playerPosition, new Rectangle(runWidth * (int)(currentFrame / ANIM_DELAY), 0, runWidth, runHeight), Color.White, 0f, Vector2.Zero, runScale, SpriteEffects.None, 0f);
+                currentFrame++;
+                if (currentFrame == FRAME_NUM*ANIM_DELAY)
+                {
+                    currentFrame = 0;
+                }
+            }
+            else // otherwise:
+            {
+                spriteBatch.Draw(currentSprite, playerPosition, Color.White);
+            }
 
             spriteBatch.End();
 

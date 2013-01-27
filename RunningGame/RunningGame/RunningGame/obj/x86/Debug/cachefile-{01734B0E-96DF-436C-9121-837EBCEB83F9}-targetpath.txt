@@ -8,3 +8,4 @@ Content\Background.xnb
 Content\JumpObstacle.xnb
 Content\PunchObstacle.xnb
 Content\SlideObstacle.xnb
+Content\RunSprite.xnb

@@ -243,6 +243,7 @@ namespace Platformer
             playerPosition = new Vector2(CENTER, GROUND_HEIGHT);
             backgroundPosition = new Vector2(0, Util.offsetY(0));
             currentObstacle = new Obstacle(Vector2.Zero);
+            currentSprite = standTexture;
 
             backgrounds.Enqueue(firstBackgroundTexture);
             float coverage = Util.scale(backgroundWidth);
@@ -580,7 +581,10 @@ namespace Platformer
 
             spriteBatch.Draw(uibg, Vector2.Zero, uiColor);
 
-            spriteBatch.DrawString(game.font, heart.performance.ToString(), new Vector2(10, 150), uiColor, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            if (heart.justPressed)
+            {
+                spriteBatch.DrawString(game.font, heart.performance.ToString(), new Vector2(10, 150), uiColor, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            }
 
             heart.Draw(spriteBatch, 1080, 0);
         }

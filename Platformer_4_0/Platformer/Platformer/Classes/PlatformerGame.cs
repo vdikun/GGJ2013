@@ -35,6 +35,7 @@ namespace Platformer
 
         // Global content.
         public SpriteFont font;
+        public SpriteFont headerFont;
 
         private Texture2D placeholder;
         public Texture2D placeholderTexture { get { return placeholder; } }
@@ -91,6 +92,7 @@ namespace Platformer
 
             // Load fonts
             font = Content.Load<SpriteFont>("Fonts/Hud");
+            headerFont = Content.Load<SpriteFont>("Fonts/Header");
 
             // Load textures
             placeholder = Content.Load<Texture2D>("Sprites/whitepixel");

@@ -24,8 +24,8 @@ namespace Platformer
         readonly static float RIGHT_LIMIT = Util.scale(900);
         readonly static float CENTER = 75;
 
-        readonly static float RIGHT_HITZONE = Util.scale(200);
-        readonly static float LEFT_HITZONE = Util.scale(300);
+        readonly static float RIGHT_HITZONE = Util.scale(150);
+        readonly static float LEFT_HITZONE = Util.scale(150);
         readonly static float PUNCHZONE = RIGHT_HITZONE + Util.scale(170);
 
         readonly static float GROUND_HEIGHT = Util.offsetY(Util.scale(350));
@@ -335,11 +335,6 @@ namespace Platformer
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-            if (game.keyboard.IsKeyDown(Keys.Escape))
-            {
-                game.currentState = new MenuState();
-            }
-
             if (!failure)
             {
                 if (backgrounds.Count <= 3)
@@ -494,7 +489,7 @@ namespace Platformer
             if (currentObstacle.position.X < playerPosition.X + RIGHT_HITZONE && currentObstacle.position.X > playerPosition.X - LEFT_HITZONE)
             {
                 if (currentObstacle.counters.Length != 0
-                    && (currentSprite != jumpTexture  || !currentObstacle.hasCounter(Obstacle.Counter.JUMP))
+                    && (currentSprite != jumpAnimTexture || !currentObstacle.hasCounter(Obstacle.Counter.JUMP))
                     && (currentSprite != slideTexture || !currentObstacle.hasCounter(Obstacle.Counter.SLIDE))
                     && (currentSprite != punchTexture || !currentObstacle.hasCounter(Obstacle.Counter.PUNCH)))
                 {
@@ -588,8 +583,6 @@ namespace Platformer
             spriteBatch.DrawString(game.font, heart.performance.ToString(), new Vector2(10, 150), uiColor, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
 
             heart.Draw(spriteBatch, 1080, 0);
-
-            spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);
         }
     }
 }

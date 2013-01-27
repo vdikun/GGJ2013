@@ -33,6 +33,9 @@ namespace Platformer
 
         readonly static float OBSTACLE_CUT_OFF = -400.0f;
         readonly static float OBSTACLE_DEADZONE = OBSTACLE_CUT_OFF - 100.0f;
+        readonly static int   OBSTACLE_MAX_ON_SCREEN = 2;
+        readonly static int   OBSTACLE_MIN_TILL_ER = 4;
+        readonly static int   OBSTACLE_MAX_TILL_ER = 6;
 
         readonly static float JUMP_DURATION = 40.0f;
         readonly static float JUMP_MID_DURATION = JUMP_DURATION / 2;
@@ -43,6 +46,8 @@ namespace Platformer
         readonly static float KNOCKBACK_DISTANCE = Util.scale(200);
         readonly static float KNOCKBACK_DURATION = 20.0f;
         readonly static float KNOCKBACK_BUFFER = -60.0f;
+
+        readonly static float QUIT_DURATION = 100.0f;
 
         readonly static float VOICE_HIT_CHANCE = 1.0f;
         readonly static float VOICE_PUNCH_CHANCE = 0.45f;
@@ -62,7 +67,6 @@ namespace Platformer
         static Texture2D jumpObstacleTexture;
         static Texture2D slideObstacleTexture;
         static Texture2D punchObstacleTexture;
-        static Texture2D currentObstacle;
         static Texture2D uibg;
         static Texture2D monitorBlip;
 
@@ -70,12 +74,13 @@ namespace Platformer
 
         Vector2 playerPosition;
         Vector2 backgroundPosition;
-        Vector2 obstaclePosition;
 
         float jumpTimer = -50;
         float punchTimer = -50;
         float knockbackTimer = -50;
-        float quitTimer = 100;
+        float quitTimer = QUIT_DURATION;
+
+        int obstaclesUntilER;
 
         float screenAdjustment;
 
@@ -85,6 +90,8 @@ namespace Platformer
 
         //Background Panels
         static Texture2D[] backgroundTextures;
+        static Texture2D firstBackgroundTexture;
+        static Texture2D lastBackgroundTexture;
         static float backgroundWidth;
         Queue<Texture2D> backgrounds = new Queue<Texture2D>();
 
@@ -116,14 +123,115 @@ namespace Platformer
             }
         }
 
+        //Obstacles
+        static Obstacle currentObstacle;
+
+        struct Obstacle 
+        {
+            public enum Counter { PUNCH, SLIDE, JUMP }
+
+            public Counter[] counters;
+            public Texture2D sprite;
+            public Texture2D destroyedSprite;
+            public Vector2 position;
+
+            public Obstacle(Vector2 position)
+            {
+                this.counters = null;
+                this.sprite = null;
+                this.destroyedSprite = null;
+                this.position = Vector2.Zero;
+                Randomize();
+                if (position != Vector2.Zero)
+                    this.position = position;
+            }
+
+            public void Randomize()
+            {
+                position.X = random.Next((int)(PlatformerGame.SCREEN_WIDTH), (int)(PlatformerGame.SCREEN_WIDTH*1.4));
+
+                switch (random.Next(1, 3)) {
+                    case 1:
+                        sprite = jumpObstacleTexture;
+                        position.Y = Util.offsetY(Util.scale(550));
+                        counters = new Counter[] { Counter.JUMP };
+                        break;
+                    case 2:
+                        sprite = slideObstacleTexture;
+                        position.Y = Util.offsetY(Util.scale(-150));
+                        counters = new Counter[] { Counter.SLIDE };
+                        break;
+                    case 3:
+                        sprite = punchObstacleTexture;
+                        destroyedSprite = punchObstacleTexture;
+                        position.Y = Util.offsetY(Util.scale(50));
+                        counters = new Counter[] { Counter.PUNCH };
+                        break;
+                }
+            }
+
+            public bool hasCounter(Counter counter)
+            {
+                return counters.Contains<Counter>(counter);
+            }
+        }
+
+        //Intro
+        static Sound voiceDrWontNeedThis;
+        static Sound voiceDrNotASprinter;
+        static Sound voiceDrDozerToTheRescue;
+        static Sound voiceDrThatsRidiculous;
+        static Sound voiceNurseTimeOfDeath;
+        static Sound voiceNurseHeartToER01;
+        static Sound voiceNurseHeartToER02;
+        static Sound voiceNurseHospitalOverflowing;
+        static Sound voiceNurseHeWillDie;
+        static Sound voiceNurseLetsDoThis01;
+        static Sound voiceNurseLetsDoThis02;
+        static Sound voiceNurseLetsGo;
+        static Sound voiceNurseSqueal;
+
+        /*struct Conversation
+        {
+            enum Stage { WAIT_1, DOCTOR, WAIT_2, NURSE, WAIT_3, RIP, RUN }
+
+            Sound[] voiceDoctor;
+            Sound[] voiceNurse;
+            SoundEffectInstance sound;
+            float chance;
+            float timer;
+
+            public Conversation(Sound[] voiceDoctor, Sound[] voiceNurse, float chance)
+            {
+                this.voiceDoctor = voiceDoctor;
+                this.voiceNurse = voiceNurse;
+                this.chance = chance;
+                this.timer = 30.0f;
+            }
+
+            public void Update()
+            {
+                if ( timer <= 0 )
+                {
+                    if (sound.State == SoundState.Stopped)
+                    {
+
+                    }
+                }
+            }
+        }*/
+
+
         public FreePlatformState()
         {
             playerPosition = new Vector2(CENTER, GROUND_HEIGHT);
             backgroundPosition = new Vector2(0, Util.offsetY(0));
-            obstaclePosition = new Vector2(OBSTACLE_DEADZONE, Util.offsetY(0));
+            currentObstacle = new Obstacle(Vector2.Zero);
 
-            float coverage = 0;
-            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 2.5; i++)
+            backgrounds.Enqueue(firstBackgroundTexture);
+            float coverage = Util.scale(backgroundWidth);
+
+            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 3; i++)
             {
                 backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
                 coverage += Util.scale(backgroundWidth);
@@ -149,6 +257,8 @@ namespace Platformer
                 manager.Load<Texture2D>("Backgrounds/background4"),
                 manager.Load<Texture2D>("Backgrounds/background5"),
             };
+            firstBackgroundTexture = manager.Load<Texture2D>("Backgrounds/Splash");
+            lastBackgroundTexture = manager.Load<Texture2D>("Backgrounds/background1");
 
             uibg = manager.Load<Texture2D>("Sprites/UIBG");
             monitorBlip = manager.Load<Texture2D>("Sprites/MonitorBlip");
@@ -195,17 +305,18 @@ namespace Platformer
             };
 
             voiceRandom = new Sound[] {
-                new Sound(manager, "Voices/dr_gangway_01", 0.45f),
-                new Sound(manager, "Voices/dr_gangway_02", 0.45f),
+                new Sound(manager, "Voices/dr_gangway_01", 0.4f),
+                new Sound(manager, "Voices/dr_gangway_02", 0.4f),
                 new Sound(manager, "Voices/dr_outta_the_way_01", 0.3f),
                 new Sound(manager, "Voices/dr_outta_the_way_02", 0.3f),
                 new Sound(manager, "Voices/dr_surgeon_thru_01", 1.0f),
             };
+
+            voiceDrDozerToTheRescue = 
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-
             if (game.keyboard.IsKeyDown(Keys.Escape))
             {
                 game.currentState = new MenuState();
@@ -229,15 +340,8 @@ namespace Platformer
 
                     if (knockbackTimer <= KNOCKBACK_BUFFER || knockbackTimer == KNOCKBACK_DURATION)
                     {
-                        obstaclePosition.X -= screenAdjustment;
-                        backgroundPosition.X -= screenAdjustment;
+                        MoveScreen(screenAdjustment);
                         PlaySound(voiceRandom, VOICE_RANDOM_CHANCE, false);
-                        if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2)
-                        {
-                            backgroundPosition.X += Util.scale(backgroundWidth);
-                            backgrounds.Dequeue();
-                            backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
-                        }
                     }
                     else
                     {
@@ -250,11 +354,7 @@ namespace Platformer
                 {
                     currentSprite = hitTexture;
                     knockbackTimer--;
-
-                    screenAdjustment = -KNOCKBACK_DISTANCE / KNOCKBACK_DURATION;
-                    obstaclePosition.X -= screenAdjustment;
-                    backgroundPosition.X -= screenAdjustment;
-                    if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2) backgroundPosition.X += Util.scale(backgroundWidth);
+                    MoveScreen(-KNOCKBACK_DISTANCE / KNOCKBACK_DURATION);
                 }
 
                 heart.Update(gameTime);
@@ -263,8 +363,22 @@ namespace Platformer
             else
             {
                 currentSprite = hitTexture;
+                if (quitTimer == QUIT_DURATION) PlaySound(voiceFailure, VOICE_FAILURE_CHANCE, true);
                 quitTimer--;
                 if (quitTimer == 0) game.currentState = new MenuState();
+            }
+        }
+
+        void MoveScreen(float screenAdjustment)
+        {
+            currentObstacle.position.X -= screenAdjustment;
+            backgroundPosition.X -= screenAdjustment;
+
+            if (backgroundPosition.X < Util.scale(-backgroundWidth) * 3)
+            {
+                backgroundPosition.X += Util.scale(backgroundWidth);
+                backgrounds.Dequeue();
+                backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length-1)]);
             }
         }
 
@@ -339,30 +453,17 @@ namespace Platformer
 
         void HandleObstacles()
         {
-            if (obstaclePosition.X < OBSTACLE_CUT_OFF)
+            if (currentObstacle.position.X < OBSTACLE_CUT_OFF)
             {
-                switch (random.Next(0, 3))
-                {
-                    case 0:
-                        currentObstacle = jumpObstacleTexture;
-                        obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(550)));
-                        break;
-                    case 1:
-                        currentObstacle = slideObstacleTexture;
-                        obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(-150)));
-                        break;
-                    case 2:
-                        currentObstacle = punchObstacleTexture;
-                        obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(50)));
-                        break;
-                }
+                currentObstacle.Randomize();
             }
 
-            if (obstaclePosition.X < playerPosition.X + RIGHT_HITZONE && obstaclePosition.X > playerPosition.X - LEFT_HITZONE)
+            if (currentObstacle.position.X < playerPosition.X + RIGHT_HITZONE && currentObstacle.position.X > playerPosition.X - LEFT_HITZONE)
             {
-                if (currentObstacle == jumpObstacleTexture && currentSprite != jumpTexture
-                    || currentObstacle == slideObstacleTexture && currentSprite != slideTexture
-                    || currentObstacle == punchObstacleTexture && currentSprite != punchTexture)
+                if (currentObstacle.counters.Length != 0
+                    && (currentSprite != jumpTexture  || !currentObstacle.hasCounter(Obstacle.Counter.JUMP))
+                    && (currentSprite != slideTexture || !currentObstacle.hasCounter(Obstacle.Counter.SLIDE))
+                    && (currentSprite != punchTexture || !currentObstacle.hasCounter(Obstacle.Counter.PUNCH)))
                 {
                     currentSprite = hitTexture;
                     screenAdjustment = -KNOCKBACK_DISTANCE;
@@ -372,9 +473,10 @@ namespace Platformer
                     PlaySound(voiceHit, VOICE_HIT_CHANCE, false);
                     heart.hit();
 
-                    if (currentObstacle == punchObstacleTexture)
+                    if (currentObstacle.hasCounter(Obstacle.Counter.PUNCH))
                     {
-                        obstaclePosition.X = OBSTACLE_DEADZONE;
+                        currentObstacle.counters = new Obstacle.Counter[0];
+                        currentObstacle.sprite = currentObstacle.destroyedSprite;
                     }
                 }
                 else
@@ -383,11 +485,12 @@ namespace Platformer
                 }
             }
 
-            if (obstaclePosition.X < playerPosition.X + PUNCHZONE && obstaclePosition.X > playerPosition.X)
+            if (currentObstacle.position.X < playerPosition.X + PUNCHZONE && currentObstacle.position.X > playerPosition.X)
             {
-                if (currentObstacle == punchObstacleTexture && currentSprite == punchTexture)
+                if (currentObstacle.hasCounter(Obstacle.Counter.PUNCH) && currentSprite == punchTexture)
                 {
-                    obstaclePosition.X = OBSTACLE_DEADZONE;
+                    currentObstacle.counters = new Obstacle.Counter[0];
+                    currentObstacle.sprite = currentObstacle.destroyedSprite;
                     PlaySound(voicePunch, VOICE_PUNCH_CHANCE, false);
                 }
             }
@@ -399,10 +502,16 @@ namespace Platformer
             {
                 if (chance >= random.NextDouble())
                 {
+                    if (currentSound != null)
+                    {
+                        currentSound.Stop();
+                        currentSound = null;
+                    }
+
                     Sound sound;
                     do
                     {
-                        sound = soundBank[random.Next(0, voiceHit.Length)];
+                        sound = soundBank[random.Next(0, soundBank.Length)];
                     } while (sound.chance < random.NextDouble());
                 
                     currentSound = sound.effect.CreateInstance();
@@ -416,11 +525,11 @@ namespace Platformer
             int i = 0;
             foreach (Texture2D background in backgrounds) 
             {
-                i++;
                 spriteBatch.Draw(background, new Vector2(backgroundPosition.X + (Util.scale(backgroundWidth) * i), backgroundPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+                i++;
             }
 
-            spriteBatch.Draw(currentObstacle, obstaclePosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+            spriteBatch.Draw(currentObstacle.sprite, currentObstacle.position, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
             spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
 
             Color uiColor;
@@ -431,7 +540,7 @@ namespace Platformer
 
             spriteBatch.Draw(uibg, Vector2.Zero, uiColor);
 
-            spriteBatch.DrawString(game.font, heart.performance.ToString(), new Vector2(10, 210), uiColor, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            spriteBatch.DrawString(game.font, heart.performance.ToString(), new Vector2(10, 150), uiColor, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
 
             heart.Draw(spriteBatch, 1080, 0);
 

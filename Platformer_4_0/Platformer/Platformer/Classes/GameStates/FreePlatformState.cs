@@ -21,7 +21,7 @@ namespace Platformer
 
         readonly static float LEFT_LIMIT = Util.scale(50);
         readonly static float RIGHT_LIMIT = Util.scale(900);
-        readonly static float CENTER = (RIGHT_LIMIT - LEFT_LIMIT) / 2 + (LEFT_LIMIT/3);
+        readonly static float CENTER = (RIGHT_LIMIT - LEFT_LIMIT) / 2 + (LEFT_LIMIT / 3);
 
         readonly static float RIGHT_HITZONE = Util.scale(200);
         readonly static float LEFT_HITZONE = Util.scale(300);
@@ -34,10 +34,14 @@ namespace Platformer
         readonly static float OBSTACLE_DEADZONE = OBSTACLE_CUT_OFF - 100.0f;
 
         readonly static float JUMP_DURATION = 40.0f;
-        readonly static float JUMP_MID_DURATION = JUMP_DURATION/2;
+        readonly static float JUMP_MID_DURATION = JUMP_DURATION / 2;
         readonly static float JUMP_BUFFER = 10.0f;
         readonly static float PUNCH_DURATION = 10.0f;
         readonly static float PUNCH_BUFFER = 5.0f;
+
+        readonly static float KNOCKBACK_DISTANCE = Util.scale(200);
+        readonly static float KNOCKBACK_DURATION = 20.0f;
+        readonly static float KNOCKBACK_BUFFER = -60.0f;
 
         static Texture2D hitTexture;
         static Texture2D jumpTexture;
@@ -52,19 +56,26 @@ namespace Platformer
         static Texture2D punchObstacleTexture;
         static Texture2D currentObstacle;
 
+        static Random random = new Random();
+
         Vector2 playerPosition;
         Vector2 bgPosition;
         Vector2 obstaclePosition;
 
-        float jumpTimer;
-        float punchTimer;
+        float jumpTimer = -50;
+        float punchTimer = -50;
+        float knockbackTimer = -50;
 
         //Controls
-        static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
-        static Keys[] leftKeys  = new Keys[] {  };
-        static Keys[] rightKeys = new Keys[] {  };
+        static Keys[] jumpKeys = new Keys[] { Keys.W, Keys.Space };
+        static Keys[] leftKeys = new Keys[] { };
+        static Keys[] rightKeys = new Keys[] { };
         static Keys[] slideKeys = new Keys[] { Keys.S };
         static Keys[] punchKeys = new Keys[] { Keys.D };
+
+        //Sound Effects
+        static SoundEffect currentSound;
+        static SoundEffect[] voiceHit;
 
         public FreePlatformState()
         {
@@ -85,6 +96,13 @@ namespace Platformer
             jumpObstacleTexture = manager.Load<Texture2D>("Sprites/Player/JumpObstacle");
             slideObstacleTexture = manager.Load<Texture2D>("Sprites/Player/SlideObstacle");
             punchObstacleTexture = manager.Load<Texture2D>("Sprites/Player/PunchObstacle");
+
+            voiceHit = new SoundEffect[] {
+                manager.Load<SoundEffect>("Voices/dr_oomph_01"),
+                manager.Load<SoundEffect>("Voices/dr_oomph_02"),
+                manager.Load<SoundEffect>("Voices/dr_oomph_03"),
+                manager.Load<SoundEffect>("Voices/dr_oomph_04"),
+            };
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
@@ -100,116 +118,146 @@ namespace Platformer
                 game.currentState = new MenuState();
             }
 
-            if (playerPosition.X > LEFT_LIMIT && Util.IsAnyKeyDown(game.keyboard, leftKeys))
+            if (knockbackTimer < 0)
             {
-                playerPosition.X -= DIRECTIONAL_INFLUENCE;
-            }
-
-            if (playerPosition.X < RIGHT_LIMIT &&  Util.IsAnyKeyDown(game.keyboard, rightKeys))
-            {
-                playerPosition.X += DIRECTIONAL_INFLUENCE;
-            }
-
-            if (Util.IsAnyKeyDown(game.keyboard, slideKeys))
-            {
-                currentSprite = slideTexture;
-            }
-
-            if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, punchKeys) && punchTimer < -PUNCH_BUFFER)
-            {
-                punchTimer = PUNCH_DURATION;
-            }
-            else
-            {
-                punchTimer--;
-            }
-
-            if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, jumpKeys) && jumpTimer < -JUMP_BUFFER)
-            {
-                jumpTimer = JUMP_DURATION;
-            }
-            else
-            {
-                jumpTimer -= (1/RUN_SPEED) * screenAdjustment;
-            }
-
-            if (punchTimer > 0)
-            {
-                currentSprite = punchTexture;
-            }
-
-            if (jumpTimer > 0)
-            {
-                currentSprite = jumpTexture;
-
-                float heightModifier;
-                if (jumpTimer > JUMP_MID_DURATION)
+                if (playerPosition.X > LEFT_LIMIT && Util.IsAnyKeyDown(game.keyboard, leftKeys))
                 {
-                    heightModifier = (jumpTimer - JUMP_MID_DURATION) / JUMP_MID_DURATION;
+                    playerPosition.X -= DIRECTIONAL_INFLUENCE;
+                }
+
+                if (playerPosition.X < RIGHT_LIMIT && Util.IsAnyKeyDown(game.keyboard, rightKeys))
+                {
+                    playerPosition.X += DIRECTIONAL_INFLUENCE;
+                }
+
+                if (Util.IsAnyKeyDown(game.keyboard, slideKeys))
+                {
+                    currentSprite = slideTexture;
+                    knockbackTimer = KNOCKBACK_BUFFER;
+                }
+
+                if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, punchKeys) && punchTimer < -PUNCH_BUFFER)
+                {
+                    punchTimer = PUNCH_DURATION;
+                    knockbackTimer = KNOCKBACK_BUFFER;
                 }
                 else
                 {
-                    heightModifier = (JUMP_MID_DURATION - jumpTimer) / JUMP_MID_DURATION;
+                    punchTimer--;
                 }
-                Console.WriteLine(heightModifier);
-                playerPosition.Y = Util.offsetY((GROUND_HEIGHT-Util.OFFSET)*heightModifier);
-            }
 
-            if (obstaclePosition.X < OBSTACLE_CUT_OFF)
-            {
-                switch (new Random().Next(0, 3))
+                if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, jumpKeys) && jumpTimer < -JUMP_BUFFER)
                 {
-                    case 0:
-                        currentObstacle = jumpObstacleTexture;
-                        obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(550)));
-                        break;
-                    case 1:
-                        currentObstacle = slideObstacleTexture;
-                        obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(-150)));
-                        break;
-                    case 2:
-                        currentObstacle = punchObstacleTexture;
-                        obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(50)));
-                        break;
+                    jumpTimer = JUMP_DURATION;
+                    knockbackTimer = KNOCKBACK_BUFFER;
                 }
-            }
+                else
+                {
+                    jumpTimer -= (1 / RUN_SPEED) * screenAdjustment;
+                }
 
-            if (obstaclePosition.X < playerPosition.X + RIGHT_HITZONE && obstaclePosition.X > playerPosition.X - LEFT_HITZONE)
-            {
-                if (currentObstacle == jumpObstacleTexture && currentSprite != jumpTexture
-                    || currentObstacle == slideObstacleTexture && currentSprite != slideTexture
-                    || currentObstacle == punchObstacleTexture && currentSprite != punchTexture) {
+                if (punchTimer > 0)
+                {
+                    currentSprite = punchTexture;
+                }
+
+                if (jumpTimer > 0)
+                {
+                    currentSprite = jumpTexture;
+
+                    float heightModifier;
+                    if (jumpTimer > JUMP_MID_DURATION)
+                    {
+                        heightModifier = (jumpTimer - JUMP_MID_DURATION) / JUMP_MID_DURATION;
+                    }
+                    else
+                    {
+                        heightModifier = (JUMP_MID_DURATION - jumpTimer) / JUMP_MID_DURATION;
+                    }
+                    playerPosition.Y = Util.offsetY((GROUND_HEIGHT - Util.OFFSET) * heightModifier);
+                }
+
+                if (obstaclePosition.X < OBSTACLE_CUT_OFF)
+                {
+                    switch (random.Next(0, 3))
+                    {
+                        case 0:
+                            currentObstacle = jumpObstacleTexture;
+                            obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(550)));
+                            break;
+                        case 1:
+                            currentObstacle = slideObstacleTexture;
+                            obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(-150)));
+                            break;
+                        case 2:
+                            currentObstacle = punchObstacleTexture;
+                            obstaclePosition = new Vector2(1280, Util.offsetY(Util.scale(50)));
+                            break;
+                    }
+                }
+
+                if (obstaclePosition.X < playerPosition.X + RIGHT_HITZONE && obstaclePosition.X > playerPosition.X - LEFT_HITZONE)
+                {
+                    if (currentObstacle == jumpObstacleTexture && currentSprite != jumpTexture
+                        || currentObstacle == slideObstacleTexture && currentSprite != slideTexture
+                        || currentObstacle == punchObstacleTexture && currentSprite != punchTexture)
+                    {
+                        currentSprite = hitTexture;
+                        currentSound = voiceHit[random.Next(0, voiceHit.Length)];
+                        currentSound.Play();
+                        screenAdjustment = -KNOCKBACK_DISTANCE;
+                        knockbackTimer = KNOCKBACK_DURATION;
+                        punchTimer = -PUNCH_BUFFER;
+                        jumpTimer = -JUMP_BUFFER;
+
+                        if (currentObstacle == punchObstacleTexture)
+                        {
+                            obstaclePosition.X = OBSTACLE_DEADZONE;
+                        }
+                    }
+                }
+
+                if (obstaclePosition.X < playerPosition.X + PUNCHZONE && obstaclePosition.X > playerPosition.X)
+                {
+                    if (currentObstacle == punchObstacleTexture && currentSprite == punchTexture)
+                    {
+                        obstaclePosition.X = OBSTACLE_DEADZONE;
+                    }
+                }
+
+                if (knockbackTimer <= KNOCKBACK_BUFFER || knockbackTimer == KNOCKBACK_DURATION)
+                {
+                    obstaclePosition.X -= screenAdjustment;
+                    bgPosition.X -= screenAdjustment;
+                    if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH) * 2) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
+                }
+                else
+                {
                     currentSprite = hitTexture;
-                    screenAdjustment = (int) (screenAdjustment * SPEED_ON_HIT);
+                    knockbackTimer--;
                 }
             }
-
-            if (obstaclePosition.X < playerPosition.X + PUNCHZONE && obstaclePosition.X > playerPosition.X)
+            else
             {
-                if (currentObstacle == punchObstacleTexture && currentSprite == punchTexture)
-                {
-                    obstaclePosition.X = OBSTACLE_DEADZONE;
-                }
+                currentSprite = hitTexture;
+                knockbackTimer--;
+
+                screenAdjustment = -KNOCKBACK_DISTANCE / KNOCKBACK_DURATION;
+                obstaclePosition.X -= screenAdjustment;
+                bgPosition.X -= screenAdjustment;
+                if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH) * 2) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
             }
-
-            bgPosition.X -= screenAdjustment;
-            if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH)) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
-
-            obstaclePosition.X -= screenAdjustment;
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
             float panelWidth = Util.scale(bgTexture.Width);
-            /*float coverage = 0;
-            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH*1.5; i++)
+            float coverage = 0;
+            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 2.5; i++)
             {
                 spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * i), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
                 coverage += panelWidth;
-            }*/
-            spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * 0), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
-            spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * 1), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
-            spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * 2), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+            }
 
             spriteBatch.Draw(currentObstacle, obstaclePosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
             spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);

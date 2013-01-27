@@ -536,13 +536,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sounds\DrDozer_7.wav">
-      <Name>DrDozer_7</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Sprites\UIBG.png">
       <Name>UIBG</Name>
       <Importer>TextureImporter</Importer>

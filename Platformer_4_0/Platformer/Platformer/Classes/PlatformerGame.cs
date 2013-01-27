@@ -24,10 +24,11 @@ namespace Platformer
         public readonly static float SCREEN_WIDTH;
         public readonly static float SCREEN_HEIGHT = 720.0f;
 
-        SoundEffect music;
-        SoundEffectInstance musicLoop;
+        public static SoundEffect music;
+        public static SoundEffectInstance musicIntro;
+        public static SoundEffectInstance musicLoop;
 
-        public GameState currentState = new MenuState();
+        public GameState currentState;
 
         // Resources for drawing.
         private GraphicsDeviceManager graphics;
@@ -107,24 +108,7 @@ namespace Platformer
             MiniGame5State.LoadContent(Content);
             Heart.LoadContent(Content);
 
-            music = Content.Load<SoundEffect>("Sounds/DrDozer_7");
-
-            /*winOverlay = Content.Load<Texture2D>("Overlays/you_win");
-            loseOverlay = Content.Load<Texture2D>("Overlays/you_lose");
-            diedOverlay = Content.Load<Texture2D>("Overlays/you_died");*/
-
-            //Known issue that you get exceptions if you use Media PLayer while connected to your PC
-            //See http://social.msdn.microsoft.com/Forums/en/windowsphone7series/thread/c8a243d2-d360-46b1-96bd-62b1ef268c66
-            //Which means its impossible to test this from VS.
-            //So we have to catch the exception and throw it away
-            /*try
-            {
-                MediaPlayer.IsRepeating = true;
-                MediaPlayer.Play(Content.Load<Song>("Sounds/Music"));
-            }
-            catch { }*/
-
-            //LoadNextLevel();
+            currentState = new MenuState();
         }
 
         protected override void Update(GameTime gameTime)
@@ -132,12 +116,15 @@ namespace Platformer
             HandleInput();
             currentState.Update(this, gameTime);
 
-            if (musicLoop == null)
+            if (musicLoop == null && music != null)
             {
                 musicLoop = music.CreateInstance();
                 musicLoop.Volume = Util.MUSIC_VOLUME;
+                musicLoop.IsLooped = true;
             }
-            if (musicLoop.State == SoundState.Stopped) musicLoop.Play();
+
+            if (musicLoop != null && musicLoop.State == SoundState.Stopped && (musicIntro == null || musicIntro.State == SoundState.Stopped))
+                musicLoop.Play();
         }
 
         private void HandleInput()
@@ -164,3 +151,4 @@ namespace Platformer
         }
     }
 }
+

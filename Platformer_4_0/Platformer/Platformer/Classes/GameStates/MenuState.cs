@@ -19,7 +19,7 @@ namespace Platformer
         static Keys[] cancelKeys = new Keys[] { Keys.Escape };
         static Keys[] upKeys     = new Keys[] { Keys.W, Keys.Up };
         static Keys[] downKeys   = new Keys[] { Keys.S, Keys.Down };
-        
+
         //Buttons
         static int selectedButton = 0;
         static int totalButtons = 0;
@@ -53,7 +53,24 @@ namespace Platformer
                 game.currentState = new FreePlatformState();
             }),
             new Button("Mini Games", 60, 120, delegate(PlatformerGame game) {
-                game.currentState = new MiniGameState();
+                //game.currentState = new MiniGameState();
+                Random random = new Random();
+                int randInt = random.Next(0, 3);
+                randInt = 0; //REMOVE THIS ONCE ALL MINIGAMES ARE INTEGRATED
+                switch (randInt)
+                {
+                    case 0:
+                        game.currentState = new MiniGame1State();
+                        break;
+                    case 1:
+                        game.currentState = new MiniGame2State();
+                        break;
+                    case 2:
+                        game.currentState = new MiniGame3State();
+                        break;
+                    default:
+                        break;
+                }
             }),
             new Button("Exit", 60, 150, delegate(PlatformerGame game) {
                 game.Exit();

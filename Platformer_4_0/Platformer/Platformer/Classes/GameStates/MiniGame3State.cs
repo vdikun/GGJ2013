@@ -26,13 +26,15 @@ namespace Platformer
 
         bool attackedByBugs;
         float timer = 0F;
+        bool stopUpdate = false;
 
         int countdown;
         int frameCounter;
+        int quitTimer = 40;
 
         // constants
         private const int BUG_SPEED = 5;
-        private const int MAX_NUMBER_BUGS = 5;
+        private const int MAX_NUMBER_BUGS = 3;
         private const float TIMER = 4.0F;
 
         public MiniGame3State()
@@ -65,59 +67,62 @@ namespace Platformer
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-            if (game.keyboard.IsKeyDown(Keys.Escape))
+            if (!stopUpdate)
             {
-                game.currentState = new MenuState();
-            }
-            if (countdown != 0)
-            {
-                frameCounter--;
-                if (frameCounter == 0) { countdown--; frameCounter = 40; }
-            }
-            else
-            {
-                timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-                // Update heart position according to mouse position
-                MouseState currentMouseState = new MouseState();
-                currentMouseState = Mouse.GetState();
-                float posDiff = currentMouseState.X - heartPosition.X;
-                heartPosition.X += posDiff * 0.1f;
-                if (heartPosition.X < 0) heartPosition.X = 0;
-                if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
-                posDiff = currentMouseState.Y - heartPosition.Y;
-                heartPosition.Y += posDiff * 0.1f;
-                if (heartPosition.Y < 0) heartPosition.Y = 0;
-                if (heartPosition.Y > 720 - heartTexture.Height) heartPosition.Y = 720 - heartTexture.Height;
-
-                // bug moving randomly towards heart
-                for (int i = 0; i < bugPositions.Count; i++)
+                if (game.keyboard.IsKeyDown(Keys.Escape))
                 {
-                    Vector2 bug = new Vector2(bugPositions[i].X, bugPositions[i].Y);
-                    Vector2 bugTarget = new Vector2(bugTargetPositions[i].X, bugTargetPositions[i].Y);
-                    Random random = new Random();
-
-                    if (bug.X < (bugTargetPositions[i].X + BUG_SPEED) && bug.X > (bugTargetPositions[i].X - BUG_SPEED))
-                        bugTarget.X = random.Next(-bugTexture.Width, (1280 - bugTexture.Width));
-                    if (bug.Y < (bugTargetPositions[i].Y + BUG_SPEED) && bug.Y > (bugTargetPositions[i].Y - BUG_SPEED))
-                        bugTarget.Y = random.Next(-bugTexture.Height, (720 - bugTexture.Height));
-                    if (bug.X < bugTargetPositions[i].X) bug.X += BUG_SPEED;
-                    if (bug.X > bugTargetPositions[i].X) bug.X -= BUG_SPEED;
-                    if (bug.Y < bugTargetPositions[i].Y) bug.Y += BUG_SPEED;
-                    if (bug.Y > bugTargetPositions[i].Y) bug.Y -= BUG_SPEED;
-
-                    bugPositions[i] = bug;
-                    bugTargetPositions[i] = bugTarget;
+                    game.currentState = new MenuState();
                 }
-
-                // check if heart touches any bug
-                foreach (Vector2 bug in bugPositions)
+                if (countdown != 0)
                 {
-                    float x = heartPosition.X + 70;
-                    float y = heartPosition.Y + 120;
+                    frameCounter--;
+                    if (frameCounter == 0) { countdown--; frameCounter = 40; }
+                }
+                else
+                {
+                    timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                    if (x < (bug.X + 30) && x > (bug.X - 30) && y < (bug.Y + 50) && y > (bug.Y - 50))
-                        attackedByBugs = true;
+                    // Update heart position according to mouse position
+                    MouseState currentMouseState = new MouseState();
+                    currentMouseState = Mouse.GetState();
+                    float posDiff = currentMouseState.X - heartPosition.X;
+                    heartPosition.X += posDiff * 0.1f;
+                    if (heartPosition.X < 0) heartPosition.X = 0;
+                    if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
+                    posDiff = currentMouseState.Y - heartPosition.Y;
+                    heartPosition.Y += posDiff * 0.1f;
+                    if (heartPosition.Y < 0) heartPosition.Y = 0;
+                    if (heartPosition.Y > 720 - heartTexture.Height) heartPosition.Y = 720 - heartTexture.Height;
+
+                    // bug moving randomly towards heart
+                    for (int i = 0; i < bugPositions.Count; i++)
+                    {
+                        Vector2 bug = new Vector2(bugPositions[i].X, bugPositions[i].Y);
+                        Vector2 bugTarget = new Vector2(bugTargetPositions[i].X, bugTargetPositions[i].Y);
+                        Random random = new Random();
+
+                        if (bug.X < (bugTargetPositions[i].X + BUG_SPEED) && bug.X > (bugTargetPositions[i].X - BUG_SPEED))
+                            bugTarget.X = random.Next(-bugTexture.Width, (1280 - bugTexture.Width));
+                        if (bug.Y < (bugTargetPositions[i].Y + BUG_SPEED) && bug.Y > (bugTargetPositions[i].Y - BUG_SPEED))
+                            bugTarget.Y = random.Next(-bugTexture.Height, (720 - bugTexture.Height));
+                        if (bug.X < bugTargetPositions[i].X) bug.X += BUG_SPEED;
+                        if (bug.X > bugTargetPositions[i].X) bug.X -= BUG_SPEED;
+                        if (bug.Y < bugTargetPositions[i].Y) bug.Y += BUG_SPEED;
+                        if (bug.Y > bugTargetPositions[i].Y) bug.Y -= BUG_SPEED;
+
+                        bugPositions[i] = bug;
+                        bugTargetPositions[i] = bugTarget;
+                    }
+
+                    // check if heart touches any bug
+                    foreach (Vector2 bug in bugPositions)
+                    {
+                        float x = heartPosition.X + 70;
+                        float y = heartPosition.Y + 120;
+
+                        if (x < (bug.X + 30) && x > (bug.X - 30) && y < (bug.Y + 50) && y > (bug.Y - 50))
+                            attackedByBugs = true;
+                    }
                 }
             }
         }
@@ -141,6 +146,20 @@ namespace Platformer
             else if (timer >= TIMER)
             {
                 spriteBatch.DrawString(game.font, "GOOD!", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+                stopUpdate = true;
+                quitTimer--;
+                if (quitTimer == 0)
+                {
+                    Util.gamesWon++;
+                    if (Util.gamesWon < Util.GAMES_TO_WIN)
+                    {
+                        Util.GotoRandomMinigame(game);
+                    }
+                    else
+                    {
+                        game.currentState = new CutsceneState();
+                    }
+                }
             }
             else
             {

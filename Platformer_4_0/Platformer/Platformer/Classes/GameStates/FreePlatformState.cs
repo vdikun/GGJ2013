@@ -345,7 +345,7 @@ namespace Platformer
                 if (backgrounds.Count <= 3)
                 {
                     PlaySound(voiceSuccess, 1.0f, true);
-                    GotoRandomMinigame(game);
+                    Util.GotoRandomMinigame(game);
                 }
 
                 currentSprite = runAnimTexture;
@@ -590,30 +590,6 @@ namespace Platformer
             heart.Draw(spriteBatch, 1080, 0);
 
             spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);
-        }
-
-        void GotoRandomMinigame(PlatformerGame game)
-        {
-            switch (random.Next(0, 5))
-            {
-                case 0:
-                    game.currentState = new MiniGame1State();
-                    break;
-                case 1:
-                    game.currentState = new MiniGame2State();
-                    break;
-                case 2:
-                    game.currentState = new MiniGame3State();
-                    break;
-                case 3:
-                    game.currentState = new MiniGame4State();
-                    break;
-                case 4:
-                    game.currentState = new MiniGame5State();
-                    break;
-                default:
-                    break;
-            }
         }
     }
 }

@@ -52,5 +52,29 @@ namespace Platformer
         {
             return OFFSET + input;
         }
+
+        public static void GotoRandomMinigame(PlatformerGame game)
+        {
+            switch (new Random().Next(0, 5))
+            {
+                case 0:
+                    game.currentState = new MiniGame1State();
+                    break;
+                case 1:
+                    game.currentState = new MiniGame2State();
+                    break;
+                case 2:
+                    game.currentState = new MiniGame3State();
+                    break;
+                case 3:
+                    game.currentState = new MiniGame4State();
+                    break;
+                case 4:
+                    game.currentState = new MiniGame5State();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

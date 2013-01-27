@@ -153,6 +153,7 @@ namespace Platformer
 
         protected override void Draw(GameTime gameTime)
         {
+            GraphicsDevice.Clear(new Color(226, 221, 217));
             spriteBatch.Begin();
             currentState.Draw(this, spriteBatch);
             spriteBatch.End();

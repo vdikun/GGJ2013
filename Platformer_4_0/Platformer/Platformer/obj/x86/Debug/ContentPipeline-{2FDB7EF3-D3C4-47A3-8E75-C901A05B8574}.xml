@@ -755,7 +755,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Base.xnb</Output>
-      <Time>2013-01-27T00:38:39.7222351-08:00</Time>
+      <Time>2013-01-27T01:38:56.590188-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Blue.png</Source>
@@ -764,7 +764,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Blue.xnb</Output>
-      <Time>2013-01-27T00:38:39.7372379-08:00</Time>
+      <Time>2013-01-27T01:39:07.8148969-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Dead.png</Source>
@@ -773,7 +773,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Dead.xnb</Output>
-      <Time>2013-01-27T00:38:39.7395791-08:00</Time>
+      <Time>2013-01-27T01:41:05.8656316-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Red.png</Source>
@@ -782,7 +782,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Red.xnb</Output>
-      <Time>2013-01-27T00:38:39.7529783-08:00</Time>
+      <Time>2013-01-27T01:39:18.2693131-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background1.png</Source>
@@ -791,7 +791,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background1.xnb</Output>
-      <Time>2013-01-27T00:38:39.0322659-08:00</Time>
+      <Time>2013-01-27T01:29:40.7791772-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background2.png</Source>
@@ -800,7 +800,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background2.xnb</Output>
-      <Time>2013-01-27T00:38:39.0683546-08:00</Time>
+      <Time>2013-01-27T01:29:50.7283331-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background3.png</Source>
@@ -809,7 +809,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background3.xnb</Output>
-      <Time>2013-01-27T00:38:39.0919029-08:00</Time>
+      <Time>2013-01-27T01:29:55.7763746-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background4.png</Source>
@@ -818,7 +818,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background4.xnb</Output>
-      <Time>2013-01-27T00:38:39.1221248-08:00</Time>
+      <Time>2013-01-27T01:30:00.2408936-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background5.png</Source>
@@ -827,7 +827,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background5.xnb</Output>
-      <Time>2013-01-27T00:38:39.145157-08:00</Time>
+      <Time>2013-01-27T01:30:04.6379156-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\DrDozer_7.wav</Source>
@@ -836,7 +836,16 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\DrDozer_7.xnb</Output>
-      <Time>2013-01-27T00:38:39.6928245-08:00</Time>
+      <Time>2013-01-27T01:09:48.1365804-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\UIBG.png</Source>
+      <Name>Sprites\UIBG</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\UIBG.xnb</Output>
+      <Time>2013-01-27T01:47:10.5966288-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

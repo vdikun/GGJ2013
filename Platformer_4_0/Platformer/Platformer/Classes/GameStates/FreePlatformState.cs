@@ -21,7 +21,7 @@ namespace Platformer
 
         readonly static float LEFT_LIMIT = Util.scale(50);
         readonly static float RIGHT_LIMIT = Util.scale(900);
-        readonly static float CENTER = (RIGHT_LIMIT - LEFT_LIMIT) / 2 + (LEFT_LIMIT / 3);
+        readonly static float CENTER = 75;
 
         readonly static float RIGHT_HITZONE = Util.scale(200);
         readonly static float LEFT_HITZONE = Util.scale(300);
@@ -62,6 +62,7 @@ namespace Platformer
         static Texture2D slideObstacleTexture;
         static Texture2D punchObstacleTexture;
         static Texture2D currentObstacle;
+        static Texture2D uibg;
 
         static Random random = new Random();
 
@@ -141,6 +142,8 @@ namespace Platformer
                 manager.Load<Texture2D>("Backgrounds/background4"),
                 manager.Load<Texture2D>("Backgrounds/background5"),
             };
+
+            uibg = manager.Load<Texture2D>("Sprites/UIBG");
 
             backgroundWidth = backgroundTextures[0].Width;
 
@@ -396,6 +399,8 @@ namespace Platformer
 
             spriteBatch.Draw(currentObstacle, obstaclePosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
             spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+
+            spriteBatch.Draw(uibg, Vector2.Zero, Color.White);
 
             spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);
         }

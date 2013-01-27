@@ -91,6 +91,7 @@ Content\Backgrounds\background3.xnb
 Content\Backgrounds\background4.xnb
 Content\Backgrounds\background5.xnb
 Content\Sounds\DrDozer_7.xnb
+Content\Sprites\UIBG.xnb
 Content\Levels\0.txt
 Content\Levels\2.txt
 Content\Levels\1.txt

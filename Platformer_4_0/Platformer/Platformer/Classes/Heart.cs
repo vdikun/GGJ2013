@@ -227,7 +227,7 @@ namespace Platformer
             }
             else if (heartState == State.Left)
             {
-                image = HEART_RED;
+                image = HEART_BLUE;
             }
             else if (heartState == State.Dead)
             {
@@ -235,7 +235,7 @@ namespace Platformer
             }
             else
             {
-                image = HEART_BLUE;
+                image = HEART_RED;
             }
                 spriteBatch.Draw(image, new Vector2(xPos, yPos), Color.White);
         }

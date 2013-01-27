@@ -34,25 +34,25 @@ namespace Platformer
             public string text;
             public ButtonAction action;
 
-            public Button(string text, int x, int y, ButtonAction action)
+            public Button(string text, ButtonAction action)
             {
-                this.index = MenuState.totalButtons;
+                this.index = totalButtons;
                 totalButtons++;
                 this.text = text;
-                this.x = x;
-                this.y = y;
+                this.x = 60;
+                this.y = 60 + (30*totalButtons);
                 this.action = action;
             }
         }
 
         static Button[] buttons = new Button[] {
-            new Button("Platforming", 60, 60, delegate(PlatformerGame game) {
+            new Button("Platforming", delegate(PlatformerGame game) {
                 game.currentState = new PlatformState();
             }),
-            new Button("Free Platforming", 60, 90, delegate(PlatformerGame game) {
+            new Button("Free Platforming", delegate(PlatformerGame game) {
                 game.currentState = new FreePlatformState();
             }),
-            new Button("Mini Games", 60, 120, delegate(PlatformerGame game) {
+            new Button("Mini Games", delegate(PlatformerGame game) {
                 //game.currentState = new MiniGameState();
                 Random random = new Random();
                 int randInt = random.Next(0, 3);
@@ -72,7 +72,16 @@ namespace Platformer
                         break;
                 }
             }),
-            new Button("Exit", 60, 150, delegate(PlatformerGame game) {
+            new Button("Mini Game 1", delegate(PlatformerGame game) {
+                game.currentState = new MiniGame1State();
+            }),
+            new Button("Mini Game 2", delegate(PlatformerGame game) {
+                game.currentState = new MiniGame2State();
+            }),
+            new Button("Mini Game 3", delegate(PlatformerGame game) {
+                game.currentState = new MiniGame3State();
+            }),
+            new Button("Exit", delegate(PlatformerGame game) {
                 game.Exit();
             }),
         };

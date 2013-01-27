@@ -14,6 +14,7 @@ namespace Platformer
 {
     class MiniGame1State : GameState
     {
+        static SoundEffect music;
 
         static Texture2D heartTexture;
         static Texture2D syringeTexture;
@@ -32,6 +33,11 @@ namespace Platformer
         bool hit = false;
         bool miss = false;
 
+        public MiniGame1State()
+        {
+            PlatformerGame.minigameMusic = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+        }
 
         public static void LoadContent(ContentManager manager)
         {

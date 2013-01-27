@@ -25,6 +25,7 @@ namespace Platformer
         public readonly static float SCREEN_HEIGHT = 720.0f;
 
         public static SoundEffect music;
+        public static SoundEffect minigameMusic;
         public static SoundEffectInstance musicIntro;
         public static SoundEffectInstance musicLoop;
 
@@ -97,6 +98,9 @@ namespace Platformer
 
             // Load textures
             placeholder = Content.Load<Texture2D>("Sprites/whitepixel");
+
+            // Load minigame music
+            minigameMusic = Content.Load<SoundEffect>("Sounds/main_theme_loop_minigames");
 
             FreePlatformState.LoadContent(Content);
             PlatformState.LoadContent(Content);

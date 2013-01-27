@@ -17,6 +17,7 @@ namespace Platformer
     {
         static Texture2D heartTexture0, heartTexture1, heartTexture2, dirt;
         static Random random = new Random();
+        static SoundEffect music;
 
         List<Vector4> particles = new List<Vector4>();
         Vector2 heartPosition = new Vector2(240, 240);
@@ -41,6 +42,9 @@ namespace Platformer
             shakeCounter = SHAKE_COUNTER;
             countdown = 4;
             frameCounter = 30;
+
+            PlatformerGame.minigameMusic = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
         }
 
         public static void LoadContent(ContentManager manager)

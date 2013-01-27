@@ -18,6 +18,7 @@ namespace Platformer
     {
         static Texture2D heartTexture;
         static Texture2D bugTexture;
+        static SoundEffect music;
 
         Vector2 heartPosition = new Vector2(240, 240);
         List<Vector2> bugPositions = new List<Vector2>();
@@ -36,6 +37,9 @@ namespace Platformer
 
         public MiniGame3State()
         {
+            PlatformerGame.minigameMusic = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+
             attackedByBugs = false;
 
             // generate bugs
@@ -120,7 +124,7 @@ namespace Platformer
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(game.font, "Mini Game 5 State", new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(game.font, "Mini Game 3 State", new Vector2(10, 10), Color.White);
             if (countdown == 4)
             {
                 spriteBatch.DrawString(game.font, "AVOID", new Vector2(480, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);

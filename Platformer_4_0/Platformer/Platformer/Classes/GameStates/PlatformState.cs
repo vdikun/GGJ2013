@@ -37,6 +37,7 @@ namespace Platformer
         int punchTimer;
 
         Heart heart1;
+        static SoundEffect minigameMusic;
 
         //Controls
         static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
@@ -63,6 +64,7 @@ namespace Platformer
             jumpObstacleTexture = manager.Load<Texture2D>("Sprites/Player/JumpObstacle");
             slideObstacleTexture = manager.Load<Texture2D>("Sprites/Player/SlideObstacle");
             punchObstacleTexture = manager.Load<Texture2D>("Sprites/Player/PunchObstacle");
+            //minigameMusic = manager.Load<SoundEffect>("Sounds/main_theme_loop_minigame");
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)

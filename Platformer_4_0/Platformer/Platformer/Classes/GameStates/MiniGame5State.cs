@@ -18,6 +18,8 @@ namespace Platformer
         static Texture2D heartTexture;
         static Texture2D patientTexture;
 
+        static SoundEffect music;
+
         Vector2 heartPosition = new Vector2(450, 240);
         Vector2 patientPosition = new Vector2(0, 0);
         Vector2 patientTargetPosition = new Vector2(0, 0);
@@ -39,6 +41,9 @@ namespace Platformer
         {
             currentMouseState = new MouseState();
             operationSuccessful = false;
+
+            PlatformerGame.minigameMusic = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
         }
 
         public static void LoadContent(ContentManager manager)

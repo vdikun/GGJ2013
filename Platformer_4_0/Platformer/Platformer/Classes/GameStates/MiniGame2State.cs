@@ -21,6 +21,8 @@ namespace Platformer
         static Texture2D heartDirty2Texture;
         static Texture2D currentHeartTexture;
 
+        static SoundEffect music;
+
         Vector2 tapPosition = new Vector2(1000, 10);
         Vector2 waterPosition;
         Vector2 heartPosition = new Vector2(300, 480);
@@ -39,7 +41,11 @@ namespace Platformer
         public MiniGame2State()
         {
             waterPosition = new Vector2(tapPosition.X - 23, tapPosition.Y + 200);
+            PlatformerGame.minigameMusic = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
         }
+
+
 
         public static void LoadContent(ContentManager manager)
         {

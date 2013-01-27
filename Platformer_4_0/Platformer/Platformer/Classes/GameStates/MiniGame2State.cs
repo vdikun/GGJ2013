@@ -14,55 +14,57 @@ namespace Platformer
 {
     class MiniGame2State : GameState
     {
+        static Texture2D tapTexture;
+        static Texture2D waterTexture;
 
-       
-        static Texture2D heartTexture;
-        static Texture2D syringeTexture;
+        Vector2 tapPosition = new Vector2(50, 10);
+        Vector2 waterPosition;
+        int tapGoal = 0;
 
-        Vector2 heartPosition = new Vector2(0, 400);
-        Vector2 syringePosition = new Vector2(0, 0);
-        static SoundEffect soundEffect;
-        static SoundEffectInstance soundEffectInstance;
+        int currentFrame = 0;
+
+        int countdown = 21;
+        int frameCountdown = 1;
+        int quitTimer = 40;
 
         public static void LoadContent(ContentManager manager)
         {
-            heartTexture = manager.Load<Texture2D>("Minigames/heart");
-            syringeTexture = manager.Load<Texture2D>("Minigames/syringe");
-            soundEffect = manager.Load<SoundEffect>("Voices/dr_kapow_01");
-            soundEffectInstance = soundEffect.CreateInstance();
+            tapTexture = manager.Load<Texture2D>("Minigames/Tap");
+            waterTexture = manager.Load<Texture2D>("Minigames/Water");
         }
-
-
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
             if (game.keyboard.IsKeyDown(Keys.Escape))
             {
                 game.currentState = new MenuState();
-                
             }
-            
 
-            if (game.keyboard.IsKeyDown(Keys.R))
+            if (countdown != 0)
             {
-
-
-                if (soundEffectInstance.State != SoundState.Playing)
+                frameCountdown--;
+                if (frameCountdown == 0)
                 {
-                    soundEffectInstance.Play();
+                    frameCountdown = 80;
+                    countdown--;
+                    Random random = new Random();
+                    tapGoal = random.Next(50, 1000);
                 }
-          
-         
-                
-                
-                
+                tapPosition.X += (tapGoal - tapPosition.X) * 0.1f;
+                waterPosition = new Vector2(tapPosition.X-23, tapPosition.Y + 200);
             }
+
+            currentFrame++;
+            if (currentFrame > 7) currentFrame = 0;
+
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
+            spriteBatch.Draw(waterTexture, waterPosition, new Rectangle(currentFrame/4 * 45, 100, waterTexture.Width / 2, waterTexture.Height-100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(tapTexture, tapPosition, null, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            
             spriteBatch.DrawString(game.font, "Mini Game 2 State", new Vector2(10, 10), Color.White);
-           
         }
     }
 }

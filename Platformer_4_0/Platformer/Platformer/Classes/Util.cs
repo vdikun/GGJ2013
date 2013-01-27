@@ -8,6 +8,9 @@ namespace Platformer
 {
     static class Util
     {
+        public static float SCALE = 0.5f;
+        public static float OFFSET = 300.0f;
+
         public static bool IsAnyKeyDown(KeyboardState keyboard, Keys[] keys)
         {
             foreach (Keys key in keys)
@@ -36,6 +39,16 @@ namespace Platformer
                     return true;
             }
             return false;
+        }
+
+        public static float scale(float input)
+        {
+            return SCALE * input;
+        }
+
+        public static float offsetY(float input)
+        {
+            return OFFSET + input;
         }
     }
 }

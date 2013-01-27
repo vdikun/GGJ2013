@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Content;
 
 namespace Platformer
 {
@@ -22,6 +23,9 @@ namespace Platformer
         //Buttons
         static int selectedButton = 0;
         static int totalButtons = 0;
+
+        //Art
+        static Texture2D background;
 
         private struct Button
         {
@@ -58,6 +62,11 @@ namespace Platformer
 
         private delegate void ButtonAction(PlatformerGame game);
 
+        public static void LoadContent(ContentManager manager)
+        {
+            background = manager.Load<Texture2D>("Backgrounds/Splash");
+        }
+
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
             if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, cancelKeys))
@@ -85,6 +94,8 @@ namespace Platformer
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
+            float scale = 1000 / PlatformerGame.SCREEN_WIDTH;
+            spriteBatch.Draw(background, new Rectangle(0, 0, (int) PlatformerGame.SCREEN_WIDTH, (int) (PlatformerGame.SCREEN_HEIGHT * scale)), Color.White);
             spriteBatch.DrawString(game.font, "Menu State", new Vector2(10, 10), Color.White);
 
             foreach (Button button in buttons) {

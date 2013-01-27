@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>RunSprite.png</Source>
+      <Name>RunSprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\Content\RunSprite.xnb</Output>
+      <Time>2013-01-26T14:06:50.4649896-08:00</Time>
+    </Item>
+    <Item>
+      <Source>JumpSprite.png</Source>
+      <Name>JumpSprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\Content\JumpSprite.xnb</Output>
+      <Time>2013-01-26T14:14:56.1469407-08:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{C16FE15C-BB34-4466-A5ED-EFD683060D13}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimationContent\</RootDirectory>
+      <LoggerRootDirectory>c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\</LoggerRootDirectory>
+      <IntermediateDirectory>c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>c:\users\scott\documents\visual studio 2010\Projects\SpriteAnimation\SpriteAnimation\SpriteAnimation\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-01-23T16:24:13.4245061-08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

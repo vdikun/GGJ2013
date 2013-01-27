@@ -51,6 +51,7 @@ Content\Sprites\Player\Running.xnb
 Content\Sprites\Player\SlideObstacle.xnb
 Content\Sprites\Player\Sliding.xnb
 Content\Sprites\Player\Standing.xnb
+Content\Backgrounds\Splash.xnb
 Content\Levels\0.txt
 Content\Levels\2.txt
 Content\Levels\1.txt

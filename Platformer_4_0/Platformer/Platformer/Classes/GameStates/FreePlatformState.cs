@@ -15,7 +15,7 @@ namespace Platformer
 
     class FreePlatformState : GameState
     {
-        readonly static float RUN_SPEED = Util.scale(25);
+        readonly static float RUN_SPEED = Util.scale(30);
         readonly static float DIRECTIONAL_INFLUENCE = Util.scale(10);
         readonly static float SPEED_INFLUENCE = 0.008f;
         readonly static float SPEED_ON_HIT = 0.9f;
@@ -28,7 +28,7 @@ namespace Platformer
         readonly static float LEFT_HITZONE = Util.scale(300);
         readonly static float PUNCHZONE = RIGHT_HITZONE + Util.scale(170);
 
-        readonly static float GROUND_HEIGHT = Util.offsetY(Util.scale(300));
+        readonly static float GROUND_HEIGHT = Util.offsetY(Util.scale(350));
         readonly static float JUMP_HEIGHT = Util.offsetY(Util.scale(150));
 
         readonly static float OBSTACLE_CUT_OFF = -10.0f;
@@ -68,6 +68,7 @@ namespace Platformer
         static Texture2D monitorBlip;
         static Texture2D obstacleGourneyTexture;
         static Texture2D obstaclePatientTexture;
+        static Texture2D obstaclePatientDestroyedTexture;
         static Texture2D obstacleWiresTexture;
 
         static Random random = new Random();
@@ -151,21 +152,21 @@ namespace Platformer
             {
                 position.X = random.Next((int)(PlatformerGame.SCREEN_WIDTH), (int)(PlatformerGame.SCREEN_WIDTH*1.4));
 
-                switch (random.Next(1, 3)) {
-                    case 1:
+                switch (random.Next(0, 3)) {
+                    case 0:
                         sprite = obstacleGourneyTexture;
-                        position.Y = Util.offsetY(Util.scale(450));
+                        position.Y = GROUND_HEIGHT + Util.offsetY(Util.scale(-300));
                         counters = new Counter[] { Counter.JUMP };
                         break;
-                    case 2:
+                    case 1:
                         sprite = obstacleWiresTexture;
                         position.Y = Util.offsetY(Util.scale(-120));
                         counters = new Counter[] { Counter.SLIDE };
                         break;
-                    case 3:
+                    case 2:
                         sprite = obstaclePatientTexture;
-                        destroyedSprite = obstaclePatientTexture;
-                        position.Y = Util.offsetY(Util.scale(50));
+                        destroyedSprite = obstaclePatientDestroyedTexture;
+                        position.Y = GROUND_HEIGHT + Util.offsetY(Util.scale(-350));
                         counters = new Counter[] { Counter.PUNCH };
                         break;
                 }
@@ -250,7 +251,7 @@ namespace Platformer
             standTexture = manager.Load<Texture2D>("Sprites/Player/Standing");
             obstacleGourneyTexture = manager.Load<Texture2D>("Sprites/GourneyJump");
             obstaclePatientTexture = manager.Load<Texture2D>("Sprites/PatientPunch");
-            //obstaclePatientDestroyedTexture = manager.Load<Texture2D>("Sprites/PatientPunchDestroyed");
+            obstaclePatientDestroyedTexture = manager.Load<Texture2D>("Sprites/PatientPunchDestroyed");
             obstacleWiresTexture = manager.Load<Texture2D>("Sprites/WiresDuck");
 
             backgroundTextures = new Texture2D[] {
@@ -314,8 +315,6 @@ namespace Platformer
                 new Sound(manager, "Voices/dr_outta_the_way_02", 0.3f),
                 new Sound(manager, "Voices/dr_surgeon_thru_01", 1.0f),
             };
-
-            //voiceDrDozerToTheRescue = 
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
@@ -330,14 +329,12 @@ namespace Platformer
                 if (backgrounds.Count <= 3)
                 {
                     PlaySound(voiceSuccess, 1.0f, true);
-                    game.currentState = new MiniGame1State();
+                    GotoRandomMinigame(game);
                 }
 
                 currentSprite = runTexture;
                 playerPosition.Y = GROUND_HEIGHT;
                 screenAdjustment = RUN_SPEED - ((CENTER - playerPosition.X) * SPEED_INFLUENCE);
-
-                // Temporary Check
 
                 if (knockbackTimer < 0)
                 {
@@ -564,6 +561,30 @@ namespace Platformer
             heart.Draw(spriteBatch, 1080, 0);
 
             spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);
+        }
+
+        void GotoRandomMinigame(PlatformerGame game)
+        {
+            switch (random.Next(0, 5))
+            {
+                case 0:
+                    game.currentState = new MiniGame1State();
+                    break;
+                case 1:
+                    game.currentState = new MiniGame2State();
+                    break;
+                case 2:
+                    game.currentState = new MiniGame3State();
+                    break;
+                case 3:
+                    game.currentState = new MiniGame4State();
+                    break;
+                case 4:
+                    game.currentState = new MiniGame5State();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Platformer
         readonly static float GROUND_HEIGHT = Util.offsetY(Util.scale(300));
         readonly static float JUMP_HEIGHT = Util.offsetY(Util.scale(150));
 
-        readonly static float OBSTACLE_CUT_OFF = -400.0f;
+        readonly static float OBSTACLE_CUT_OFF = -10.0f;
         readonly static float OBSTACLE_DEADZONE = OBSTACLE_CUT_OFF - 100.0f;
         readonly static int   OBSTACLE_MAX_ON_SCREEN = 2;
         readonly static int   OBSTACLE_MIN_TILL_ER = 4;
@@ -81,6 +81,7 @@ namespace Platformer
         float quitTimer = QUIT_DURATION;
 
         int obstaclesUntilER;
+        bool stopAddingRooms = false;
 
         float screenAdjustment;
 
@@ -224,6 +225,7 @@ namespace Platformer
 
         public FreePlatformState()
         {
+            obstaclesUntilER = random.Next(OBSTACLE_MIN_TILL_ER, OBSTACLE_MAX_TILL_ER);
             playerPosition = new Vector2(CENTER, GROUND_HEIGHT);
             backgroundPosition = new Vector2(0, Util.offsetY(0));
             currentObstacle = new Obstacle(Vector2.Zero);
@@ -259,7 +261,7 @@ namespace Platformer
                 manager.Load<Texture2D>("Backgrounds/background5"),
             };
             firstBackgroundTexture = manager.Load<Texture2D>("Backgrounds/Splash");
-            lastBackgroundTexture = manager.Load<Texture2D>("Backgrounds/background1");
+            lastBackgroundTexture = manager.Load<Texture2D>("Backgrounds/Splash");
 
             uibg = manager.Load<Texture2D>("Sprites/UIBG");
             monitorBlip = manager.Load<Texture2D>("Sprites/MonitorBlip");
@@ -325,6 +327,12 @@ namespace Platformer
 
             if (!failure)
             {
+                if (backgrounds.Count <= 3)
+                {
+                    PlaySound(voiceSuccess, 1.0f, true);
+                    game.currentState = new MiniGame1State();
+                }
+
                 currentSprite = runTexture;
                 playerPosition.Y = GROUND_HEIGHT;
                 screenAdjustment = RUN_SPEED - ((CENTER - playerPosition.X) * SPEED_INFLUENCE);
@@ -379,7 +387,7 @@ namespace Platformer
             {
                 backgroundPosition.X += Util.scale(backgroundWidth);
                 backgrounds.Dequeue();
-                backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length-1)]);
+                if (!stopAddingRooms) backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length-1)]);
             }
         }
 
@@ -454,9 +462,19 @@ namespace Platformer
 
         void HandleObstacles()
         {
-            if (currentObstacle.position.X < OBSTACLE_CUT_OFF)
+            if (currentObstacle.position.X < OBSTACLE_CUT_OFF-currentObstacle.sprite.Width)
             {
-                currentObstacle.Randomize();
+                if (backgrounds.Count >= 5)
+                {
+                    currentObstacle.Randomize();
+                    obstaclesUntilER--;
+
+                    if (obstaclesUntilER == 0)
+                    {
+                        backgrounds.Enqueue(lastBackgroundTexture);
+                        stopAddingRooms = true;
+                    }
+                }
             }
 
             if (currentObstacle.position.X < playerPosition.X + RIGHT_HITZONE && currentObstacle.position.X > playerPosition.X - LEFT_HITZONE)

@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 
-namespace gamejam_isha_1
+namespace HeartBeatMeter
 {
     enum Click
     {
@@ -33,6 +33,7 @@ namespace gamejam_isha_1
         private const int HEART_METER_DECREASE_VALUE = -1;
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
+        private const int MATCH_COUNTER = 2;
 
         // variables
         private int heartMeter;
@@ -140,7 +141,7 @@ namespace gamejam_isha_1
             {
                 matchCounter++;
                 Console.WriteLine("yes");
-                if (matchCounter == 3)
+                if (matchCounter == MATCH_COUNTER)
                 {
                     matchCounter = 0;
                     changeHeartMeter(HEART_METER_MATCH_VALUE);

@@ -1,6 +1,6 @@
 using System;
 
-namespace gamejam_isha_1
+namespace HeartBeatMeter
 {
 #if WINDOWS || XBOX
     static class Program

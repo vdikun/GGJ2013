@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace gamejam_isha_1
+namespace HeartBeatMeter
 {
     /// <summary>
     /// This is the main type for your game

@@ -101,6 +101,11 @@ Content\Sounds\main_theme_loop_minigames.xnb
 Content\Sounds\titlescreen.xnb
 Content\Sprites\MonitorBlip.xnb
 Content\Sounds\Heart_Pump_A1.xnb
+Content\Backgrounds\openingbackground.xnb
+Content\Sprites\Nurses.xnb
+Content\Sprites\Patient.xnb
+Content\Sprites\GourneyJump.xnb
+Content\Sprites\PatientPunch.xnb
 Content\Levels\0.txt
 Content\Levels\2.txt
 Content\Levels\1.txt

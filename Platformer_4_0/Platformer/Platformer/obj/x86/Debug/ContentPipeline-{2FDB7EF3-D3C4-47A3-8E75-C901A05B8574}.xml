@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Hit.xnb</Output>
-      <Time>2013-01-27T02:19:49.43835-08:00</Time>
+      <Time>2013-01-27T10:40:27.3620795-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Jumping.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Punching.xnb</Output>
-      <Time>2013-01-27T02:19:49.4428927-08:00</Time>
+      <Time>2013-01-27T10:40:03.1035915-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\PunchObstacle.png</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Sliding.xnb</Output>
-      <Time>2013-01-27T02:19:49.4448936-08:00</Time>
+      <Time>2013-01-27T10:39:27.0206545-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Standing.png</Source>
@@ -927,6 +927,51 @@
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\Heart_Pump_A1.xnb</Output>
       <Time>2013-01-27T04:31:06.6739202-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\openingbackground.png</Source>
+      <Name>Backgrounds\openingbackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\openingbackground.xnb</Output>
+      <Time>2013-01-27T10:09:31.6663444-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Nurses.png</Source>
+      <Name>Sprites\Nurses</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Nurses.xnb</Output>
+      <Time>2013-01-27T10:17:09.8336007-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Patient.png</Source>
+      <Name>Sprites\Patient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Patient.xnb</Output>
+      <Time>2013-01-27T10:14:57.6611694-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\GourneyJump.png</Source>
+      <Name>Sprites\GourneyJump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\GourneyJump.xnb</Output>
+      <Time>2013-01-27T10:29:09.2649118-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\PatientPunch.png</Source>
+      <Name>Sprites\PatientPunch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\PatientPunch.xnb</Output>
+      <Time>2013-01-27T10:28:35.491136-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

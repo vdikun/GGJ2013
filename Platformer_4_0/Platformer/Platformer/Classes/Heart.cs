@@ -54,7 +54,7 @@ namespace Platformer
         private const int HEART_METER_DECREASE_VALUE = -2;
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
-        private const int MATCH_COUNTER = 2;
+        private const int MATCH_COUNTER = 1;
         private const int TIME_LAG = 1;
 
         // variables

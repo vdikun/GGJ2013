@@ -312,7 +312,7 @@ namespace Platformer
                 new Sound(manager, "Voices/dr_surgeon_thru_01", 1.0f),
             };
 
-            voiceDrDozerToTheRescue = 
+            //voiceDrDozerToTheRescue = 
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)

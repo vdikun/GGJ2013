@@ -64,11 +64,11 @@ namespace Platformer
         static Texture2D slideTexture;
         static Texture2D standTexture;
         static Texture2D currentSprite;
-        static Texture2D jumpObstacleTexture;
-        static Texture2D slideObstacleTexture;
-        static Texture2D punchObstacleTexture;
         static Texture2D uibg;
         static Texture2D monitorBlip;
+        static Texture2D obstacleGourneyTexture;
+        static Texture2D obstaclePatientTexture;
+        static Texture2D obstacleWiresTexture;
 
         static Random random = new Random();
 
@@ -152,18 +152,18 @@ namespace Platformer
 
                 switch (random.Next(1, 3)) {
                     case 1:
-                        sprite = jumpObstacleTexture;
-                        position.Y = Util.offsetY(Util.scale(550));
+                        sprite = obstacleGourneyTexture;
+                        position.Y = Util.offsetY(Util.scale(450));
                         counters = new Counter[] { Counter.JUMP };
                         break;
                     case 2:
-                        sprite = slideObstacleTexture;
-                        position.Y = Util.offsetY(Util.scale(-150));
+                        sprite = obstacleWiresTexture;
+                        position.Y = Util.offsetY(Util.scale(-120));
                         counters = new Counter[] { Counter.SLIDE };
                         break;
                     case 3:
-                        sprite = punchObstacleTexture;
-                        destroyedSprite = punchObstacleTexture;
+                        sprite = obstaclePatientTexture;
+                        destroyedSprite = obstaclePatientTexture;
                         position.Y = Util.offsetY(Util.scale(50));
                         counters = new Counter[] { Counter.PUNCH };
                         break;
@@ -246,9 +246,10 @@ namespace Platformer
             runTexture = manager.Load<Texture2D>("Sprites/Player/Running");
             slideTexture = manager.Load<Texture2D>("Sprites/Player/Sliding");
             standTexture = manager.Load<Texture2D>("Sprites/Player/Standing");
-            jumpObstacleTexture = manager.Load<Texture2D>("Sprites/Player/JumpObstacle");
-            slideObstacleTexture = manager.Load<Texture2D>("Sprites/Player/SlideObstacle");
-            punchObstacleTexture = manager.Load<Texture2D>("Sprites/Player/PunchObstacle");
+            obstacleGourneyTexture = manager.Load<Texture2D>("Sprites/GourneyJump");
+            obstaclePatientTexture = manager.Load<Texture2D>("Sprites/PatientPunch");
+            //obstaclePatientDestroyedTexture = manager.Load<Texture2D>("Sprites/PatientPunchDestroyed");
+            obstacleWiresTexture = manager.Load<Texture2D>("Sprites/WiresDuck");
 
             backgroundTextures = new Texture2D[] {
                 manager.Load<Texture2D>("Backgrounds/background1"),

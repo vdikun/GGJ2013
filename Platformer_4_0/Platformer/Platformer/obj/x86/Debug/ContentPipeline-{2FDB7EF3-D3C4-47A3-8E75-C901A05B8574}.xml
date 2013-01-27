@@ -845,7 +845,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\UIBG.xnb</Output>
-      <Time>2013-01-27T03:15:03.9774063-08:00</Time>
+      <Time>2013-01-27T03:21:37.4367455-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\OpenWoundGuy.png</Source>
@@ -917,7 +917,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonitorBlip.xnb</Output>
-      <Time>2013-01-27T03:18:18.288024-08:00</Time>
+      <Time>2013-01-27T03:21:37.3377335-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

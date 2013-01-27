@@ -47,11 +47,11 @@ namespace Platformer
         
         // constants
         private const int BEAT_PATTERN_LENGTH = 2;
-        public const int HEART_METER_INIT = 30;
+        public const int HEART_METER_INIT = 50;
         public const int HEART_METER_UP_BOUND = 50;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
-        private const int HEART_METER_DECREASE_VALUE = -1;
+        private const int HEART_METER_DECREASE_VALUE = -2;
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
         private const int MATCH_COUNTER = 2;

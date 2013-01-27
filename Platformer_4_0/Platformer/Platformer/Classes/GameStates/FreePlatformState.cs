@@ -25,7 +25,7 @@ namespace Platformer
 
         readonly static float RIGHT_HITZONE = Util.scale(200);
         readonly static float LEFT_HITZONE = Util.scale(300);
-        readonly static float PUNCHZONE = RIGHT_HITZONE + Util.scale(100);
+        readonly static float PUNCHZONE = RIGHT_HITZONE + Util.scale(170);
 
         readonly static float GROUND_HEIGHT = Util.offsetY(Util.scale(300));
         readonly static float JUMP_HEIGHT = Util.offsetY(Util.scale(150));
@@ -86,8 +86,8 @@ namespace Platformer
 
         struct Sound
         {
-            SoundEffect effect;
-            float chance;
+            public SoundEffect effect;
+            public float chance;
 
             public Sound(ContentManager manager, string path, float chance)
             {
@@ -188,7 +188,7 @@ namespace Platformer
                 {
                     obstaclePosition.X -= screenAdjustment;
                     bgPosition.X -= screenAdjustment;
-                    if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH) * 2) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
+                    if (bgPosition.X < Util.scale(-bgTexture.Width) * 2) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
                 }
                 else
                 {
@@ -305,12 +305,11 @@ namespace Platformer
                     || currentObstacle == punchObstacleTexture && currentSprite != punchTexture)
                 {
                     currentSprite = hitTexture;
-                    //currentSound = voiceHit[random.Next(0, voiceHit.Length)].CreateInstance();
-                    //currentSound.Play();
                     screenAdjustment = -KNOCKBACK_DISTANCE;
                     knockbackTimer = KNOCKBACK_DURATION;
                     punchTimer = -PUNCH_BUFFER;
                     jumpTimer = -JUMP_BUFFER;
+                    PlaySound(voiceHit, 1.0f, false);
 
                     if (currentObstacle == punchObstacleTexture)
                     {
@@ -324,6 +323,24 @@ namespace Platformer
                 if (currentObstacle == punchObstacleTexture && currentSprite == punchTexture)
                 {
                     obstaclePosition.X = OBSTACLE_DEADZONE;
+                }
+            }
+        }
+
+        void PlaySound(Sound[] soundBank, float chance, bool priority)
+        {
+            if (priority || currentSound == null || currentSound.State != SoundState.Playing)
+            {
+                if (chance >= random.NextDouble())
+                {
+                    Sound sound;
+                    do
+                    {
+                        sound = soundBank[random.Next(0, voiceHit.Length)];
+                    } while (sound.chance < random.NextDouble());
+                
+                    currentSound = sound.effect.CreateInstance();
+                    currentSound.Play();
                 }
             }
         }

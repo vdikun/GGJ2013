@@ -831,6 +831,24 @@
       <Extra>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\GameJamContinue.wma</Extra>
       <Time>2013-01-26T22:18:50.3392586-08:00</Time>
     </Item>
+    <Item>
+      <Source>Minigames\heartDirty1.png</Source>
+      <Name>Minigames\heartDirty1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\heartDirty1.xnb</Output>
+      <Time>2013-01-26T22:39:44.9568453-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Minigames\heartDirty2.png</Source>
+      <Name>Minigames\heartDirty2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\heartDirty2.xnb</Output>
+      <Time>2013-01-26T22:42:52.5434867-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{2FDB7EF3-D3C4-47A3-8E75-C901A05B8574}</ContentProjectGUID>

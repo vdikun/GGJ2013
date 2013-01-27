@@ -92,6 +92,8 @@ Content\Sounds\DrDozer_7.xnb
 Content\Sounds\DrDozer_7.wma
 Content\Sounds\GameJamContinue.xnb
 Content\Sounds\GameJamContinue.wma
+Content\Minigames\heartDirty1.xnb
+Content\Minigames\heartDirty2.xnb
 Content\Levels\0.txt
 Content\Levels\2.txt
 Content\Levels\1.txt

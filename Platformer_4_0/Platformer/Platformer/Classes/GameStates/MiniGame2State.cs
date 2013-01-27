@@ -16,9 +16,14 @@ namespace Platformer
     {
         static Texture2D tapTexture;
         static Texture2D waterTexture;
+        static Texture2D heartTexture;
+        static Texture2D heartDirty1Texture;
+        static Texture2D heartDirty2Texture;
+        static Texture2D currentHeartTexture;
 
         Vector2 tapPosition = new Vector2(50, 10);
         Vector2 waterPosition;
+        Vector2 heartPosition = new Vector2(0, 480);
         int tapGoal = 0;
 
         int currentFrame = 0;
@@ -31,6 +36,10 @@ namespace Platformer
         {
             tapTexture = manager.Load<Texture2D>("Minigames/Tap");
             waterTexture = manager.Load<Texture2D>("Minigames/Water");
+            heartTexture = manager.Load<Texture2D>("Minigames/heart");
+            heartDirty1Texture = manager.Load<Texture2D>("Minigames/heartDirty1");
+            heartDirty2Texture = manager.Load<Texture2D>("Minigames/heartDirty2");
+            currentHeartTexture = heartDirty2Texture;
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
@@ -40,6 +49,11 @@ namespace Platformer
                 game.currentState = new MenuState();
             }
 
+            float posDiff = Mouse.GetState().X - heartPosition.X;
+            heartPosition.X += posDiff * 0.1f;
+            if (heartPosition.X < 0) heartPosition.X = 0;
+            if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
+            
             if (countdown != 0)
             {
                 frameCountdown--;
@@ -63,7 +77,8 @@ namespace Platformer
         {
             spriteBatch.Draw(waterTexture, waterPosition, new Rectangle(currentFrame/4 * 45, 100, waterTexture.Width / 2, waterTexture.Height-100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
             spriteBatch.Draw(tapTexture, tapPosition, null, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
-            
+            spriteBatch.Draw(currentHeartTexture, heartPosition, Color.White);
+
             spriteBatch.DrawString(game.font, "Mini Game 2 State", new Vector2(10, 10), Color.White);
         }
     }

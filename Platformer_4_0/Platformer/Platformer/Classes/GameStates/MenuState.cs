@@ -90,6 +90,7 @@ namespace Platformer
         public MenuState()
         {
             PlatformerGame.music = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
         }
 
         public static void LoadContent(ContentManager manager)

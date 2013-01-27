@@ -106,6 +106,7 @@ namespace Platformer
             MiniGame3State.LoadContent(Content);
             MiniGame4State.LoadContent(Content);
             MiniGame5State.LoadContent(Content);
+            CutsceneState.LoadContent(Content);
             Heart.LoadContent(Content);
 
             currentState = new MenuState();

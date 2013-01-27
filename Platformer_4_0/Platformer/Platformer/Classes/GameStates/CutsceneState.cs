@@ -25,6 +25,7 @@ namespace Platformer
         public CutsceneState()
         {
             PlatformerGame.music = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)

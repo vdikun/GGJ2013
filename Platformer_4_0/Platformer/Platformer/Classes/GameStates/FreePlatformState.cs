@@ -74,6 +74,9 @@ namespace Platformer
         static Texture2D obstacleWiresTexture;
         static Texture2D monitorBlipTexture;
 
+        static SoundEffect music;
+        static SoundEffect introMusic;
+
         //List<Vector2> blipPositions = new List<Vector2>();
         Vector2[] blipPositions = {};
 
@@ -252,6 +255,12 @@ namespace Platformer
             backgrounds.Enqueue(firstBackgroundTexture);
             float coverage = Util.scale(backgroundWidth);
 
+            PlatformerGame.musicIntro = introMusic.CreateInstance();
+            PlatformerGame.musicIntro.Volume = Util.MUSIC_VOLUME;
+            PlatformerGame.musicIntro.Play();
+            PlatformerGame.music = music;
+            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+
             for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 3; i++)
             {
                 backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
@@ -337,6 +346,9 @@ namespace Platformer
                 new Sound(manager, "Voices/dr_outta_the_way_02", 0.3f),
                 new Sound(manager, "Voices/dr_surgeon_thru_01", 1.0f),
             };
+
+            music = manager.Load<SoundEffect>("Sounds/main_theme_intro");
+            introMusic = manager.Load<SoundEffect>("Sounds/main_theme_loop");
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)

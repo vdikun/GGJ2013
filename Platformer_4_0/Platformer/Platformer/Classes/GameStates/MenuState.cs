@@ -54,7 +54,7 @@ namespace Platformer
         }
 
         static Button[] buttons = new Button[] {
-            /*
+            
             new Button("Platforming", delegate(PlatformerGame game) {
                 game.currentState = new PlatformState();
             }),
@@ -80,7 +80,7 @@ namespace Platformer
             new Button("Exit", delegate(PlatformerGame game) {
                 game.Exit();
             }),
-             * */
+             
         };
 
         private delegate void ButtonAction(PlatformerGame game);
@@ -99,11 +99,11 @@ namespace Platformer
 
             if (Util.IsAnyKeyDown(game.keyboard, acceptKeys))
             {
-                //buttons[selectedButton].action.BeginInvoke(game, null, null);
-                game.currentState = new FreePlatformState();
+                buttons[selectedButton].action.BeginInvoke(game, null, null);
+                //game.currentState = new FreePlatformState();
             }
 
-            /*
+            
             if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, downKeys))
             {
                 selectedButton++;
@@ -115,7 +115,7 @@ namespace Platformer
                 selectedButton--;
                 if (selectedButton < 0) selectedButton = totalButtons-1;
             }
-             * */
+             
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)

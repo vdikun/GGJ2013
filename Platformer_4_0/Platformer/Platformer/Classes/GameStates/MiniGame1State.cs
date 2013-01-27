@@ -32,6 +32,7 @@ namespace Platformer
         bool hit = false;
         bool miss = false;
 
+
         public static void LoadContent(ContentManager manager)
         {
             heartTexture = manager.Load<Texture2D>("Minigames/heart");
@@ -71,8 +72,24 @@ namespace Platformer
                 {
                     quitTimer--;
                 }
-                if (quitTimer == 0) game.currentState = new MenuState();
-
+                if (quitTimer == 0)
+                {
+                    if (hit) {
+                        Util.gamesWon++;
+                        if (Util.gamesWon < Util.GAMES_TO_WIN)
+                        {
+                            Util.GotoRandomMinigame(game);
+                        }
+                        else
+                        {
+                            game.currentState = new CutsceneState();
+                        }
+                    }
+                    else { 
+                        Util.GotoRandomMinigame(game);
+                    }                        
+                }
+                
                 syringeRect = new Rectangle((int)syringePosition.X + 28, (int)syringePosition.Y + 227, 2, 56);
                 heartRect = new Rectangle((int)heartPosition.X, (int)heartPosition.Y + 100, (int)heartTexture.Width, (int)heartTexture.Height - 100);
                 if (syringeRect.Intersects(heartRect))

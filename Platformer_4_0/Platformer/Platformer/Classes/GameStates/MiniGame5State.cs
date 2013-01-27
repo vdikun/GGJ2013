@@ -105,7 +105,18 @@ namespace Platformer
             {
                 spriteBatch.DrawString(game.font, "GOOD!", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
                 quitTimer--;
-                if (quitTimer == 0) game.currentState = new MenuState();
+                if (quitTimer == 0)
+                {
+                        Util.gamesWon++;
+                        if (Util.gamesWon < Util.GAMES_TO_WIN)
+                        {
+                            Util.GotoRandomMinigame(game);
+                        }
+                        else
+                        {
+                            game.currentState = new CutsceneState();
+                        }
+                }
             }
             else
             {

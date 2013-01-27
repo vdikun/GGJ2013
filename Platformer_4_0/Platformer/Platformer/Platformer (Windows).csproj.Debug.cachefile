@@ -92,6 +92,10 @@ Content\Sounds\DrDozer_7.xnb
 Content\Sounds\GameJamContinue.xnb
 Content\Minigames\heartDirty1.xnb
 Content\Minigames\heartDirty2.xnb
+Content\Sprites\Heart_Base.xnb
+Content\Sprites\Heart_Blue.xnb
+Content\Sprites\Heart_Dead.xnb
+Content\Sprites\Heart_Red.xnb
 Content\Sounds\DrDozer_7.wma
 Content\Sounds\GameJamContinue.wma
 Content\Levels\0.txt

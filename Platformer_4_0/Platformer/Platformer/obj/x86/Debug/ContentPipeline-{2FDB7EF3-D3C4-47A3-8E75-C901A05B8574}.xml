@@ -849,6 +849,42 @@
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\heartDirty2.xnb</Output>
       <Time>2013-01-26T22:42:52.5434867-08:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\Heart_Base.png</Source>
+      <Name>Sprites\Heart_Base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Base.xnb</Output>
+      <Time>2013-01-26T20:17:19.0484304-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Heart_Blue.png</Source>
+      <Name>Sprites\Heart_Blue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Blue.xnb</Output>
+      <Time>2013-01-26T20:17:19.0494309-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Heart_Dead.png</Source>
+      <Name>Sprites\Heart_Dead</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Dead.xnb</Output>
+      <Time>2013-01-26T23:02:17.3822482-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Heart_Red.png</Source>
+      <Name>Sprites\Heart_Red</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Red.xnb</Output>
+      <Time>2013-01-26T20:17:19.0504314-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{2FDB7EF3-D3C4-47A3-8E75-C901A05B8574}</ContentProjectGUID>

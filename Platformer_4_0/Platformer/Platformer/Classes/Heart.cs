@@ -23,6 +23,23 @@ namespace Platformer
         Right = 1
     }
 
+    enum State
+    {
+        Default = 0,
+        Left = 1,
+        Right = 2,
+        Dead = 3
+    }
+
+    enum Performance
+    {
+        VerySlow = 0,
+        Slow = 1,
+        Perfect = 2,
+        Fast = 3,
+        VeryFast = 4
+    }
+
     class Heart
     {
         
@@ -30,6 +47,7 @@ namespace Platformer
         
         // constants
         private const int BEAT_PATTERN_LENGTH = 2;
+        public const int HEART_METER_INIT = 10;
         public const int HEART_METER_UP_BOUND = 100;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
@@ -37,14 +55,16 @@ namespace Platformer
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
         private const int MATCH_COUNTER = 2;
+        private const int TIME_LAG = 1;
 
         // variables
-        private int heartMeter;
+        public int heartMeter;
         private Click[] beatPattern, clickPattern;
         private int beatPatternLength;
         private float beatTimer;
         private float autoTimer;
-        
+        private State heartState;
+        private Performance performance;
 
         //other variables
         private float oldTime;
@@ -52,19 +72,36 @@ namespace Platformer
         private float[] timeDiff;
         private int matchCounter;
 
+        // heart anmation frames
+        private static Texture2D HEART_BASE;
+        private static Texture2D HEART_RED;
+        private static Texture2D HEART_BLUE;
+        private static Texture2D HEART_DEAD;
+        private static Texture2D LIGHT_ON;
+        private static Texture2D LIGHT_OFF;
+
         public Heart()
         {
-            heartMeter = 80;    // Initial value of the Heart meter
+            heartMeter = HEART_METER_INIT;    // Initial value of the Heart meter
             beatPatternLength = BEAT_PATTERN_LENGTH;
-            beatPattern = new Click[] {Click.Left, Click.Right};
+            beatPattern = new Click[] { Click.Left, Click.Right };
             beatTimer = BEAT_TIMER;
             // assignBeatPattern();    // assign random click pattern + time width
             clickPattern = new Click[beatPatternLength];    // to store clicks by user
             timeDiff = new float[beatPatternLength];    // to store time diff between clicks
             oldTime = 0F;
+            heartState = State.Default;
+            performance = Performance.Perfect;
         }
 
-        public int getHeartMeter() { return heartMeter; }
+        public static void LoadContent(ContentManager contentManager)
+        {
+
+            HEART_BASE = contentManager.Load<Texture2D>("Sprites/Heart_Base");
+            HEART_RED = contentManager.Load<Texture2D>("Sprites/Heart_Red");
+            HEART_BLUE  = contentManager.Load<Texture2D>("Sprites/Heart_Blue");
+            HEART_DEAD = contentManager.Load<Texture2D>("Sprites/Heart_Dead");
+        }
 
         void changeHeartMeter(int change) 
         {
@@ -74,7 +111,7 @@ namespace Platformer
             { heartMeter = HEART_METER_LOW_BOUND; }
             else if ((heartMeter + change) > HEART_METER_UP_BOUND)
             { heartMeter = HEART_METER_UP_BOUND; }
-            Console.WriteLine("Heartmeter " + getHeartMeter());
+            Console.WriteLine("Heartmeter " + heartMeter);
         }
 
         void assignBeatPattern()
@@ -108,11 +145,27 @@ namespace Platformer
             if (avgTime < (beatTimer - 0.1F))
             {
                 Console.WriteLine("Take it slow!");
+                performance = Performance.Fast;
                 return false;
+            }
+            else if (avgTime < (beatTimer - 0.2F))
+            {
+                Console.WriteLine("Way too fast....");
+                performance = Performance.VeryFast;
+                return false;
+
+            }
+            else if (avgTime > (beatTimer + 0.3F))
+            {
+                Console.WriteLine(".......");
+                performance = Performance.VerySlow;
+                return false;
+
             }
             else if (avgTime > (beatTimer + 0.15F))
             {
                 Console.WriteLine("Come on Grandma....");
+                performance = Performance.Slow;
                 return false;
 
             }
@@ -124,7 +177,9 @@ namespace Platformer
                     if (clickPattern[i] != beatPattern[i])
                         return false;
                 }
-            return true;
+            Console.WriteLine("Excellent!");
+            performance = Performance.Perfect;
+            return true;             // user gets points
         }
 
 
@@ -163,35 +218,81 @@ namespace Platformer
         /// 
         /// </summary>
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, int xPos, int yPos)
         {
-            
+            Texture2D image;
+            if (heartState == State.Default)
+            {
+                image = HEART_BASE;
+            }
+            else if (heartState == State.Left)
+            {
+                image = HEART_RED;
+            }
+            else if (heartState == State.Dead)
+            {
+                image = HEART_DEAD;
+            }
+            else
+            {
+                image = HEART_BLUE;
+            }
+                spriteBatch.Draw(image, new Vector2(xPos, yPos), Color.White);
         }
 
         public virtual void Update(GameTime gameTime)
         {
             // Automatic decrease of HeartMeter with time
-            autoTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (autoTimer >= TIMER)
+            if (heartMeter > 0)
             {
-                autoTimer = 0F;
-                changeHeartMeter(HEART_METER_DECREASE_VALUE);
+                autoTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (autoTimer >= TIMER)
+                {
+                    autoTimer = 0F;
+                    changeHeartMeter(HEART_METER_DECREASE_VALUE);
+                }
+
+                // Mouse Click Input
+                // click patterns
+                if (previousMouseState.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                {
+
+                    time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
+                    oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                    addToClickPattern(Click.Left, time);
+
+                }
+
+                else if (previousMouseState.RightButton == ButtonState.Released && Mouse.GetState().RightButton == ButtonState.Pressed)
+                {
+                    time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
+                    oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                    addToClickPattern(Click.Right, time);
+                }
             }
 
-            // Mouse Click Input
-            if (previousMouseState.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            // heart state
+            if (heartState != State.Dead)
             {
-     
-                time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
-                oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
-                addToClickPattern(Click.Left, time);
-            }
-
-            else if (previousMouseState.RightButton == ButtonState.Released && Mouse.GetState().RightButton == ButtonState.Pressed)
-            {
-                time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
-                oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
-                addToClickPattern(Click.Right, time);
+                if (heartMeter <= 0)
+                {
+                    heartState = State.Dead;
+                }
+                else
+                {
+                    if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+                    {
+                        heartState = State.Left;
+                    }
+                    else if (Mouse.GetState().RightButton == ButtonState.Pressed)
+                    {
+                        heartState = State.Right;
+                    }
+                    else
+                    {
+                        heartState = State.Default;
+                    }
+                }
             }
 
             // Update Progress bar with HeartMeter value

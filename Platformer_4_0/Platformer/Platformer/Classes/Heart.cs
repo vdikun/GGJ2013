@@ -51,7 +51,7 @@ namespace Platformer
         public const int HEART_METER_UP_BOUND = 50;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
-        private const int HEART_METER_DECREASE_VALUE = -2;
+        private const int HEART_METER_DECREASE_VALUE = -3;
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
         private const int MATCH_COUNTER = 2;
@@ -103,6 +103,11 @@ namespace Platformer
             HEART_DEAD = contentManager.Load<Texture2D>("Sprites/Heart_Dead");
         }
 
+        public void hit()
+        {
+            changeHeartMeter(-10);
+        }
+
         void changeHeartMeter(int change) 
         {
             if ((heartMeter + change) >= HEART_METER_LOW_BOUND && (heartMeter + change) <= HEART_METER_UP_BOUND) 
@@ -111,7 +116,7 @@ namespace Platformer
             { heartMeter = HEART_METER_LOW_BOUND; }
             else if ((heartMeter + change) > HEART_METER_UP_BOUND)
             { heartMeter = HEART_METER_UP_BOUND; }
-            Console.WriteLine("Heartmeter " + heartMeter);
+            //Console.WriteLine("Heartmeter " + heartMeter);
         }
 
         void assignBeatPattern()
@@ -122,7 +127,7 @@ namespace Platformer
             {
                 int rnd = random.Next(0, 2);
                 beatPattern[i] = (Click) rnd;
-                Console.WriteLine(rnd);
+                //Console.WriteLine(rnd);
             }
 
             // Assign time length for each beat
@@ -203,7 +208,6 @@ namespace Platformer
             if (matchBeatPattern())
             {
                 matchCounter++;
-                Console.WriteLine("yes");
                 if (matchCounter == MATCH_COUNTER)
                 {
                     matchCounter = 0;

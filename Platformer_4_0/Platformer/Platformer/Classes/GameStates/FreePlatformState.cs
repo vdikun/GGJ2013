@@ -251,6 +251,7 @@ namespace Platformer
             }
 
             heart.Update(gameTime);
+            if (heart.heartMeter == 0) game.currentState = new MenuState();
         }
 
         void HandleMovement(KeyboardState keyboard)
@@ -355,6 +356,7 @@ namespace Platformer
                     punchTimer = -PUNCH_BUFFER;
                     jumpTimer = -JUMP_BUFFER;
                     PlaySound(voiceHit, VOICE_HIT_CHANCE, false);
+                    heart.hit();
 
                     if (currentObstacle == punchObstacleTexture)
                     {
@@ -409,11 +411,14 @@ namespace Platformer
 
             Color uiColor;
             uiColor = Color.White;
-            if (heart.heartMeter < 40) uiColor = Color.Yellow;
-            if (heart.heartMeter < 25) uiColor = Color.Orange;
+            if (heart.heartMeter < 35) uiColor = Color.Yellow;
+            if (heart.heartMeter < 20) uiColor = Color.Orange;
             if (heart.heartMeter < 10) uiColor = Color.Red;
 
             spriteBatch.Draw(uibg, Vector2.Zero, uiColor);
+
+            spriteBatch.DrawString(game.font, heart.performance.ToString(), new Vector2(10, 210), uiColor, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+
             heart.Draw(spriteBatch, 1080, 0);
 
             spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);

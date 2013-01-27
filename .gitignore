@@ -2,8 +2,3 @@
 *.classpath
 *.project
 *.settings
-*.exe
-*.pdb
-*.cache
-*.txt
-*.xml

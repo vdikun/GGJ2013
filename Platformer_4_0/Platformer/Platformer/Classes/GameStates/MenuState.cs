@@ -91,6 +91,7 @@ namespace Platformer
         {
             PlatformerGame.music = music;
             if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            if (PlatformerGame.musicIntro != null) PlatformerGame.musicIntro.Stop();
         }
 
         public static void LoadContent(ContentManager manager)

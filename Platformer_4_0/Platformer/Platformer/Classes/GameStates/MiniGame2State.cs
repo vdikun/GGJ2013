@@ -22,13 +22,14 @@ namespace Platformer
         Vector2 heartPosition = new Vector2(0, 400);
         Vector2 syringePosition = new Vector2(0, 0);
         static SoundEffect soundEffect;
-        static SoundEffect soundEffectInstance;
+        static SoundEffectInstance soundEffectInstance;
 
         public static void LoadContent(ContentManager manager)
         {
             heartTexture = manager.Load<Texture2D>("Minigames/heart");
             syringeTexture = manager.Load<Texture2D>("Minigames/syringe");
             soundEffect = manager.Load<SoundEffect>("Voices/dr_kapow_01");
+            soundEffectInstance = soundEffect.CreateInstance();
         }
 
 
@@ -40,14 +41,18 @@ namespace Platformer
                 game.currentState = new MenuState();
                 
             }
-
+            
 
             if (game.keyboard.IsKeyDown(Keys.R))
             {
 
-               
-                soundEffect.Play();
-            
+
+                if (soundEffectInstance.State != SoundState.Playing)
+                {
+                    soundEffectInstance.Play();
+                }
+          
+         
                 
                 
                 

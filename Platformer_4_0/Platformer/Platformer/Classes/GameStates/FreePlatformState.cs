@@ -43,6 +43,14 @@ namespace Platformer
         readonly static float KNOCKBACK_DURATION = 20.0f;
         readonly static float KNOCKBACK_BUFFER = -60.0f;
 
+        readonly static float VOICE_HIT_CHANCE = 1.0f;
+        readonly static float VOICE_PUNCH_CHANCE = 0.45f;
+        readonly static float VOICE_RECOVER_CHANCE = 0.6f;
+        readonly static float VOICE_FAILURE_CHANCE = 1.0f;
+        readonly static float VOICE_SUCCESS_CHANCE = 1.0f;
+        readonly static float VOICE_RANDOM_CHANCE = 0.0008f;
+        readonly static float VOICE_OBSTACLE_RANDOM_CHANCE = 0.002f;
+
         static Texture2D hitTexture;
         static Texture2D jumpTexture;
         static Texture2D punchTexture;
@@ -188,12 +196,14 @@ namespace Platformer
                 {
                     obstaclePosition.X -= screenAdjustment;
                     bgPosition.X -= screenAdjustment;
-                    if (bgPosition.X < Util.scale(-bgTexture.Width) * 2) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
+                    PlaySound(voiceRandom, VOICE_RANDOM_CHANCE, false);
+                    if (bgPosition.X < Util.scale(-bgTexture.Width) * 2) bgPosition.X += Util.scale(bgTexture.Width);
                 }
                 else
                 {
                     currentSprite = hitTexture;
                     knockbackTimer--;
+                    if (knockbackTimer == KNOCKBACK_BUFFER + 1) PlaySound(voiceRecover, VOICE_RECOVER_CHANCE, true); 
                 }
             }
             else
@@ -204,7 +214,7 @@ namespace Platformer
                 screenAdjustment = -KNOCKBACK_DISTANCE / KNOCKBACK_DURATION;
                 obstaclePosition.X -= screenAdjustment;
                 bgPosition.X -= screenAdjustment;
-                if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH) * 2) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
+                if (bgPosition.X < Util.scale(-bgTexture.Width) * 2) bgPosition.X += Util.scale(bgTexture.Width);
             }
         }
 
@@ -226,7 +236,7 @@ namespace Platformer
             if (Util.IsAnyKeyPressed(keyboard, prevKeyboard, punchKeys) && punchTimer < -PUNCH_BUFFER)
             {
                 punchTimer = PUNCH_DURATION;
-                knockbackTimer = KNOCKBACK_BUFFER;
+                if (knockbackTimer > KNOCKBACK_BUFFER) knockbackTimer = KNOCKBACK_BUFFER+1;
             }
             else
             {
@@ -244,7 +254,7 @@ namespace Platformer
             if (Util.IsAnyKeyPressed(keyboard, prevKeyboard, jumpKeys) && jumpTimer < -JUMP_BUFFER)
             {
                 jumpTimer = JUMP_DURATION;
-                knockbackTimer = KNOCKBACK_BUFFER;
+                if (knockbackTimer > KNOCKBACK_BUFFER) knockbackTimer = KNOCKBACK_BUFFER + 1;
             }
             else
             {
@@ -309,12 +319,16 @@ namespace Platformer
                     knockbackTimer = KNOCKBACK_DURATION;
                     punchTimer = -PUNCH_BUFFER;
                     jumpTimer = -JUMP_BUFFER;
-                    PlaySound(voiceHit, 1.0f, false);
+                    PlaySound(voiceHit, VOICE_HIT_CHANCE, false);
 
                     if (currentObstacle == punchObstacleTexture)
                     {
                         obstaclePosition.X = OBSTACLE_DEADZONE;
                     }
+                }
+                else
+                {
+                    PlaySound(voiceRandom, VOICE_OBSTACLE_RANDOM_CHANCE, false);
                 }
             }
 
@@ -323,6 +337,7 @@ namespace Platformer
                 if (currentObstacle == punchObstacleTexture && currentSprite == punchTexture)
                 {
                     obstaclePosition.X = OBSTACLE_DEADZONE;
+                    PlaySound(voicePunch, VOICE_PUNCH_CHANCE, false);
                 }
             }
         }

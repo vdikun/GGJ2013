@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Platformer
 {
-    class MiniGameState : GameState
+    class MiniGame3State : GameState
     {
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
@@ -20,7 +20,7 @@ namespace Platformer
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(game.font, "Mini Game State", new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(game.font, "Mini Game 3 State", new Vector2(10, 10), Color.White);
         }
     }
 }

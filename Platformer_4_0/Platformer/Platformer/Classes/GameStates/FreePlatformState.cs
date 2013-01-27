@@ -75,8 +75,11 @@ namespace Platformer
         float jumpTimer = -50;
         float punchTimer = -50;
         float knockbackTimer = -50;
+        float quitTimer = 100;
 
         float screenAdjustment;
+
+        Boolean failure = false;
 
         Heart heart = new Heart();
 
@@ -202,56 +205,67 @@ namespace Platformer
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-            currentSprite = runTexture;
-            playerPosition.Y = GROUND_HEIGHT;
-            screenAdjustment = RUN_SPEED - ((CENTER - playerPosition.X) * SPEED_INFLUENCE);
 
-            // Temporary Check
             if (game.keyboard.IsKeyDown(Keys.Escape))
             {
                 game.currentState = new MenuState();
             }
 
-            if (knockbackTimer < 0)
+            if (!failure)
             {
-                HandleMovement(game.keyboard);
-                HandleSlide(game.keyboard);
-                HandlePunch(game.keyboard, game.prevKeyboard);
-                HandleJump(game.keyboard, game.prevKeyboard);
-                HandleObstacles();
+                currentSprite = runTexture;
+                playerPosition.Y = GROUND_HEIGHT;
+                screenAdjustment = RUN_SPEED - ((CENTER - playerPosition.X) * SPEED_INFLUENCE);
 
-                if (knockbackTimer <= KNOCKBACK_BUFFER || knockbackTimer == KNOCKBACK_DURATION)
+                // Temporary Check
+
+                if (knockbackTimer < 0)
                 {
-                    obstaclePosition.X -= screenAdjustment;
-                    backgroundPosition.X -= screenAdjustment;
-                    PlaySound(voiceRandom, VOICE_RANDOM_CHANCE, false);
-                    if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2)
+                    HandleMovement(game.keyboard);
+                    HandleSlide(game.keyboard);
+                    HandlePunch(game.keyboard, game.prevKeyboard);
+                    HandleJump(game.keyboard, game.prevKeyboard);
+                    HandleObstacles();
+
+                    if (knockbackTimer <= KNOCKBACK_BUFFER || knockbackTimer == KNOCKBACK_DURATION)
                     {
-                        backgroundPosition.X += Util.scale(backgroundWidth);
-                        backgrounds.Dequeue();
-                        backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
+                        obstaclePosition.X -= screenAdjustment;
+                        backgroundPosition.X -= screenAdjustment;
+                        PlaySound(voiceRandom, VOICE_RANDOM_CHANCE, false);
+                        if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2)
+                        {
+                            backgroundPosition.X += Util.scale(backgroundWidth);
+                            backgrounds.Dequeue();
+                            backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
+                        }
+                    }
+                    else
+                    {
+                        currentSprite = hitTexture;
+                        knockbackTimer--;
+                        if (knockbackTimer == KNOCKBACK_BUFFER + 1) PlaySound(voiceRecover, VOICE_RECOVER_CHANCE, true);
                     }
                 }
                 else
                 {
                     currentSprite = hitTexture;
                     knockbackTimer--;
-                    if (knockbackTimer == KNOCKBACK_BUFFER + 1) PlaySound(voiceRecover, VOICE_RECOVER_CHANCE, true); 
+
+                    screenAdjustment = -KNOCKBACK_DISTANCE / KNOCKBACK_DURATION;
+                    obstaclePosition.X -= screenAdjustment;
+                    backgroundPosition.X -= screenAdjustment;
+                    if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2) backgroundPosition.X += Util.scale(backgroundWidth);
                 }
+
+                heart.Update(gameTime);
+                if (heart.heartMeter == 0) failure = true;
             }
             else
             {
                 currentSprite = hitTexture;
-                knockbackTimer--;
-
-                screenAdjustment = -KNOCKBACK_DISTANCE / KNOCKBACK_DURATION;
-                obstaclePosition.X -= screenAdjustment;
-                backgroundPosition.X -= screenAdjustment;
-                if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2) backgroundPosition.X += Util.scale(backgroundWidth);
+                quitTimer--;
+                if (quitTimer == 0) game.currentState = new MenuState();
             }
-
-            heart.Update(gameTime);
-            if (heart.heartMeter == 0) game.currentState = new MenuState();
         }
 
         void HandleMovement(KeyboardState keyboard)

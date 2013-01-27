@@ -67,11 +67,15 @@ namespace Platformer
         static Texture2D standTexture;
         static Texture2D currentSprite;
         static Texture2D uibg;
-        static Texture2D monitorBlip;
+        static Texture2D uibgo;
         static Texture2D obstacleGourneyTexture;
         static Texture2D obstaclePatientTexture;
         static Texture2D obstaclePatientDestroyedTexture;
         static Texture2D obstacleWiresTexture;
+        static Texture2D monitorBlipTexture;
+
+        //List<Vector2> blipPositions = new List<Vector2>();
+        Vector2[] blipPositions = {};
 
         static Random random = new Random();
 
@@ -282,7 +286,8 @@ namespace Platformer
             lastBackgroundTexture = manager.Load<Texture2D>("Backgrounds/Splash");
 
             uibg = manager.Load<Texture2D>("Sprites/UIBG");
-            monitorBlip = manager.Load<Texture2D>("Sprites/MonitorBlip");
+            uibgo = manager.Load<Texture2D>("Sprites/UIBGOverlay");
+            monitorBlipTexture = manager.Load<Texture2D>("Sprites/MonitorBlip");
 
             backgroundWidth = backgroundTextures[0].Width;
 
@@ -377,6 +382,17 @@ namespace Platformer
 
                 heart.Update(gameTime);
                 if (heart.heartMeter == 0) failure = true;
+
+                if (heart.beat)
+                {
+                    Vector2[] tempArray = new Vector2[blipPositions.Length+1];
+                    for (int j = 0; j < blipPositions.Length; j++)
+                    {
+                        tempArray[j] = blipPositions[j];
+                    }
+                    tempArray[tempArray.Length - 1] = new Vector2(-monitorBlipTexture.Width, 14);
+                    blipPositions = (Vector2[])tempArray.Clone();
+                }
             }
             else
             {
@@ -580,6 +596,13 @@ namespace Platformer
             if (heart.heartMeter < 10) uiColor = Color.Red;
 
             spriteBatch.Draw(uibg, Vector2.Zero, uiColor);
+            Console.WriteLine(blipPositions.Length);
+            for (int j = 0; j < blipPositions.Length; j++)
+            {
+                spriteBatch.Draw(monitorBlipTexture, blipPositions[j], uiColor);
+                blipPositions[j].X += 10;
+            }
+            spriteBatch.Draw(uibgo, Vector2.Zero, uiColor);
 
             if (heart.justPressed)
             {

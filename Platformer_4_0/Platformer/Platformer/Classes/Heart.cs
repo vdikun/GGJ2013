@@ -17,6 +17,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Platformer
 {
+
     enum Click
     {
         Left = 0,
@@ -42,6 +43,7 @@ namespace Platformer
 
     class Heart
     {
+        public bool beat = false;
         
         private MouseState previousMouseState;
         
@@ -251,7 +253,7 @@ namespace Platformer
 
         public virtual void Update(GameTime gameTime)
         {
-
+            beat = false;
             // Automatic decrease of HeartMeter with time
             if (heartMeter > 0)
             {
@@ -268,11 +270,11 @@ namespace Platformer
                 {
                     pumpEffect = pump.CreateInstance();
                     pumpEffect.Play();
+                    beat = true;
                     time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
                     oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
                     addToClickPattern(Click.Left, time);
                     justPressed = true;
-                    
                 }
 
                 else if (previousMouseState.RightButton == ButtonState.Released && Mouse.GetState().RightButton == ButtonState.Pressed)
@@ -280,6 +282,7 @@ namespace Platformer
                     pumpEffect = pump.CreateInstance();
                     pumpEffect.Pitch = 0.2f;
                     pumpEffect.Play();
+                    beat = true;
                     time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
                     oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
                     addToClickPattern(Click.Right, time);

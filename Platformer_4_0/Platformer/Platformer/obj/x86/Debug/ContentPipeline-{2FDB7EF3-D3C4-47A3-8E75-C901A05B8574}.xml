@@ -830,15 +830,6 @@
       <Time>2013-01-27T02:19:49.2435766-08:00</Time>
     </Item>
     <Item>
-      <Source>Sounds\DrDozer_7.wav</Source>
-      <Name>Sounds\DrDozer_7</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\DrDozer_7.xnb</Output>
-      <Time>2013-01-27T02:19:49.3033323-08:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\UIBG.png</Source>
       <Name>Sprites\UIBG</Name>
       <Importer>TextureImporter</Importer>
@@ -890,7 +881,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\main_theme_loop.xnb</Output>
-      <Time>2013-01-27T00:57:24-08:00</Time>
+      <Time>2013-01-27T13:53:38.0930986-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\main_theme_loop_minigames.wav</Source>
@@ -917,7 +908,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonitorBlip.xnb</Output>
-      <Time>2013-01-27T13:25:37.8153625-08:00</Time>
+      <Time>2013-01-27T13:53:56.0482526-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\Heart_Pump_A1.wav</Source>
@@ -998,7 +989,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\JumpingAnim.xnb</Output>
-      <Time>2013-01-27T12:16:49.3838761-08:00</Time>
+      <Time>2013-01-27T14:06:55.0862694-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\RunningAnim.png</Source>
@@ -1007,7 +998,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\RunningAnim.xnb</Output>
-      <Time>2013-01-27T11:14:00.9496294-08:00</Time>
+      <Time>2013-01-27T14:06:55.0882704-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\Roach.png</Source>
@@ -1026,6 +1017,168 @@
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\UIBGOverlay.xnb</Output>
       <Time>2013-01-27T12:32:02.6110307-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\footsteps.wav</Source>
+      <Name>Sounds\SFX\footsteps</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\footsteps.xnb</Output>
+      <Time>2013-01-27T14:00:52-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\heart_splat.wav</Source>
+      <Name>Sounds\SFX\heart_splat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\heart_splat.xnb</Output>
+      <Time>2013-01-27T14:05:30-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\kick_door.wav</Source>
+      <Name>Sounds\SFX\kick_door</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\kick_door.xnb</Output>
+      <Time>2013-01-27T14:04:12-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\landing_jump.wav</Source>
+      <Name>Sounds\SFX\landing_jump</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\landing_jump.xnb</Output>
+      <Time>2013-01-27T14:01:12-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\obstacle_thud.wav</Source>
+      <Name>Sounds\SFX\obstacle_thud</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\obstacle_thud.xnb</Output>
+      <Time>2013-01-27T14:04:52-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\ow_reaction_1.wav</Source>
+      <Name>Sounds\SFX\ow_reaction_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\ow_reaction_1.xnb</Output>
+      <Time>2013-01-27T14:03:12-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\ow_reaction_2.wav</Source>
+      <Name>Sounds\SFX\ow_reaction_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\ow_reaction_2.xnb</Output>
+      <Time>2013-01-27T14:03:16-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\ow_reaction_3.wav</Source>
+      <Name>Sounds\SFX\ow_reaction_3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\ow_reaction_3.xnb</Output>
+      <Time>2013-01-27T14:03:22-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\punch_person_1.wav</Source>
+      <Name>Sounds\SFX\punch_person_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_person_1.xnb</Output>
+      <Time>2013-01-27T14:01:56-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\punch_person_2.wav</Source>
+      <Name>Sounds\SFX\punch_person_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_person_2.xnb</Output>
+      <Time>2013-01-27T14:02:02-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\punch_person_3.wav</Source>
+      <Name>Sounds\SFX\punch_person_3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_person_3.xnb</Output>
+      <Time>2013-01-27T14:02:06-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\punch_wall_1.wav</Source>
+      <Name>Sounds\SFX\punch_wall_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_wall_1.xnb</Output>
+      <Time>2013-01-27T14:02:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\punch_wall_2.wav</Source>
+      <Name>Sounds\SFX\punch_wall_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_wall_2.xnb</Output>
+      <Time>2013-01-27T14:02:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\punch_wall_3.wav</Source>
+      <Name>Sounds\SFX\punch_wall_3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_wall_3.xnb</Output>
+      <Time>2013-01-27T14:02:52-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\shatter_glass.wav</Source>
+      <Name>Sounds\SFX\shatter_glass</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\shatter_glass.xnb</Output>
+      <Time>2013-01-27T14:03:54-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\shatter_glass_1.wav</Source>
+      <Name>Sounds\SFX\shatter_glass_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\shatter_glass_1.xnb</Output>
+      <Time>2013-01-27T14:03:42-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\stab.wav</Source>
+      <Name>Sounds\SFX\stab</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\stab.xnb</Output>
+      <Time>2013-01-27T14:04:32-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\SFX\tap_water_loop.wav</Source>
+      <Name>Sounds\SFX\tap_water_loop</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\tap_water_loop.xnb</Output>
+      <Time>2013-01-27T14:05:18-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

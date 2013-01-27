@@ -70,6 +70,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Classes\GameStates\MiniGame4State.cs" />
+    <Compile Include="Classes\GameStates\MiniGame5State.cs" />
     <Compile Include="Classes\GameStates\PlatformState.cs" />
     <Compile Include="Classes\Heart.cs" />
     <Compile Include="Classes\Old\Accelerometer.cs" />

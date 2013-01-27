@@ -128,7 +128,11 @@ namespace Platformer
             HandleInput();
             currentState.Update(this, gameTime);
 
-            if (musicLoop == null) musicLoop = music.CreateInstance();
+            if (musicLoop == null)
+            {
+                musicLoop = music.CreateInstance();
+                musicLoop.Volume = Util.MUSIC_VOLUME;
+            }
             if (musicLoop.State == SoundState.Stopped) musicLoop.Play();
         }
 

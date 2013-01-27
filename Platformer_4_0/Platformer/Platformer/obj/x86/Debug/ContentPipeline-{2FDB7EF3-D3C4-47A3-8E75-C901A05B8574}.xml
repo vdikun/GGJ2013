@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Gem.xnb</Output>
-      <Time>2013-01-26T16:41:33.1407735-08:00</Time>
+      <Time>2013-01-27T00:38:39.6958239-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterA\Idle.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterA\Idle.xnb</Output>
-      <Time>2013-01-26T16:41:33.1437745-08:00</Time>
+      <Time>2013-01-27T00:38:39.7730719-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterA\Run.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterA\Run.xnb</Output>
-      <Time>2013-01-26T16:41:33.1447746-08:00</Time>
+      <Time>2013-01-27T00:38:39.7760721-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterB\Idle.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterB\Idle.xnb</Output>
-      <Time>2013-01-26T16:41:33.146776-08:00</Time>
+      <Time>2013-01-27T00:38:39.7780905-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterB\Run.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterB\Run.xnb</Output>
-      <Time>2013-01-26T16:41:33.1477749-08:00</Time>
+      <Time>2013-01-27T00:38:39.7800923-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterC\Idle.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterC\Idle.xnb</Output>
-      <Time>2013-01-26T16:41:33.1497754-08:00</Time>
+      <Time>2013-01-27T00:38:39.7810725-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterC\Run.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterC\Run.xnb</Output>
-      <Time>2013-01-26T16:41:33.1507751-08:00</Time>
+      <Time>2013-01-27T00:38:39.7830921-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterD\Idle.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterD\Idle.xnb</Output>
-      <Time>2013-01-26T16:41:33.1527748-08:00</Time>
+      <Time>2013-01-27T00:38:39.7851409-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterD\Run.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterD\Run.xnb</Output>
-      <Time>2013-01-26T16:41:33.1547762-08:00</Time>
+      <Time>2013-01-27T00:38:39.7871224-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA0.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA0.xnb</Output>
-      <Time>2013-01-26T16:41:33.176778-08:00</Time>
+      <Time>2013-01-27T00:38:39.8152206-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA1.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA1.xnb</Output>
-      <Time>2013-01-26T16:41:33.1787798-08:00</Time>
+      <Time>2013-01-27T00:38:39.8162203-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA2.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA2.xnb</Output>
-      <Time>2013-01-26T16:41:33.1787798-08:00</Time>
+      <Time>2013-01-27T00:38:39.81722-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA3.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA3.xnb</Output>
-      <Time>2013-01-26T16:41:33.1797794-08:00</Time>
+      <Time>2013-01-27T00:38:39.8182209-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA4.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA4.xnb</Output>
-      <Time>2013-01-26T16:41:33.1807795-08:00</Time>
+      <Time>2013-01-27T00:38:39.819221-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA5.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA5.xnb</Output>
-      <Time>2013-01-26T16:41:33.1817788-08:00</Time>
+      <Time>2013-01-27T00:38:39.819221-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA6.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA6.xnb</Output>
-      <Time>2013-01-26T16:41:33.1847798-08:00</Time>
+      <Time>2013-01-27T00:38:39.820221-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockB0.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockB0.xnb</Output>
-      <Time>2013-01-26T16:41:33.1857795-08:00</Time>
+      <Time>2013-01-27T00:38:39.8212207-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockB1.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockB1.xnb</Output>
-      <Time>2013-01-26T16:41:33.18678-08:00</Time>
+      <Time>2013-01-27T00:38:39.8222208-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\Platform.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\Platform.xnb</Output>
-      <Time>2013-01-26T16:41:33.1877797-08:00</Time>
+      <Time>2013-01-27T00:38:39.8262223-08:00</Time>
     </Item>
     <Item>
       <Source>Overlays\you_died.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Overlays\you_died.xnb</Output>
-      <Time>2013-01-26T16:41:33.0637641-08:00</Time>
+      <Time>2013-01-27T00:38:39.4781601-08:00</Time>
     </Item>
     <Item>
       <Source>Overlays\you_lose.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Overlays\you_lose.xnb</Output>
-      <Time>2013-01-26T16:41:33.0657651-08:00</Time>
+      <Time>2013-01-27T00:38:39.4801619-08:00</Time>
     </Item>
     <Item>
       <Source>Overlays\you_win.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Overlays\you_win.xnb</Output>
-      <Time>2013-01-26T16:41:33.0667652-08:00</Time>
+      <Time>2013-01-27T00:38:39.4811604-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\Exit.png</Source>
@@ -206,7 +206,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\Exit.xnb</Output>
-      <Time>2013-01-26T16:41:33.18678-08:00</Time>
+      <Time>2013-01-27T00:38:39.8252222-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\whitepixel.png</Source>
@@ -215,7 +215,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\whitepixel.xnb</Output>
-      <Time>2013-01-26T16:41:33.174779-08:00</Time>
+      <Time>2013-01-27T00:38:39.8142201-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Background.png</Source>
@@ -224,7 +224,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Background.xnb</Output>
-      <Time>2013-01-26T16:41:33.1557763-08:00</Time>
+      <Time>2013-01-27T00:38:39.7881225-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Hit.png</Source>
@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Hit.xnb</Output>
-      <Time>2013-01-26T16:41:33.1567768-08:00</Time>
+      <Time>2013-01-27T00:38:39.7982185-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Jumping.png</Source>
@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Jumping.xnb</Output>
-      <Time>2013-01-26T16:41:33.1577761-08:00</Time>
+      <Time>2013-01-27T00:38:39.8012187-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\JumpObstacle.png</Source>
@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\JumpObstacle.xnb</Output>
-      <Time>2013-01-26T16:41:33.1567768-08:00</Time>
+      <Time>2013-01-27T00:38:39.800219-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Punching.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Punching.xnb</Output>
-      <Time>2013-01-26T16:41:33.1657779-08:00</Time>
+      <Time>2013-01-27T00:38:39.8042185-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\PunchObstacle.png</Source>
@@ -269,7 +269,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\PunchObstacle.xnb</Output>
-      <Time>2013-01-26T16:41:33.164777-08:00</Time>
+      <Time>2013-01-27T00:38:39.8022184-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Running.png</Source>
@@ -278,7 +278,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Running.xnb</Output>
-      <Time>2013-01-26T16:41:33.1677773-08:00</Time>
+      <Time>2013-01-27T00:38:39.8102206-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\SlideObstacle.png</Source>
@@ -287,7 +287,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\SlideObstacle.xnb</Output>
-      <Time>2013-01-26T16:41:33.1687777-08:00</Time>
+      <Time>2013-01-27T00:38:39.8112199-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Sliding.png</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Sliding.xnb</Output>
-      <Time>2013-01-26T16:41:33.1697778-08:00</Time>
+      <Time>2013-01-27T00:38:39.8122196-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Standing.png</Source>
@@ -305,7 +305,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Standing.xnb</Output>
-      <Time>2013-01-26T16:41:33.171778-08:00</Time>
+      <Time>2013-01-27T00:38:39.8132201-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Splash.jpg</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Splash.xnb</Output>
-      <Time>2013-01-26T16:41:33.0537629-08:00</Time>
+      <Time>2013-01-27T00:38:39.0028585-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\heart.png</Source>
@@ -323,7 +323,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\heart.xnb</Output>
-      <Time>2013-01-26T17:45:01.4389697-08:00</Time>
+      <Time>2013-01-27T00:38:39.3801393-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\syringe.png</Source>
@@ -332,7 +332,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\syringe.xnb</Output>
-      <Time>2013-01-26T17:45:01.4399678-08:00</Time>
+      <Time>2013-01-27T00:38:39.4771604-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\Tap.png</Source>
@@ -341,7 +341,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\Tap.xnb</Output>
-      <Time>2013-01-26T19:40:48.6192634-08:00</Time>
+      <Time>2013-01-27T00:38:39.1951157-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\Water.png</Source>
@@ -350,7 +350,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\Water.xnb</Output>
-      <Time>2013-01-26T19:40:48.6242622-08:00</Time>
+      <Time>2013-01-27T00:38:39.2671251-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\Hud.spritefont</Source>
@@ -359,7 +359,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Fonts\Hud.xnb</Output>
-      <Time>2013-01-26T16:41:33.0577636-08:00</Time>
+      <Time>2013-01-27T00:38:39.1711117-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_asystole.wav</Source>
@@ -368,7 +368,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_asystole.xnb</Output>
-      <Time>2013-01-26T16:18:32-08:00</Time>
+      <Time>2013-01-27T00:38:39.8482257-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_bulldozed_01.wav</Source>
@@ -377,7 +377,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_bulldozed_01.xnb</Output>
-      <Time>2013-01-26T16:17:16-08:00</Time>
+      <Time>2013-01-27T00:38:39.8602267-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_bulldozed_02.wav</Source>
@@ -386,7 +386,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_bulldozed_02.xnb</Output>
-      <Time>2013-01-26T16:17:22-08:00</Time>
+      <Time>2013-01-27T00:38:39.8832305-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_bulldozed_03.wav</Source>
@@ -395,7 +395,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_bulldozed_03.xnb</Output>
-      <Time>2013-01-26T16:17:28-08:00</Time>
+      <Time>2013-01-27T00:38:39.9082325-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_cant_spell.wav</Source>
@@ -404,7 +404,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_cant_spell.xnb</Output>
-      <Time>2013-01-26T16:19:36-08:00</Time>
+      <Time>2013-01-27T00:38:40.183267-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_check_infection.wav</Source>
@@ -413,7 +413,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_check_infection.xnb</Output>
-      <Time>2013-01-26T16:18:24-08:00</Time>
+      <Time>2013-01-27T00:38:40.220272-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_chopper.wav</Source>
@@ -422,7 +422,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_chopper.xnb</Output>
-      <Time>2013-01-26T16:18:16-08:00</Time>
+      <Time>2013-01-27T00:38:40.2302728-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_crash_cart.wav</Source>
@@ -431,7 +431,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_crash_cart.xnb</Output>
-      <Time>2013-01-26T16:27:42-08:00</Time>
+      <Time>2013-01-27T00:38:40.2622766-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_gangway_01.wav</Source>
@@ -440,7 +440,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_gangway_01.xnb</Output>
-      <Time>2013-01-26T16:16:46-08:00</Time>
+      <Time>2013-01-27T00:38:40.2792795-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_gangway_02.wav</Source>
@@ -449,7 +449,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_gangway_02.xnb</Output>
-      <Time>2013-01-26T16:16:56-08:00</Time>
+      <Time>2013-01-27T00:38:40.2992819-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_hes_crashing.wav</Source>
@@ -458,7 +458,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_hes_crashing.xnb</Output>
-      <Time>2013-01-26T16:28:04-08:00</Time>
+      <Time>2013-01-27T00:38:40.3182859-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_its_no_use.wav</Source>
@@ -467,7 +467,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_its_no_use.xnb</Output>
-      <Time>2013-01-26T16:18:44-08:00</Time>
+      <Time>2013-01-27T00:38:40.3312873-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_kapow_01.wav</Source>
@@ -476,7 +476,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_kapow_01.xnb</Output>
-      <Time>2013-01-26T16:28:22-08:00</Time>
+      <Time>2013-01-27T00:38:40.3482883-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_kapow_02.wav</Source>
@@ -485,7 +485,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_kapow_02.xnb</Output>
-      <Time>2013-01-26T16:21:02-08:00</Time>
+      <Time>2013-01-27T00:38:40.4063047-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_made_it_01.wav</Source>
@@ -494,7 +494,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_made_it_01.xnb</Output>
-      <Time>2013-01-26T16:28:30-08:00</Time>
+      <Time>2013-01-27T00:38:40.4525129-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_made_it_02.wav</Source>
@@ -503,7 +503,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_made_it_02.xnb</Output>
-      <Time>2013-01-26T16:19:54-08:00</Time>
+      <Time>2013-01-27T00:38:40.4988795-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_now_for_fun_01.wav</Source>
@@ -512,7 +512,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_now_for_fun_01.xnb</Output>
-      <Time>2013-01-26T16:20:30-08:00</Time>
+      <Time>2013-01-27T00:38:40.7600161-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_now_for_fun_02.wav</Source>
@@ -521,7 +521,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_now_for_fun_02.xnb</Output>
-      <Time>2013-01-26T16:20:14-08:00</Time>
+      <Time>2013-01-27T00:38:40.9100346-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_now_for_fun_03.wav</Source>
@@ -530,7 +530,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_now_for_fun_03.xnb</Output>
-      <Time>2013-01-26T16:20:46-08:00</Time>
+      <Time>2013-01-27T00:38:41.0110475-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_oomph_01.wav</Source>
@@ -539,7 +539,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_oomph_01.xnb</Output>
-      <Time>2013-01-26T16:17:54-08:00</Time>
+      <Time>2013-01-27T00:38:41.0348688-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_oomph_02.wav</Source>
@@ -548,7 +548,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_oomph_02.xnb</Output>
-      <Time>2013-01-26T16:17:58-08:00</Time>
+      <Time>2013-01-27T00:38:41.0619702-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_oomph_03.wav</Source>
@@ -557,7 +557,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_oomph_03.xnb</Output>
-      <Time>2013-01-26T16:18:04-08:00</Time>
+      <Time>2013-01-27T00:38:41.0753507-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_oomph_04.wav</Source>
@@ -566,7 +566,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_oomph_04.xnb</Output>
-      <Time>2013-01-26T16:18:08-08:00</Time>
+      <Time>2013-01-27T00:38:41.13424-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_outta_the_way_01.wav</Source>
@@ -575,7 +575,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_outta_the_way_01.xnb</Output>
-      <Time>2013-01-26T16:16:24-08:00</Time>
+      <Time>2013-01-27T00:38:41.1832107-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_outta_the_way_02.wav</Source>
@@ -584,7 +584,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_outta_the_way_02.xnb</Output>
-      <Time>2013-01-26T16:16:32-08:00</Time>
+      <Time>2013-01-27T00:38:41.2222782-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_success_01.wav</Source>
@@ -593,7 +593,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_success_01.xnb</Output>
-      <Time>2013-01-26T16:20:04-08:00</Time>
+      <Time>2013-01-27T00:38:41.410113-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_success_02.wav</Source>
@@ -602,7 +602,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_success_02.xnb</Output>
-      <Time>2013-01-26T16:20:08-08:00</Time>
+      <Time>2013-01-27T00:38:41.656771-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\dr_surgeon_thru_01.wav</Source>
@@ -611,7 +611,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\dr_surgeon_thru_01.xnb</Output>
-      <Time>2013-01-26T16:21:24-08:00</Time>
+      <Time>2013-01-27T00:38:41.7223278-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_A_dr.wav</Source>
@@ -620,7 +620,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_A_dr.xnb</Output>
-      <Time>2013-01-26T16:29:20-08:00</Time>
+      <Time>2013-01-27T00:38:41.7740383-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_A_nurse.wav</Source>
@@ -629,7 +629,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_A_nurse.xnb</Output>
-      <Time>2013-01-26T16:29:50-08:00</Time>
+      <Time>2013-01-27T00:38:41.844801-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_B_dr.wav</Source>
@@ -638,7 +638,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_B_dr.xnb</Output>
-      <Time>2013-01-26T16:24:06-08:00</Time>
+      <Time>2013-01-27T00:38:41.9394509-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_B_nurse_01.wav</Source>
@@ -647,7 +647,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_B_nurse_01.xnb</Output>
-      <Time>2013-01-26T16:30:18-08:00</Time>
+      <Time>2013-01-27T00:38:42.058652-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_B_nurse_02.wav</Source>
@@ -656,7 +656,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_B_nurse_02.xnb</Output>
-      <Time>2013-01-26T16:30:34-08:00</Time>
+      <Time>2013-01-27T00:38:42.168427-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_C_dr.wav</Source>
@@ -665,7 +665,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_C_dr.xnb</Output>
-      <Time>2013-01-26T16:24:14-08:00</Time>
+      <Time>2013-01-27T00:38:42.2599852-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_C_nurse.wav</Source>
@@ -674,7 +674,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_C_nurse.xnb</Output>
-      <Time>2013-01-26T16:30:54-08:00</Time>
+      <Time>2013-01-27T00:38:42.3805343-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_D_dr.wav</Source>
@@ -683,7 +683,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_D_dr.xnb</Output>
-      <Time>2013-01-26T16:31:10-08:00</Time>
+      <Time>2013-01-27T00:38:42.4571309-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\intro_D_nurse.wav</Source>
@@ -692,7 +692,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\intro_D_nurse.xnb</Output>
-      <Time>2013-01-26T16:31:26-08:00</Time>
+      <Time>2013-01-27T00:38:42.4845644-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\nurse_lets_do_this_01.wav</Source>
@@ -701,7 +701,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\nurse_lets_do_this_01.xnb</Output>
-      <Time>2013-01-26T16:31:42-08:00</Time>
+      <Time>2013-01-27T00:38:42.5341699-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\nurse_lets_do_this_02.wav</Source>
@@ -710,7 +710,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\nurse_lets_do_this_02.xnb</Output>
-      <Time>2013-01-26T16:31:56-08:00</Time>
+      <Time>2013-01-27T00:38:42.6172903-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\nurse_lets_go.wav</Source>
@@ -719,7 +719,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\nurse_lets_go.xnb</Output>
-      <Time>2013-01-26T16:23:38-08:00</Time>
+      <Time>2013-01-27T00:38:42.6824899-08:00</Time>
     </Item>
     <Item>
       <Source>Voices\nurse_squeal.wav</Source>
@@ -728,7 +728,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Voices\nurse_squeal.xnb</Output>
-      <Time>2013-01-26T16:33:12-08:00</Time>
+      <Time>2013-01-27T00:38:42.7481359-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\heartDirty1.png</Source>
@@ -737,7 +737,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\heartDirty1.xnb</Output>
-      <Time>2013-01-26T22:39:44.9568453-08:00</Time>
+      <Time>2013-01-27T00:38:39.4491485-08:00</Time>
     </Item>
     <Item>
       <Source>Minigames\heartDirty2.png</Source>
@@ -746,7 +746,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\heartDirty2.xnb</Output>
-      <Time>2013-01-26T22:42:52.5434867-08:00</Time>
+      <Time>2013-01-27T00:38:39.4701599-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Base.png</Source>
@@ -755,7 +755,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Base.xnb</Output>
-      <Time>2013-01-26T20:17:19.0484304-08:00</Time>
+      <Time>2013-01-27T00:38:39.7222351-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Blue.png</Source>
@@ -764,7 +764,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Blue.xnb</Output>
-      <Time>2013-01-26T20:17:19.0494309-08:00</Time>
+      <Time>2013-01-27T00:38:39.7372379-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Dead.png</Source>
@@ -773,7 +773,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Dead.xnb</Output>
-      <Time>2013-01-26T23:02:17.3822482-08:00</Time>
+      <Time>2013-01-27T00:38:39.7395791-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Heart_Red.png</Source>
@@ -782,7 +782,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Heart_Red.xnb</Output>
-      <Time>2013-01-26T20:17:19.0504314-08:00</Time>
+      <Time>2013-01-27T00:38:39.7529783-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background1.png</Source>
@@ -791,7 +791,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background1.xnb</Output>
-      <Time>2013-01-27T00:01:33.8403446-08:00</Time>
+      <Time>2013-01-27T00:38:39.0322659-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background2.png</Source>
@@ -800,7 +800,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background2.xnb</Output>
-      <Time>2013-01-27T00:01:37.9955968-08:00</Time>
+      <Time>2013-01-27T00:38:39.0683546-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background3.png</Source>
@@ -809,7 +809,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background3.xnb</Output>
-      <Time>2013-01-27T00:01:41.8451761-08:00</Time>
+      <Time>2013-01-27T00:38:39.0919029-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background4.png</Source>
@@ -818,7 +818,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background4.xnb</Output>
-      <Time>2013-01-27T00:01:46.2719351-08:00</Time>
+      <Time>2013-01-27T00:38:39.1221248-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background5.png</Source>
@@ -827,7 +827,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background5.xnb</Output>
-      <Time>2013-01-27T00:01:54.0898347-08:00</Time>
+      <Time>2013-01-27T00:38:39.145157-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\DrDozer_7.wav</Source>
@@ -836,7 +836,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\DrDozer_7.xnb</Output>
-      <Time>2013-01-27T00:21:02-08:00</Time>
+      <Time>2013-01-27T00:38:39.6928245-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

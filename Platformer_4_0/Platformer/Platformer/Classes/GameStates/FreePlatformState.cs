@@ -58,7 +58,6 @@ namespace Platformer
         static Texture2D slideTexture;
         static Texture2D standTexture;
         static Texture2D currentSprite;
-        static Texture2D bgTexture;
         static Texture2D jumpObstacleTexture;
         static Texture2D slideObstacleTexture;
         static Texture2D punchObstacleTexture;
@@ -67,7 +66,7 @@ namespace Platformer
         static Random random = new Random();
 
         Vector2 playerPosition;
-        Vector2 bgPosition;
+        Vector2 backgroundPosition;
         Vector2 obstaclePosition;
 
         float jumpTimer = -50;
@@ -76,9 +75,14 @@ namespace Platformer
 
         float screenAdjustment;
 
+        //Background Panels
+        static Texture2D[] backgroundTextures;
+        static float backgroundWidth;
+        Queue<Texture2D> backgrounds = new Queue<Texture2D>();
+
         //Controls
-        static Keys[] jumpKeys = new Keys[] { Keys.W, Keys.Space };
-        static Keys[] leftKeys = new Keys[] { };
+        static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
+        static Keys[] leftKeys  = new Keys[] { };
         static Keys[] rightKeys = new Keys[] { };
         static Keys[] slideKeys = new Keys[] { Keys.S };
         static Keys[] punchKeys = new Keys[] { Keys.D };
@@ -107,8 +111,15 @@ namespace Platformer
         public FreePlatformState()
         {
             playerPosition = new Vector2(CENTER, GROUND_HEIGHT);
-            bgPosition = new Vector2(0, Util.offsetY(0));
+            backgroundPosition = new Vector2(0, Util.offsetY(0));
             obstaclePosition = new Vector2(OBSTACLE_DEADZONE, Util.offsetY(0));
+
+            float coverage = 0;
+            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 2.5; i++)
+            {
+                backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
+                coverage += Util.scale(backgroundWidth);
+            }
         }
 
         public static void LoadContent(ContentManager manager)
@@ -119,10 +130,19 @@ namespace Platformer
             runTexture = manager.Load<Texture2D>("Sprites/Player/Running");
             slideTexture = manager.Load<Texture2D>("Sprites/Player/Sliding");
             standTexture = manager.Load<Texture2D>("Sprites/Player/Standing");
-            bgTexture = manager.Load<Texture2D>("Sprites/Player/Background");
             jumpObstacleTexture = manager.Load<Texture2D>("Sprites/Player/JumpObstacle");
             slideObstacleTexture = manager.Load<Texture2D>("Sprites/Player/SlideObstacle");
             punchObstacleTexture = manager.Load<Texture2D>("Sprites/Player/PunchObstacle");
+
+            backgroundTextures = new Texture2D[] {
+                manager.Load<Texture2D>("Backgrounds/background1"),
+                manager.Load<Texture2D>("Backgrounds/background2"),
+                manager.Load<Texture2D>("Backgrounds/background3"),
+                manager.Load<Texture2D>("Backgrounds/background4"),
+                manager.Load<Texture2D>("Backgrounds/background5"),
+            };
+
+            backgroundWidth = backgroundTextures[0].Width;
 
             voiceHit = new Sound[] {
                 new Sound(manager, "Voices/dr_oomph_01", 1.0f),
@@ -195,9 +215,14 @@ namespace Platformer
                 if (knockbackTimer <= KNOCKBACK_BUFFER || knockbackTimer == KNOCKBACK_DURATION)
                 {
                     obstaclePosition.X -= screenAdjustment;
-                    bgPosition.X -= screenAdjustment;
+                    backgroundPosition.X -= screenAdjustment;
                     PlaySound(voiceRandom, VOICE_RANDOM_CHANCE, false);
-                    if (bgPosition.X < Util.scale(-bgTexture.Width) * 2) bgPosition.X += Util.scale(bgTexture.Width);
+                    if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2)
+                    {
+                        backgroundPosition.X += Util.scale(backgroundWidth);
+                        backgrounds.Dequeue();
+                        backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
+                    }
                 }
                 else
                 {
@@ -213,8 +238,8 @@ namespace Platformer
 
                 screenAdjustment = -KNOCKBACK_DISTANCE / KNOCKBACK_DURATION;
                 obstaclePosition.X -= screenAdjustment;
-                bgPosition.X -= screenAdjustment;
-                if (bgPosition.X < Util.scale(-bgTexture.Width) * 2) bgPosition.X += Util.scale(bgTexture.Width);
+                backgroundPosition.X -= screenAdjustment;
+                if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2) backgroundPosition.X += Util.scale(backgroundWidth);
             }
         }
 
@@ -362,12 +387,11 @@ namespace Platformer
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
         {
-            float panelWidth = Util.scale(bgTexture.Width);
-            float coverage = 0;
-            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 2.5; i++)
+            int i = 0;
+            foreach (Texture2D background in backgrounds) 
             {
-                spriteBatch.Draw(bgTexture, new Vector2(bgPosition.X + (panelWidth * i), bgPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
-                coverage += panelWidth;
+                i++;
+                spriteBatch.Draw(background, new Vector2(backgroundPosition.X + (Util.scale(backgroundWidth) * i), backgroundPosition.Y), null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
             }
 
             spriteBatch.Draw(currentObstacle, obstaclePosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);

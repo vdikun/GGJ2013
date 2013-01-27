@@ -10,7 +10,7 @@ namespace Platformer
     {
         public static float SCALE = 0.65f;
         public static float OFFSET = 252.0f;
-        public static float MUSIC_VOLUME = 0.5f;
+        public static float MUSIC_VOLUME = 0.35f;
         public static float SFX_VOLUME = 1f;
 
         public static bool IsAnyKeyDown(KeyboardState keyboard, Keys[] keys)

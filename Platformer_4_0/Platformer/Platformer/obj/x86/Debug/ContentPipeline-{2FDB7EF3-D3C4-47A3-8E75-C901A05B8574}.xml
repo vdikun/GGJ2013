@@ -919,6 +919,15 @@
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonitorBlip.xnb</Output>
       <Time>2013-01-27T03:21:37.3377335-08:00</Time>
     </Item>
+    <Item>
+      <Source>Sounds\Heart_Pump_A1.wav</Source>
+      <Name>Sounds\Heart_Pump_A1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\Heart_Pump_A1.xnb</Output>
+      <Time>2013-01-27T04:31:06.6739202-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{2FDB7EF3-D3C4-47A3-8E75-C901A05B8574}</ContentProjectGUID>

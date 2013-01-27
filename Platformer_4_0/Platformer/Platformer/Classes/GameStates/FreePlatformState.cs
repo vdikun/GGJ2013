@@ -160,10 +160,10 @@ namespace Platformer
             };
 
             voicePunch = new Sound[] {
-                new Sound(manager, "Voices/dr_bulldozed_01", 0.3f),
-                new Sound(manager, "Voices/dr_bulldozed_02", 0.3f),
-                new Sound(manager, "Voices/dr_bulldozed_03", 0.4f),
-                new Sound(manager, "Voices/dr_kapow_01", 0.4f),
+                new Sound(manager, "Voices/dr_bulldozed_01", 0.2f),
+                new Sound(manager, "Voices/dr_bulldozed_02", 0.2f),
+                new Sound(manager, "Voices/dr_bulldozed_03", 0.3f),
+                new Sound(manager, "Voices/dr_kapow_01", 0.5f),
                 new Sound(manager, "Voices/dr_kapow_02", 0.4f),
                 new Sound(manager, "Voices/dr_outta_the_way_01", 0.5f),
                 new Sound(manager, "Voices/dr_outta_the_way_02", 0.5f),

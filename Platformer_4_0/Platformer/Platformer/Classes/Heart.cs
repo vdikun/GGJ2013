@@ -51,7 +51,7 @@ namespace Platformer
         public const int HEART_METER_UP_BOUND = 50;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
-        private const int HEART_METER_DECREASE_VALUE = -3;
+        private const int HEART_METER_DECREASE_VALUE = -2;
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
         private const int MATCH_COUNTER = 2;
@@ -80,6 +80,9 @@ namespace Platformer
         private static Texture2D LIGHT_ON;
         private static Texture2D LIGHT_OFF;
 
+        private static SoundEffect pump;
+        private static SoundEffectInstance pumpEffect;
+
         public Heart()
         {
             heartMeter = HEART_METER_INIT;    // Initial value of the Heart meter
@@ -101,6 +104,8 @@ namespace Platformer
             HEART_RED = contentManager.Load<Texture2D>("Sprites/Heart_Red");
             HEART_BLUE  = contentManager.Load<Texture2D>("Sprites/Heart_Blue");
             HEART_DEAD = contentManager.Load<Texture2D>("Sprites/Heart_Dead");
+
+            pump = contentManager.Load<SoundEffect>("Sounds/Heart_Pump_A1");
         }
 
         public void hit()
@@ -260,7 +265,8 @@ namespace Platformer
                 // click patterns
                 if (previousMouseState.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
                 {
-
+                    pumpEffect = pump.CreateInstance();
+                    pumpEffect.Play();
                     time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
                     oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
                     addToClickPattern(Click.Left, time);
@@ -269,6 +275,9 @@ namespace Platformer
 
                 else if (previousMouseState.RightButton == ButtonState.Released && Mouse.GetState().RightButton == ButtonState.Pressed)
                 {
+                    pumpEffect = pump.CreateInstance();
+                    pumpEffect.Pitch = 0.2f;
+                    pumpEffect.Play();
                     time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
                     oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
                     addToClickPattern(Click.Right, time);

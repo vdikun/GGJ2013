@@ -26,8 +26,10 @@ namespace Platformer
         int countdown;
         int frameCounter;
 
+        int quitTimer = 40;
+
         // constants
-        private const int CHANGE_X_PER_FRAME = 400;
+        private const int CHANGE_X_PER_FRAME = 350;
         private int SHAKE_COUNTER = 14; // how long you want to move mouse at specified speed to reduce dirt by 1
         
 
@@ -37,8 +39,8 @@ namespace Platformer
             oldMouseState = Mouse.GetState();
             currentMouseState = new MouseState();
             shakeCounter = SHAKE_COUNTER;
-            countdown = 4; // number of sprites for dirty hearts
-            frameCounter = 40;
+            countdown = 3;
+            frameCounter = 30;
         }
 
         public static void LoadContent(ContentManager manager)
@@ -94,7 +96,7 @@ namespace Platformer
                     }
 
                     // if mouse has been moved with specified velocity, remove dirt (change texture)
-                    if (shakeCounter == SHAKE_COUNTER/2)
+                    if (shakeCounter == SHAKE_COUNTER / 2)
                     {
                         heartState = 1;
                     }
@@ -104,6 +106,14 @@ namespace Platformer
                     }
 
                     oldMouseState = currentMouseState;
+                }
+                else
+                {
+                    quitTimer--;
+                    if (quitTimer == 0)
+                    {
+                        game.currentState = new MenuState();
+                    }
                 }
             }
 
@@ -121,14 +131,14 @@ namespace Platformer
         {
             foreach (Vector4 particle in particles)
             {
-                spriteBatch.Draw(dirt, new Vector2(particle.X, particle.Y), null, Color.SaddleBrown, 0f, Vector2.Zero, (float) (1.0f + random.NextDouble()), SpriteEffects.None, 0f);
+                spriteBatch.Draw(dirt, new Vector2(particle.X, particle.Y), null, Color.SaddleBrown, 0f, Vector2.Zero, (float) (2.0f + random.NextDouble()), SpriteEffects.None, 0f);
             }
 
             spriteBatch.DrawString(game.font, "Mini Game 4 State", new Vector2(10, 10), Color.White);
 
             if (countdown != 0) spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
 
-            if (shakeCounter >= 3 && shakeCounter <= 10) spriteBatch.DrawString(game.font, "Almost there..", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+            if (shakeCounter >= 3 && shakeCounter <= 11) spriteBatch.DrawString(game.font, "Almost there..", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
             
             switch (heartState)
             {

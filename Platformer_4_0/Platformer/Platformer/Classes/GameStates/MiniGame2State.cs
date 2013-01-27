@@ -26,7 +26,7 @@ namespace Platformer
         Vector2 heartPosition = new Vector2(0, 480);
         int tapGoal = 500;
 
-        int dirt = 150;
+        int dirt = 100;
 
         bool hittingHeart = false;
 

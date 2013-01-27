@@ -26,6 +26,8 @@ namespace Platformer
         MouseState currentMouseState, previousMouseState;
         bool operationSuccessful;
 
+        int quitTimer = 40;
+
         // constants
         private const int PATIENT_SPEED = 10;
         private const int POSITION_MATCH_ERROR = 80;
@@ -94,6 +96,8 @@ namespace Platformer
             if (operationSuccessful)
             {
                 spriteBatch.DrawString(game.font, "GOOD!", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+                quitTimer--;
+                if (quitTimer == 0) game.currentState = new MenuState();
             }
             else
             {

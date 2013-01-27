@@ -92,7 +92,7 @@ namespace Platformer
 
             // Load fonts
             font = Content.Load<SpriteFont>("Fonts/Hud");
-            headerFont = Content.Load<SpriteFont>("Fonts/Header");
+            headerFont = Content.Load<SpriteFont>("Fonts/Hud");
 
             // Load textures
             placeholder = Content.Load<Texture2D>("Sprites/whitepixel");

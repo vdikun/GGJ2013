@@ -18,13 +18,14 @@ namespace Platformer
         static Texture2D heartTexture;
         static Texture2D syringeTexture;
 
-        Vector2 heartPosition = new Vector2(0, 480);
-        Vector2 syringePosition = new Vector2(0, 0);
+        Vector2 heartPosition = new Vector2(600, 480);
+        Vector2 syringePosition = new Vector2(350, 0);
         Rectangle syringeRect;
         Rectangle heartRect;
         int syringeGoal = 0;
 
-        int countdown = 4;
+        int countdown = 5;
+        int stab_countdown = 6;
         int frameCountdown = 1;
         int quitTimer = 40;
 
@@ -39,50 +40,58 @@ namespace Platformer
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-            if (game.keyboard.IsKeyDown(Keys.Escape))
+            if (countdown <= 1)
             {
-                game.currentState = new MenuState();
-            }
+                if (!hit)
+                {
+                    float posDiff = Mouse.GetState().X - heartPosition.X;
+                    heartPosition.X += posDiff * 0.1f;
+                    if (heartPosition.X < 0) heartPosition.X = 0;
+                    if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
+                }
 
-            if (!hit)
-            {
-                float posDiff = Mouse.GetState().X - heartPosition.X;
-                heartPosition.X += posDiff * 0.1f;
-                if (heartPosition.X < 0) heartPosition.X = 0;
-                if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
-            }
+                if (stab_countdown != 0)
+                {
+                    frameCountdown--;
+                    if (frameCountdown == 0)
+                    {
+                        frameCountdown = 40;
+                        stab_countdown--;
+                        countdown--;
+                        Random random = new Random();
+                        if (stab_countdown != 0) syringeGoal = random.Next(0, 1280 - syringeTexture.Width);
+                    }
+                    syringePosition.X += (syringeGoal - syringePosition.X) * 0.1f;
+                }
+                else if (!hit)
+                {
+                    syringePosition.Y += 20;
+                }
+                if (hit || miss)
+                {
+                    quitTimer--;
+                }
+                if (quitTimer == 0) game.currentState = new MenuState();
 
-            if (countdown != 0)
+                syringeRect = new Rectangle((int)syringePosition.X + 28, (int)syringePosition.Y + 227, 2, 56);
+                heartRect = new Rectangle((int)heartPosition.X, (int)heartPosition.Y + 100, (int)heartTexture.Width, (int)heartTexture.Height - 100);
+                if (syringeRect.Intersects(heartRect))
+                {
+                    hit = true;
+                }
+                if (syringePosition.Y == 720)
+                {
+                    miss = true;
+                }
+            }
+            else
             {
                 frameCountdown--;
                 if (frameCountdown == 0)
                 {
                     frameCountdown = 40;
                     countdown--;
-                    Random random = new Random();
-                    if (countdown != 0) syringeGoal = random.Next(0, 1280 - syringeTexture.Width);
                 }
-                syringePosition.X += (syringeGoal - syringePosition.X)*0.1f;
-            }
-            else if (!hit)
-            {
-                syringePosition.Y+=20;
-            }
-            if (hit || miss)
-            {
-                quitTimer--;
-            }
-            if (quitTimer == 0) game.currentState = new MenuState();
-
-            syringeRect = new Rectangle((int)syringePosition.X+28, (int)syringePosition.Y+227, 2, 56);
-            heartRect = new Rectangle((int)heartPosition.X, (int)heartPosition.Y+100, (int)heartTexture.Width, (int)heartTexture.Height-100);
-            if (syringeRect.Intersects(heartRect))
-            {
-                hit = true;
-            }
-            if (syringePosition.Y == 720)
-            {
-                miss = true;
             }
         }
 
@@ -91,9 +100,17 @@ namespace Platformer
             spriteBatch.Draw(heartTexture, heartPosition, Color.White);
             spriteBatch.Draw(syringeTexture, syringePosition, Color.White);
 
-            spriteBatch.DrawString(game.font, "Mini Game 1 State", new Vector2(10, 10), Color.White);
-            if (!hit && !miss)
-                spriteBatch.DrawString(game.font, ""+countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            if (countdown > 3)
+            {
+                spriteBatch.DrawString(game.font, "STAB", new Vector2(480, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
+            else if (countdown > 0)
+            {
+                spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
+
+            if (stab_countdown > 0 && stab_countdown < 4)
+                spriteBatch.DrawString(game.font, ""+stab_countdown, new Vector2(630, 100), Color.Red, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
             if (hit)
                 spriteBatch.DrawString(game.font, "GOOD!", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
             if (miss)

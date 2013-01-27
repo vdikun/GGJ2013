@@ -21,9 +21,9 @@ namespace Platformer
         static Texture2D heartDirty2Texture;
         static Texture2D currentHeartTexture;
 
-        Vector2 tapPosition = new Vector2(50, 10);
+        Vector2 tapPosition = new Vector2(1000, 10);
         Vector2 waterPosition;
-        Vector2 heartPosition = new Vector2(0, 480);
+        Vector2 heartPosition = new Vector2(300, 480);
         int tapGoal = 500;
 
         int dirt = 100;
@@ -31,8 +31,15 @@ namespace Platformer
         bool hittingHeart = false;
 
         int currentFrame = 0;
+        int countdown = 5;
+        int frameCountdown = 1;
 
         int quitTimer = 40;
+
+        public MiniGame2State()
+        {
+            waterPosition = new Vector2(tapPosition.X - 23, tapPosition.Y + 200);
+        }
 
         public static void LoadContent(ContentManager manager)
         {
@@ -46,62 +53,54 @@ namespace Platformer
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
         {
-            if (game.keyboard.IsKeyDown(Keys.Escape))
-            {
-                game.currentState = new MenuState();
-            }
-
-            float posDiff = Mouse.GetState().X - heartPosition.X;
-            heartPosition.X += posDiff * 0.1f;
-            if (heartPosition.X < 0) heartPosition.X = 0;
-            if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
-            
-            /*if (countdown != 0)
+            if (countdown != 0)
             {
                 frameCountdown--;
                 if (frameCountdown == 0)
                 {
-                    frameCountdown = 80;
+                    frameCountdown = 40;
                     countdown--;
-                    Random random = new Random();
-                    tapGoal = random.Next(50, 1000);
                 }
-                tapPosition.X += (tapGoal - tapPosition.X) * 0.1f;
-                waterPosition = new Vector2(tapPosition.X-23, tapPosition.Y + 200);
-            }*/
-
-            if (Math.Abs(tapPosition.X-tapGoal) >= 10)
-            {
-                //tapPosition.X += (tapGoal - tapPosition.X) * 0.1f;
-                if (tapPosition.X < tapGoal) tapPosition.X+=10;
-                else if (tapPosition.X > tapGoal) tapPosition.X-=10;
-                waterPosition = new Vector2(tapPosition.X - 23, tapPosition.Y + 200);
             }
             else
             {
-                Random random = new Random();
-                tapGoal = random.Next(50, 1000);
+                float posDiff = Mouse.GetState().X - heartPosition.X;
+                heartPosition.X += posDiff * 0.1f;
+                if (heartPosition.X < 0) heartPosition.X = 0;
+                if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
+
+
+                if (Math.Abs(tapPosition.X - tapGoal) >= 10)
+                {
+                    if (tapPosition.X < tapGoal) tapPosition.X += 10;
+                    else if (tapPosition.X > tapGoal) tapPosition.X -= 10;
+                    waterPosition = new Vector2(tapPosition.X - 23, tapPosition.Y + 200);
+                }
+                else
+                {
+                    Random random = new Random();
+                    tapGoal = random.Next(50, 1000);
+                }
+
+                hittingHeart = false;
+                if (heartPosition.X < waterPosition.X + waterTexture.Width / 4 && heartPosition.X > waterPosition.X + waterTexture.Width / 4 - heartTexture.Width)
+                {
+                    dirt--;
+                    hittingHeart = true;
+                }
+
+                currentHeartTexture = heartDirty2Texture;
+                if (dirt <= 75) currentHeartTexture = heartDirty1Texture;
+                if (dirt <= 0)
+                {
+                    currentHeartTexture = heartTexture;
+                    quitTimer--;
+                }
+                if (quitTimer == 0) game.currentState = new MenuState();
             }
 
             currentFrame++;
             if (currentFrame > 7) currentFrame = 0;
-
-            hittingHeart = false;
-            if (heartPosition.X < waterPosition.X + waterTexture.Width / 4 && heartPosition.X > waterPosition.X + waterTexture.Width / 4 - heartTexture.Width)
-            {
-                dirt--;
-                hittingHeart = true;
-            }
-
-            currentHeartTexture = heartDirty2Texture;
-            if (dirt <= 75) currentHeartTexture = heartDirty1Texture;
-            if (dirt <= 0)
-            {
-                currentHeartTexture = heartTexture;
-                quitTimer--;
-            }
-            if (quitTimer == 0) game.currentState = new MenuState();
-
         }
 
         void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
@@ -113,7 +112,14 @@ namespace Platformer
                 spriteBatch.Draw(waterTexture, waterPosition, new Rectangle(currentFrame / 4 * 45, 200, waterTexture.Width / 2, waterTexture.Height - 200), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
             spriteBatch.Draw(tapTexture, tapPosition, null, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
 
-            spriteBatch.DrawString(game.font, "Mini Game 2 State", new Vector2(10, 10), Color.White);
+            if (countdown == 4)
+            {
+                spriteBatch.DrawString(game.font, "WASH", new Vector2(480, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
+            else if (countdown > 0)
+            {
+                spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
         }
     }
 }

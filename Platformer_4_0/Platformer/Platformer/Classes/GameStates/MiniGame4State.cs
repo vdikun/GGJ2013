@@ -39,7 +39,7 @@ namespace Platformer
             oldMouseState = Mouse.GetState();
             currentMouseState = new MouseState();
             shakeCounter = SHAKE_COUNTER;
-            countdown = 3;
+            countdown = 4;
             frameCounter = 30;
         }
 
@@ -134,9 +134,13 @@ namespace Platformer
                 spriteBatch.Draw(dirt, new Vector2(particle.X, particle.Y), null, Color.SaddleBrown, 0f, Vector2.Zero, (float) (2.0f + random.NextDouble()), SpriteEffects.None, 0f);
             }
 
-            spriteBatch.DrawString(game.font, "Mini Game 4 State", new Vector2(10, 10), Color.White);
-
-            if (countdown != 0) spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            if (countdown == 4)
+            {
+                spriteBatch.DrawString(game.font, "SHAKE", new Vector2(480, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            } else if (countdown > 0)
+            {
+                spriteBatch.DrawString(game.font, "" + countdown, new Vector2(630, 100), Color.White, 0f, Vector2.Zero, 5f, SpriteEffects.None, 0f);
+            }
 
             if (shakeCounter >= 3 && shakeCounter <= 11) spriteBatch.DrawString(game.font, "Almost there..", new Vector2(450, 100), Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
             

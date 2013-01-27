@@ -213,6 +213,9 @@ namespace Platformer
         static Sound voiceNurseLetsGo;
         static Sound voiceNurseSqueal;
 
+        static SoundEffect punchSound;
+        static SoundEffectInstance punchInstance;
+
         /*struct Conversation
         {
             enum Stage { WAIT_1, DOCTOR, WAIT_2, NURSE, WAIT_3, RIP, RUN }
@@ -291,8 +294,8 @@ namespace Platformer
                 manager.Load<Texture2D>("Backgrounds/background4"),
                 manager.Load<Texture2D>("Backgrounds/background5"),
             };
-            firstBackgroundTexture = manager.Load<Texture2D>("Backgrounds/Splash");
-            lastBackgroundTexture = manager.Load<Texture2D>("Backgrounds/Splash");
+            firstBackgroundTexture = manager.Load<Texture2D>("Backgrounds/opening");
+            lastBackgroundTexture = manager.Load<Texture2D>("Backgrounds/closing");
 
             uibg = manager.Load<Texture2D>("Sprites/UIBG");
             uibgo = manager.Load<Texture2D>("Sprites/UIBGOverlay");
@@ -349,6 +352,8 @@ namespace Platformer
 
             music = manager.Load<SoundEffect>("Sounds/main_theme_intro");
             introMusic = manager.Load<SoundEffect>("Sounds/main_theme_loop");
+
+            punchSound = manager.Load<SoundEffect>("Sounds/SFX/punch_person_1");
         }
 
         void GameState.Update(PlatformerGame game, GameTime gameTime)
@@ -549,6 +554,8 @@ namespace Platformer
                     currentObstacle.counters = new Obstacle.Counter[0];
                     currentObstacle.sprite = currentObstacle.destroyedSprite;
                     PlaySound(voicePunch, VOICE_PUNCH_CHANCE, false);
+                    punchInstance = punchSound.CreateInstance();
+                    punchInstance.Play();
                 }
             }
         }

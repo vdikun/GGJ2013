@@ -1189,6 +1189,24 @@
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\victory_music.xnb</Output>
       <Time>2013-01-27T13:53:38.1291047-08:00</Time>
     </Item>
+    <Item>
+      <Source>Backgrounds\closing.png</Source>
+      <Name>Backgrounds\closing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\closing.xnb</Output>
+      <Time>2013-01-27T14:29:07.9111444-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\opening.png</Source>
+      <Name>Backgrounds\opening</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\opening.xnb</Output>
+      <Time>2013-01-27T14:29:35.6789108-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{2FDB7EF3-D3C4-47A3-8E75-C901A05B8574}</ContentProjectGUID>

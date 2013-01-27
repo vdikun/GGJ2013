@@ -65,6 +65,7 @@ namespace Platformer
         private float autoTimer;
         private State heartState;
         public Performance performance;
+        public bool justPressed;
 
         //other variables
         private float oldTime;
@@ -77,8 +78,6 @@ namespace Platformer
         private static Texture2D HEART_RED;
         private static Texture2D HEART_BLUE;
         private static Texture2D HEART_DEAD;
-        private static Texture2D LIGHT_ON;
-        private static Texture2D LIGHT_OFF;
 
         private static SoundEffect pump;
         private static SoundEffectInstance pumpEffect;
@@ -95,6 +94,7 @@ namespace Platformer
             oldTime = 0F;
             heartState = State.Default;
             performance = Performance.Perfect;
+            justPressed = false;
         }
 
         public static void LoadContent(ContentManager contentManager)
@@ -251,6 +251,7 @@ namespace Platformer
 
         public virtual void Update(GameTime gameTime)
         {
+
             // Automatic decrease of HeartMeter with time
             if (heartMeter > 0)
             {
@@ -270,7 +271,8 @@ namespace Platformer
                     time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
                     oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
                     addToClickPattern(Click.Left, time);
-
+                    justPressed = true;
+                    
                 }
 
                 else if (previousMouseState.RightButton == ButtonState.Released && Mouse.GetState().RightButton == ButtonState.Pressed)
@@ -281,6 +283,21 @@ namespace Platformer
                     time = (float)gameTime.TotalGameTime.TotalSeconds - oldTime;
                     oldTime = (float)gameTime.TotalGameTime.TotalSeconds;
                     addToClickPattern(Click.Right, time);
+                    justPressed = true;
+                }
+
+                else
+                {
+                    // check if heart has just been pressed
+                    float currentTime = (float)gameTime.TotalGameTime.TotalSeconds;
+                    if ((currentTime - oldTime) < 1)
+                    {
+                        justPressed = true;
+                    }
+                    else
+                    {
+                        justPressed = false;
+                    }
                 }
             }
 

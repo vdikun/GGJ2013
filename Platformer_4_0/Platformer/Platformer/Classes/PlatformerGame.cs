@@ -95,6 +95,7 @@ namespace Platformer
             PlatformState.LoadContent(Content);
             MenuState.LoadContent(Content);
             MiniGame1State.LoadContent(Content);
+            MiniGame2State.LoadContent(Content);
 
             /*winOverlay = Content.Load<Texture2D>("Overlays/you_win");
             loseOverlay = Content.Load<Texture2D>("Overlays/you_lose");

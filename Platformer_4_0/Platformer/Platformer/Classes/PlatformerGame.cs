@@ -71,6 +71,7 @@ namespace Platformer
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferHeight = 720;
             graphics.PreferredBackBufferWidth = 1280;
+            this.IsMouseVisible = true;
 
             Content.RootDirectory = "Content";
         }

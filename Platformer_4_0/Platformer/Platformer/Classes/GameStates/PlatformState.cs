@@ -36,6 +36,8 @@ namespace Platformer
         int jumpTimer;
         int punchTimer;
 
+        Heart heart1;
+
         //Controls
         static Keys[] jumpKeys  = new Keys[] { Keys.W, Keys.Space };
         static Keys[] slideKeys = new Keys[] { Keys.S };
@@ -46,6 +48,7 @@ namespace Platformer
             playerPosition = new Vector2(100, 300);
             bgPosition = new Vector2(0, 0);
             obstaclePosition = new Vector2(-500, 0);
+            heart1 = new Heart();
         }
 
         public static void LoadContent(ContentManager manager)
@@ -66,6 +69,8 @@ namespace Platformer
         {
             currentSprite = runTexture;
             playerPosition.Y = 300;
+
+            heart1.Update(gameTime);
 
             if (game.keyboard.IsKeyDown(Keys.Escape))
             {

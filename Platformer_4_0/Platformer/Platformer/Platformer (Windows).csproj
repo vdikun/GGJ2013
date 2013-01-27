@@ -69,6 +69,8 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\GameStates\PlatformState.cs" />
+    <Compile Include="Classes\Heart.cs" />
     <Compile Include="Classes\Old\Accelerometer.cs" />
     <Compile Include="Classes\Old\Animation.cs" />
     <Compile Include="Classes\Old\AnimationPlayer.cs" />
@@ -79,7 +81,6 @@
     <Compile Include="Classes\Util.cs" />
     <Compile Include="Classes\GameStates\FreePlatformState.cs" />
     <Compile Include="Classes\GameStates\CutsceneState.cs" />
-    <Compile Include="Classes\GameStates\PlatformState.cs" />
     <Compile Include="Classes\GameStates\MenuState.cs" />
     <Compile Include="Classes\GameStates\GameState.cs" />
     <Compile Include="Classes\Old\Enemy.cs" />

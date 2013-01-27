@@ -17,7 +17,7 @@ Josue Pacheco
 Devon Edwards
 
 Controls:
-W - JUMP
-S - SLIDE
-D - RUN
-R/L MOUSE - HEARTBEAT
+- W : JUMP
+- S : SLIDE
+- D : RUN
+- R/L MOUSE : HEARTBEAT

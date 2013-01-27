@@ -34,8 +34,8 @@ namespace Platformer
         readonly static float OBSTACLE_CUT_OFF = -10.0f;
         readonly static float OBSTACLE_DEADZONE = OBSTACLE_CUT_OFF - 100.0f;
         readonly static int   OBSTACLE_MAX_ON_SCREEN = 2;
-        readonly static int   OBSTACLE_MIN_TILL_ER = 4;
-        readonly static int   OBSTACLE_MAX_TILL_ER = 6;
+        readonly static int   OBSTACLE_MIN_TILL_ER = 15;
+        readonly static int   OBSTACLE_MAX_TILL_ER = 20;
 
         readonly static float JUMP_DURATION = 40.0f;
         readonly static float JUMP_MID_DURATION = JUMP_DURATION / 2;

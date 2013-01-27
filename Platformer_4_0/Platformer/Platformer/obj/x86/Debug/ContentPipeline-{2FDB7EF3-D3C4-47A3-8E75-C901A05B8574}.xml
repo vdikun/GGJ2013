@@ -980,7 +980,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\WiresDuck.xnb</Output>
-      <Time>2013-01-27T10:29:53.7107408-08:00</Time>
+      <Time>2013-01-27T14:24:14.894071-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\JumpingAnim.png</Source>
@@ -1025,7 +1025,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\footsteps.xnb</Output>
-      <Time>2013-01-27T14:00:52-08:00</Time>
+      <Time>2013-01-27T14:13:04.6701896-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\heart_splat.wav</Source>
@@ -1034,7 +1034,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\heart_splat.xnb</Output>
-      <Time>2013-01-27T14:05:30-08:00</Time>
+      <Time>2013-01-27T14:13:04.67519-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\kick_door.wav</Source>
@@ -1043,7 +1043,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\kick_door.xnb</Output>
-      <Time>2013-01-27T14:04:12-08:00</Time>
+      <Time>2013-01-27T14:13:04.6781906-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\landing_jump.wav</Source>
@@ -1052,7 +1052,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\landing_jump.xnb</Output>
-      <Time>2013-01-27T14:01:12-08:00</Time>
+      <Time>2013-01-27T14:13:04.6821902-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\obstacle_thud.wav</Source>
@@ -1061,7 +1061,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\obstacle_thud.xnb</Output>
-      <Time>2013-01-27T14:04:52-08:00</Time>
+      <Time>2013-01-27T14:13:04.6851912-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\ow_reaction_1.wav</Source>
@@ -1070,7 +1070,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\ow_reaction_1.xnb</Output>
-      <Time>2013-01-27T14:03:12-08:00</Time>
+      <Time>2013-01-27T14:13:04.6901928-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\ow_reaction_2.wav</Source>
@@ -1079,7 +1079,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\ow_reaction_2.xnb</Output>
-      <Time>2013-01-27T14:03:16-08:00</Time>
+      <Time>2013-01-27T14:13:04.6941931-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\ow_reaction_3.wav</Source>
@@ -1088,7 +1088,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\ow_reaction_3.xnb</Output>
-      <Time>2013-01-27T14:03:22-08:00</Time>
+      <Time>2013-01-27T14:13:04.6971934-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\punch_person_1.wav</Source>
@@ -1097,7 +1097,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_person_1.xnb</Output>
-      <Time>2013-01-27T14:01:56-08:00</Time>
+      <Time>2013-01-27T14:13:04.7011937-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\punch_person_2.wav</Source>
@@ -1106,7 +1106,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_person_2.xnb</Output>
-      <Time>2013-01-27T14:02:02-08:00</Time>
+      <Time>2013-01-27T14:13:04.7061937-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\punch_person_3.wav</Source>
@@ -1115,7 +1115,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_person_3.xnb</Output>
-      <Time>2013-01-27T14:02:06-08:00</Time>
+      <Time>2013-01-27T14:13:04.710194-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\punch_wall_1.wav</Source>
@@ -1124,7 +1124,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_wall_1.xnb</Output>
-      <Time>2013-01-27T14:02:34-08:00</Time>
+      <Time>2013-01-27T14:13:04.714196-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\punch_wall_2.wav</Source>
@@ -1133,7 +1133,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_wall_2.xnb</Output>
-      <Time>2013-01-27T14:02:44-08:00</Time>
+      <Time>2013-01-27T14:13:04.7191959-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\punch_wall_3.wav</Source>
@@ -1142,7 +1142,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\punch_wall_3.xnb</Output>
-      <Time>2013-01-27T14:02:52-08:00</Time>
+      <Time>2013-01-27T14:13:04.7261977-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\shatter_glass.wav</Source>
@@ -1151,7 +1151,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\shatter_glass.xnb</Output>
-      <Time>2013-01-27T14:03:54-08:00</Time>
+      <Time>2013-01-27T14:13:04.7331983-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\shatter_glass_1.wav</Source>
@@ -1160,7 +1160,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\shatter_glass_1.xnb</Output>
-      <Time>2013-01-27T14:03:42-08:00</Time>
+      <Time>2013-01-27T14:13:04.7401984-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\stab.wav</Source>
@@ -1169,7 +1169,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\stab.xnb</Output>
-      <Time>2013-01-27T14:04:32-08:00</Time>
+      <Time>2013-01-27T14:13:04.7452-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\SFX\tap_water_loop.wav</Source>
@@ -1178,7 +1178,16 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\SFX\tap_water_loop.xnb</Output>
-      <Time>2013-01-27T14:05:18-08:00</Time>
+      <Time>2013-01-27T14:13:04.7521994-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\victory_music.wav</Source>
+      <Name>Sounds\victory_music</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\victory_music.xnb</Output>
+      <Time>2013-01-27T13:53:38.1291047-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

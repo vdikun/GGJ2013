@@ -193,7 +193,7 @@ namespace Platformer
             }
 
             bgPosition.X -= screenAdjustment;
-            if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH)) bgPosition.X = 0;
+            if (bgPosition.X < Util.scale(-PlatformerGame.SCREEN_WIDTH)) bgPosition.X += Util.scale(PlatformerGame.SCREEN_WIDTH);
 
             obstaclePosition.X -= screenAdjustment;
         }

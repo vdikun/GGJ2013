@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Gem.xnb</Output>
-      <Time>2013-01-25T23:08:57.074-08:00</Time>
+      <Time>2013-01-26T16:37:54.5222-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterA\Idle.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterA\Idle.xnb</Output>
-      <Time>2013-01-25T23:08:57.075-08:00</Time>
+      <Time>2013-01-26T16:37:54.5232-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterA\Run.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterA\Run.xnb</Output>
-      <Time>2013-01-25T23:08:57.075-08:00</Time>
+      <Time>2013-01-26T16:37:54.5242-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterB\Idle.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterB\Idle.xnb</Output>
-      <Time>2013-01-25T23:08:57.077-08:00</Time>
+      <Time>2013-01-26T16:37:54.5252-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterB\Run.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterB\Run.xnb</Output>
-      <Time>2013-01-25T23:08:57.078-08:00</Time>
+      <Time>2013-01-26T16:37:54.5262-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterC\Idle.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterC\Idle.xnb</Output>
-      <Time>2013-01-25T23:08:57.079-08:00</Time>
+      <Time>2013-01-26T16:37:54.5272-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterC\Run.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterC\Run.xnb</Output>
-      <Time>2013-01-25T23:08:57.079-08:00</Time>
+      <Time>2013-01-26T16:37:54.5282-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterD\Idle.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterD\Idle.xnb</Output>
-      <Time>2013-01-25T23:08:57.081-08:00</Time>
+      <Time>2013-01-26T16:37:54.5292-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\MonsterD\Run.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonsterD\Run.xnb</Output>
-      <Time>2013-01-25T23:08:57.082-08:00</Time>
+      <Time>2013-01-26T16:37:54.5302-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA0.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA0.xnb</Output>
-      <Time>2013-01-25T23:08:57.087-08:00</Time>
+      <Time>2013-01-26T16:37:54.5372-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA1.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA1.xnb</Output>
-      <Time>2013-01-25T23:08:57.087-08:00</Time>
+      <Time>2013-01-26T16:37:54.5382-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA2.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA2.xnb</Output>
-      <Time>2013-01-25T23:08:57.088-08:00</Time>
+      <Time>2013-01-26T16:37:54.5382-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA3.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA3.xnb</Output>
-      <Time>2013-01-25T23:08:57.088-08:00</Time>
+      <Time>2013-01-26T16:37:54.5382-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA4.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA4.xnb</Output>
-      <Time>2013-01-25T23:08:57.089-08:00</Time>
+      <Time>2013-01-26T16:37:54.5392-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA5.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA5.xnb</Output>
-      <Time>2013-01-25T23:08:57.089-08:00</Time>
+      <Time>2013-01-26T16:37:54.5392-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockA6.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockA6.xnb</Output>
-      <Time>2013-01-25T23:08:57.09-08:00</Time>
+      <Time>2013-01-26T16:37:54.5402-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockB0.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockB0.xnb</Output>
-      <Time>2013-01-25T23:08:57.091-08:00</Time>
+      <Time>2013-01-26T16:37:54.5402-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\BlockB1.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\BlockB1.xnb</Output>
-      <Time>2013-01-25T23:08:57.091-08:00</Time>
+      <Time>2013-01-26T16:37:54.5412-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\Platform.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\Platform.xnb</Output>
-      <Time>2013-01-25T23:08:57.092-08:00</Time>
+      <Time>2013-01-26T16:37:54.5422-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer0_0.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer0_0.xnb</Output>
-      <Time>2013-01-25T23:08:56.886-08:00</Time>
+      <Time>2013-01-26T16:37:54.4052-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer0_1.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer0_1.xnb</Output>
-      <Time>2013-01-25T23:08:56.89-08:00</Time>
+      <Time>2013-01-26T16:37:54.4112-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer0_2.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer0_2.xnb</Output>
-      <Time>2013-01-25T23:08:56.893-08:00</Time>
+      <Time>2013-01-26T16:37:54.4152-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer1_0.png</Source>
@@ -206,7 +206,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer1_0.xnb</Output>
-      <Time>2013-01-25T23:08:56.901-08:00</Time>
+      <Time>2013-01-26T16:37:54.4272-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer1_1.png</Source>
@@ -215,7 +215,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer1_1.xnb</Output>
-      <Time>2013-01-25T23:08:56.909-08:00</Time>
+      <Time>2013-01-26T16:37:54.4382-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer1_2.png</Source>
@@ -224,7 +224,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer1_2.xnb</Output>
-      <Time>2013-01-25T23:08:57.012-08:00</Time>
+      <Time>2013-01-26T16:37:54.4472-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer2_0.png</Source>
@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer2_0.xnb</Output>
-      <Time>2013-01-25T23:08:57.02-08:00</Time>
+      <Time>2013-01-26T16:37:54.4512-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer2_1.png</Source>
@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer2_1.xnb</Output>
-      <Time>2013-01-25T23:08:57.025-08:00</Time>
+      <Time>2013-01-26T16:37:54.4562-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Layer2_2.png</Source>
@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Layer2_2.xnb</Output>
-      <Time>2013-01-25T23:08:57.031-08:00</Time>
+      <Time>2013-01-26T16:37:54.4602-08:00</Time>
     </Item>
     <Item>
       <Source>Overlays\you_died.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Overlays\you_died.xnb</Output>
-      <Time>2013-01-25T23:08:57.04-08:00</Time>
+      <Time>2013-01-26T16:37:54.4682-08:00</Time>
     </Item>
     <Item>
       <Source>Overlays\you_lose.png</Source>
@@ -269,7 +269,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Overlays\you_lose.xnb</Output>
-      <Time>2013-01-25T23:08:57.04-08:00</Time>
+      <Time>2013-01-26T16:37:54.4692-08:00</Time>
     </Item>
     <Item>
       <Source>Overlays\you_win.png</Source>
@@ -278,7 +278,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Overlays\you_win.xnb</Output>
-      <Time>2013-01-25T23:08:57.041-08:00</Time>
+      <Time>2013-01-26T16:37:54.4692-08:00</Time>
     </Item>
     <Item>
       <Source>Tiles\Exit.png</Source>
@@ -287,7 +287,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Tiles\Exit.xnb</Output>
-      <Time>2013-01-25T23:08:57.091-08:00</Time>
+      <Time>2013-01-26T16:37:54.5412-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\Hud.spritefont</Source>
@@ -296,7 +296,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Fonts\Hud.xnb</Output>
-      <Time>2013-01-25T23:08:57.036-08:00</Time>
+      <Time>2013-01-26T16:37:54.4652-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\ExitReached.wma</Source>
@@ -305,7 +305,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\ExitReached.xnb</Output>
-      <Time>2013-01-25T23:08:57.042-08:00</Time>
+      <Time>2013-01-26T16:37:54.4722-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\GemCollected.wma</Source>
@@ -314,7 +314,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\GemCollected.xnb</Output>
-      <Time>2013-01-25T23:08:57.043-08:00</Time>
+      <Time>2013-01-26T16:37:54.4742-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\MonsterKilled.wma</Source>
@@ -323,7 +323,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\MonsterKilled.xnb</Output>
-      <Time>2013-01-25T23:08:57.044-08:00</Time>
+      <Time>2013-01-26T16:37:54.4752-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\Music.wma</Source>
@@ -333,7 +333,7 @@
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\Music.xnb</Output>
       <Extra>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\Music.wma</Extra>
-      <Time>2013-01-25T23:08:57.06-08:00</Time>
+      <Time>2013-01-26T16:37:54.5162-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\PlayerFall.wma</Source>
@@ -342,7 +342,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\PlayerFall.xnb</Output>
-      <Time>2013-01-25T23:08:57.07-08:00</Time>
+      <Time>2013-01-26T16:37:54.5172-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\PlayerJump.wma</Source>
@@ -351,7 +351,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\PlayerJump.xnb</Output>
-      <Time>2013-01-25T23:08:57.071-08:00</Time>
+      <Time>2013-01-26T16:37:54.5182-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\PlayerKilled.wma</Source>
@@ -360,7 +360,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\PlayerKilled.xnb</Output>
-      <Time>2013-01-25T23:08:57.071-08:00</Time>
+      <Time>2013-01-26T16:37:54.5182-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\Powerup.wma</Source>
@@ -369,7 +369,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\Powerup.xnb</Output>
-      <Time>2013-01-25T23:08:57.072-08:00</Time>
+      <Time>2013-01-26T16:37:54.5202-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\whitepixel.png</Source>
@@ -378,7 +378,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\whitepixel.xnb</Output>
-      <Time>2013-01-26T02:30:48.5166-08:00</Time>
+      <Time>2013-01-26T16:37:54.5362-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Background.png</Source>
@@ -387,7 +387,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Background.xnb</Output>
-      <Time>2013-01-26T08:29:27.448-08:00</Time>
+      <Time>2013-01-26T16:37:54.5302-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Hit.png</Source>
@@ -396,7 +396,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Hit.xnb</Output>
-      <Time>2013-01-26T08:29:27.449-08:00</Time>
+      <Time>2013-01-26T16:37:54.5312-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Jumping.png</Source>
@@ -405,7 +405,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Jumping.xnb</Output>
-      <Time>2013-01-26T08:29:27.45-08:00</Time>
+      <Time>2013-01-26T16:37:54.5322-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\JumpObstacle.png</Source>
@@ -414,7 +414,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\JumpObstacle.xnb</Output>
-      <Time>2013-01-26T08:29:27.451-08:00</Time>
+      <Time>2013-01-26T16:37:54.5312-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Punching.png</Source>
@@ -423,7 +423,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Punching.xnb</Output>
-      <Time>2013-01-26T08:29:27.452-08:00</Time>
+      <Time>2013-01-26T16:37:54.5332-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\PunchObstacle.png</Source>
@@ -432,7 +432,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\PunchObstacle.xnb</Output>
-      <Time>2013-01-26T08:29:27.442-08:00</Time>
+      <Time>2013-01-26T16:37:54.5332-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Running.png</Source>
@@ -441,7 +441,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Running.xnb</Output>
-      <Time>2013-01-26T08:29:27.444-08:00</Time>
+      <Time>2013-01-26T16:37:54.5342-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\SlideObstacle.png</Source>
@@ -450,7 +450,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\SlideObstacle.xnb</Output>
-      <Time>2013-01-26T08:29:27.445-08:00</Time>
+      <Time>2013-01-26T16:37:54.5342-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Sliding.png</Source>
@@ -459,7 +459,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Sliding.xnb</Output>
-      <Time>2013-01-26T08:29:27.446-08:00</Time>
+      <Time>2013-01-26T16:37:54.5352-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Standing.png</Source>
@@ -468,7 +468,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Standing.xnb</Output>
-      <Time>2013-01-26T08:29:27.447-08:00</Time>
+      <Time>2013-01-26T16:37:54.5352-08:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\Splash.jpg</Source>
@@ -477,7 +477,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\Splash.xnb</Output>
-      <Time>2013-01-26T14:42:21.879-08:00</Time>
+      <Time>2013-01-26T16:37:54.4642-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

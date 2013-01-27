@@ -105,7 +105,7 @@ namespace Platformer
             avgTime /= beatPatternLength;
 
             // check if click pattern wasnt too slow/ too fast/ incorrect number/ wrong pattern
-            if (avgTime < (beatTimer - 0.15F))
+            if (avgTime < (beatTimer - 0.1F))
             {
                 Console.WriteLine("Take it slow!");
                 return false;

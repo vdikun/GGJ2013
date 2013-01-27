@@ -47,8 +47,8 @@ namespace Platformer
         
         // constants
         private const int BEAT_PATTERN_LENGTH = 2;
-        public const int HEART_METER_INIT = 10;
-        public const int HEART_METER_UP_BOUND = 100;
+        public const int HEART_METER_INIT = 30;
+        public const int HEART_METER_UP_BOUND = 50;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
         private const int HEART_METER_DECREASE_VALUE = -1;
@@ -64,7 +64,7 @@ namespace Platformer
         private float beatTimer;
         private float autoTimer;
         private State heartState;
-        private Performance performance;
+        public Performance performance;
 
         //other variables
         private float oldTime;

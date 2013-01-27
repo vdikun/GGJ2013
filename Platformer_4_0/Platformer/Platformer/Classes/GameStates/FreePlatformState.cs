@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Platformer
 {
+
     class FreePlatformState : GameState
     {
         readonly static float RUN_SPEED = Util.scale(25);
@@ -63,6 +64,7 @@ namespace Platformer
         static Texture2D punchObstacleTexture;
         static Texture2D currentObstacle;
         static Texture2D uibg;
+        static Texture2D monitorBlip;
 
         static Random random = new Random();
 
@@ -75,6 +77,8 @@ namespace Platformer
         float knockbackTimer = -50;
 
         float screenAdjustment;
+
+        Heart heart = new Heart();
 
         //Background Panels
         static Texture2D[] backgroundTextures;
@@ -144,6 +148,7 @@ namespace Platformer
             };
 
             uibg = manager.Load<Texture2D>("Sprites/UIBG");
+            monitorBlip = manager.Load<Texture2D>("Sprites/MonitorBlip");
 
             backgroundWidth = backgroundTextures[0].Width;
 
@@ -244,6 +249,8 @@ namespace Platformer
                 backgroundPosition.X -= screenAdjustment;
                 if (backgroundPosition.X < Util.scale(-backgroundWidth) * 2) backgroundPosition.X += Util.scale(backgroundWidth);
             }
+
+            heart.Update(gameTime);
         }
 
         void HandleMovement(KeyboardState keyboard)
@@ -400,7 +407,14 @@ namespace Platformer
             spriteBatch.Draw(currentObstacle, obstaclePosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
             spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
 
-            spriteBatch.Draw(uibg, Vector2.Zero, Color.White);
+            Color uiColor;
+            uiColor = Color.White;
+            if (heart.heartMeter < 40) uiColor = Color.Yellow;
+            if (heart.heartMeter < 25) uiColor = Color.Orange;
+            if (heart.heartMeter < 10) uiColor = Color.Red;
+
+            spriteBatch.Draw(uibg, Vector2.Zero, uiColor);
+            heart.Draw(spriteBatch, 1080, 0);
 
             spriteBatch.DrawString(game.font, "Free Platform State", new Vector2(10, 10), Color.White);
         }

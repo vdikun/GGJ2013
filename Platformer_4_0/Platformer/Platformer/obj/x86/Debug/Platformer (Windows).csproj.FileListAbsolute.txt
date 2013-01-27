@@ -207,3 +207,11 @@ C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin
 C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background4.xnb
 C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Backgrounds\background5.xnb
 C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\UIBG.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Minigames\OpenWoundGuy.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\cutscene_1stplay.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\cutscene_loop.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\main_theme_intro.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\main_theme_loop.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\main_theme_loop_minigames.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sounds\titlescreen.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\MonitorBlip.xnb

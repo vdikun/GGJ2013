@@ -55,7 +55,7 @@ namespace Platformer
             new Button("Mini Games", delegate(PlatformerGame game) {
                 //game.currentState = new MiniGameState();
                 Random random = new Random();
-                int randInt = random.Next(0, 3);
+                int randInt = random.Next(0, 4);
                 randInt = 0; //REMOVE THIS ONCE ALL MINIGAMES ARE INTEGRATED
                 switch (randInt)
                 {
@@ -67,6 +67,9 @@ namespace Platformer
                         break;
                     case 2:
                         game.currentState = new MiniGame3State();
+                        break;
+                    case 3:
+                        game.currentState = new MiniGame4State();
                         break;
                     default:
                         break;
@@ -80,6 +83,9 @@ namespace Platformer
             }),
             new Button("Mini Game 3", delegate(PlatformerGame game) {
                 game.currentState = new MiniGame3State();
+            }),
+            new Button("Mini Game 4", delegate(PlatformerGame game) {
+                game.currentState = new MiniGame4State();
             }),
             new Button("Exit", delegate(PlatformerGame game) {
                 game.Exit();

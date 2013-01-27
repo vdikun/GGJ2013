@@ -59,8 +59,10 @@ namespace Platformer
 
         static Texture2D hitTexture;
         static Texture2D jumpTexture;
+        static Texture2D jumpAnimTexture;
         static Texture2D punchTexture;
         static Texture2D runTexture;
+        static Texture2D runAnimTexture;
         static Texture2D slideTexture;
         static Texture2D standTexture;
         static Texture2D currentSprite;
@@ -87,6 +89,17 @@ namespace Platformer
         float screenAdjustment;
 
         Boolean failure = false;
+
+        int currentFrame = 0;
+
+        Rectangle[] animBoxes = {new Rectangle(0, 0, 300, 300),
+                               new Rectangle(300, 0, 300, 300),
+                               new Rectangle(600, 0, 300, 300),
+                               new Rectangle(900, 0, 300, 300),
+                               new Rectangle(0, 300, 300, 300),
+                               new Rectangle(300, 300, 300, 300),
+                               new Rectangle(600, 300, 300, 300),
+                               new Rectangle(900, 300, 300, 300)};
 
         Heart heart = new Heart();
 
@@ -254,6 +267,9 @@ namespace Platformer
             obstaclePatientDestroyedTexture = manager.Load<Texture2D>("Sprites/PatientPunchDestroyed");
             obstacleWiresTexture = manager.Load<Texture2D>("Sprites/WiresDuck");
 
+            runAnimTexture = manager.Load<Texture2D>("Sprites/Player/RunningAnim");
+            jumpAnimTexture = manager.Load<Texture2D>("Sprites/Player/JumpingAnim");
+
             backgroundTextures = new Texture2D[] {
                 manager.Load<Texture2D>("Backgrounds/background1"),
                 manager.Load<Texture2D>("Backgrounds/background2"),
@@ -332,7 +348,7 @@ namespace Platformer
                     GotoRandomMinigame(game);
                 }
 
-                currentSprite = runTexture;
+                currentSprite = runAnimTexture;
                 playerPosition.Y = GROUND_HEIGHT;
                 screenAdjustment = RUN_SPEED - ((CENTER - playerPosition.X) * SPEED_INFLUENCE);
 
@@ -433,7 +449,8 @@ namespace Platformer
 
             if (jumpTimer > 0)
             {
-                currentSprite = jumpTexture;
+                if (jumpTimer == JUMP_DURATION) currentFrame = 0;
+                currentSprite = jumpAnimTexture;
 
                 float heightModifier;
                 if (jumpTimer > JUMP_MID_DURATION)
@@ -546,7 +563,19 @@ namespace Platformer
             }
 
             spriteBatch.Draw(currentObstacle.sprite, currentObstacle.position, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
-            spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+
+            if (currentSprite != runAnimTexture && currentSprite != jumpAnimTexture)
+                spriteBatch.Draw(currentSprite, playerPosition, null, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+            else
+            {
+                Rectangle rect = new Rectangle(0, 0, 0, 0);
+                if (currentSprite == runAnimTexture) rect = animBoxes[currentFrame/3];
+                if (currentSprite == jumpAnimTexture) rect = animBoxes[(int)(currentFrame/(JUMP_DURATION/8))];
+                spriteBatch.Draw(currentSprite, playerPosition, rect, Color.White, 0f, Vector2.Zero, Util.SCALE, SpriteEffects.None, 0f);
+                currentFrame++;
+                if (currentSprite == runAnimTexture) if (currentFrame == 8*3) currentFrame = 0;
+                if (currentSprite == jumpAnimTexture) if (currentFrame == 6*(JUMP_DURATION/8)) currentFrame = 0;
+            }
 
             Color uiColor;
             uiColor = Color.White;

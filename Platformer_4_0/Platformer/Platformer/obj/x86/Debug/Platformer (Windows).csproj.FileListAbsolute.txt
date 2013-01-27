@@ -221,3 +221,7 @@ C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin
 C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Patient.xnb
 C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\GourneyJump.xnb
 C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\PatientPunch.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\PatientPunchDestroyed.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\WiresDuck.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\JumpingAnim.xnb
+C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\RunningAnim.xnb

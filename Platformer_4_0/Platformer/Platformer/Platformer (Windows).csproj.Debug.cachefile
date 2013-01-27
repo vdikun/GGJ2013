@@ -106,6 +106,10 @@ Content\Sprites\Nurses.xnb
 Content\Sprites\Patient.xnb
 Content\Sprites\GourneyJump.xnb
 Content\Sprites\PatientPunch.xnb
+Content\Sprites\PatientPunchDestroyed.xnb
+Content\Sprites\WiresDuck.xnb
+Content\Sprites\Player\JumpingAnim.xnb
+Content\Sprites\Player\RunningAnim.xnb
 Content\Levels\0.txt
 Content\Levels\2.txt
 Content\Levels\1.txt

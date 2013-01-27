@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Hit.xnb</Output>
-      <Time>2013-01-27T10:40:27.3620795-08:00</Time>
+      <Time>2013-01-27T11:05:53.3344661-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Jumping.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Punching.xnb</Output>
-      <Time>2013-01-27T10:40:03.1035915-08:00</Time>
+      <Time>2013-01-27T11:05:59.6367632-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\PunchObstacle.png</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\Sliding.xnb</Output>
-      <Time>2013-01-27T10:39:27.0206545-08:00</Time>
+      <Time>2013-01-27T11:06:10.7186599-08:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\Standing.png</Source>
@@ -971,7 +971,43 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\PatientPunch.xnb</Output>
-      <Time>2013-01-27T10:28:35.491136-08:00</Time>
+      <Time>2013-01-27T10:51:15.7708829-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\PatientPunchDestroyed.png</Source>
+      <Name>Sprites\PatientPunchDestroyed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\PatientPunchDestroyed.xnb</Output>
+      <Time>2013-01-27T10:51:31.589177-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\WiresDuck.png</Source>
+      <Name>Sprites\WiresDuck</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\WiresDuck.xnb</Output>
+      <Time>2013-01-27T10:29:53.7107408-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Player\JumpingAnim.png</Source>
+      <Name>Sprites\Player\JumpingAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\JumpingAnim.xnb</Output>
+      <Time>2013-01-27T12:13:55.2054763-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Player\RunningAnim.png</Source>
+      <Name>Sprites\Player\RunningAnim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Scott\Documents\GitHub\GGJ2013\Platformer_4_0\Platformer\Platformer\bin\x86\Debug\Content\Sprites\Player\RunningAnim.xnb</Output>
+      <Time>2013-01-27T11:14:00.9496294-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

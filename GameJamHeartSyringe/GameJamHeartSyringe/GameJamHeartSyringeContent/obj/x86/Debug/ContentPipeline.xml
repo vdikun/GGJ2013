@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\heart.xnb</Output>
-      <Time>2013-01-26T02:30:46.5876-08:00</Time>
+      <Output>C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\heart.xnb</Output>
+      <Time>2013-01-26T11:38:59.5543933-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\syringe.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\syringe.xnb</Output>
-      <Time>2013-01-26T02:30:46.5886-08:00</Time>
+      <Output>C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\syringe.xnb</Output>
+      <Time>2013-01-26T11:38:59.5543933-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -25,10 +25,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringeContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringeContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringeContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringeContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -57,7 +57,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-01-24T21:07:38.2014-08:00</Value>
+        <Value>2013-01-25T21:34:35.4209778-08:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

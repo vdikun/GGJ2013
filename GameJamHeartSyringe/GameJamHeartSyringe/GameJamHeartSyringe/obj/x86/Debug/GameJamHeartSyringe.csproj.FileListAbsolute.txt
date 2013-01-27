@@ -14,3 +14,11 @@ C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyrin
 C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.exe
 C:\Users\Devindra\Documents\GitHub\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.pdb
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\heart.xnb
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\Content\Textures\syringe.xnb
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\GameJamHeartSyringe.exe
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\bin\x86\Debug\GameJamHeartSyringe.pdb
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.csprojResolveAssemblyReference.cache
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.exe
+C:\Users\Isha\Documents\Visual Studio 2010\Projects\GGJ2013\GameJamHeartSyringe\GameJamHeartSyringe\GameJamHeartSyringe\obj\x86\Debug\GameJamHeartSyringe.pdb

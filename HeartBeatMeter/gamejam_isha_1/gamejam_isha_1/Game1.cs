@@ -22,15 +22,14 @@ namespace gamejam_isha_1
         SpriteBatch spriteBatch;
 
         Heart heart1;
-        int level;
         UI.ProgressBar progressBar;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            level = 1;
-            heart1 = new Heart(level);
+  
+            heart1 = new Heart();
         }
 
         /// <summary>

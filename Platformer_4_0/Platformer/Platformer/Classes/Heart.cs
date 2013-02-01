@@ -15,9 +15,8 @@ using Microsoft.Xna.Framework.Media;
 // pattern in (int[]) beatPattern , values from {0, 1} 0: left click, 1: right click
 // time for each click is 0.5s +- 0.1s
 
-namespace Platformer
+namespace Dozer
 {
-
     enum Click
     {
         Left = 0,
@@ -49,11 +48,11 @@ namespace Platformer
         
         // constants
         private const int BEAT_PATTERN_LENGTH = 2;
-        public const int HEART_METER_INIT = 50;
+        public const int HEART_METER_INIT = 20;
         public const int HEART_METER_UP_BOUND = 50;
         public const int HEART_METER_LOW_BOUND = 0;
         private const int HEART_METER_MATCH_VALUE = 10;
-        private const int HEART_METER_DECREASE_VALUE = -2;
+        private const int HEART_METER_DECREASE_VALUE = -5;
         private const float TIMER = 0.6F;
         private const float BEAT_TIMER = 0.5F;
         private const int MATCH_COUNTER = 1;

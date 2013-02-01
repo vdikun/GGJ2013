@@ -10,10 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platformer
+namespace Dozer
 {
-
-    class FreePlatformState : GameState
+    class PlatformingState : GameState
     {
         readonly static float RUN_SPEED = Util.scale(30);
         readonly static float DIRECTIONAL_INFLUENCE = Util.scale(10);
@@ -170,7 +169,7 @@ namespace Platformer
 
             public void Randomize()
             {
-                position.X = random.Next((int)(PlatformerGame.SCREEN_WIDTH), (int)(PlatformerGame.SCREEN_WIDTH*1.4));
+                position.X = random.Next((int)(Main.SCREEN_WIDTH), (int)(Main.SCREEN_WIDTH*1.4));
 
                 switch (random.Next(0, 3)) {
                     case 0:
@@ -247,7 +246,7 @@ namespace Platformer
         }*/
 
 
-        public FreePlatformState()
+        public PlatformingState()
         {
             obstaclesUntilER = random.Next(OBSTACLE_MIN_TILL_ER, OBSTACLE_MAX_TILL_ER);
             playerPosition = new Vector2(CENTER, GROUND_HEIGHT);
@@ -258,13 +257,13 @@ namespace Platformer
             backgrounds.Enqueue(firstBackgroundTexture);
             float coverage = Util.scale(backgroundWidth);
 
-            PlatformerGame.musicIntro = introMusic.CreateInstance();
-            PlatformerGame.musicIntro.Volume = Util.MUSIC_VOLUME;
-            PlatformerGame.musicIntro.Play();
-            PlatformerGame.music = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            Main.musicIntro = introMusic.CreateInstance();
+            Main.musicIntro.Volume = Util.MUSIC_VOLUME;
+            Main.musicIntro.Play();
+            Main.music = music;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
 
-            for (int i = 0; coverage < PlatformerGame.SCREEN_WIDTH * 3; i++)
+            for (int i = 0; coverage < Main.SCREEN_WIDTH * 3; i++)
             {
                 backgrounds.Enqueue(backgroundTextures[random.Next(0, backgroundTextures.Length)]);
                 coverage += Util.scale(backgroundWidth);
@@ -356,7 +355,7 @@ namespace Platformer
             punchSound = manager.Load<SoundEffect>("Sounds/SFX/punch_person_1");
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (!failure)
             {
@@ -416,7 +415,11 @@ namespace Platformer
                 currentSprite = hitTexture;
                 if (quitTimer == QUIT_DURATION) PlaySound(voiceFailure, VOICE_FAILURE_CHANCE, true);
                 quitTimer--;
-                if (quitTimer == 0) game.currentState = new MenuState();
+                if (quitTimer == 0)
+                {
+                    Main.SubmitResult("Defeat", 0);
+                    game.currentState = new MenuState();
+                }
             }
         }
 
@@ -584,7 +587,7 @@ namespace Platformer
             }
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
             int i = 0;
             foreach (Texture2D background in backgrounds) 

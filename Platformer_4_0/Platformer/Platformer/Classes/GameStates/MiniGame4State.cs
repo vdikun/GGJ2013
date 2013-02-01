@@ -11,13 +11,12 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 
-namespace Platformer
+namespace Dozer
 {
     class MiniGame4State : GameState
     {
         static Texture2D heartTexture0, heartTexture1, heartTexture2, dirt;
         static Random random = new Random();
-        static SoundEffect music;
 
         List<Vector4> particles = new List<Vector4>();
         Vector2 heartPosition = new Vector2(240, 240);
@@ -43,8 +42,8 @@ namespace Platformer
             countdown = 4;
             frameCounter = 30;
 
-            PlatformerGame.minigameMusic = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            Main.music = Main.minigameMusic;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
         }
 
         public static void LoadContent(ContentManager manager)
@@ -55,7 +54,7 @@ namespace Platformer
             dirt = manager.Load<Texture2D>("Sprites/whitepixel");
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (game.keyboard.IsKeyDown(Keys.Escape))
             {
@@ -140,7 +139,7 @@ namespace Platformer
             }
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
             foreach (Vector4 particle in particles)
             {

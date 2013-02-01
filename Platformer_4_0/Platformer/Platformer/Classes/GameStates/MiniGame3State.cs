@@ -11,8 +11,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-
-namespace Platformer
+namespace Dozer
 {
     class MiniGame3State : GameState
     {
@@ -39,8 +38,8 @@ namespace Platformer
 
         public MiniGame3State()
         {
-            PlatformerGame.minigameMusic = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            Main.music = Main.minigameMusic;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
 
             attackedByBugs = false;
 
@@ -65,7 +64,7 @@ namespace Platformer
 
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (!stopUpdate)
             {
@@ -127,7 +126,7 @@ namespace Platformer
             }
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
             spriteBatch.DrawString(game.font, "Mini Game 3 State", new Vector2(10, 10), Color.White);
             if (countdown == 4)

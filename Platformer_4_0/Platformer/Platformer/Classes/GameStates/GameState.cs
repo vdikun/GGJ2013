@@ -5,11 +5,11 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-namespace Platformer
+namespace Dozer
 {
     public interface GameState
     {
-        void Update(PlatformerGame game, GameTime gameTime);
-        void Draw(PlatformerGame game, SpriteBatch spriteBatch);
+        void Update(Main game, GameTime gameTime);
+        void Draw(Main game, SpriteBatch spriteBatch);
     }
 }

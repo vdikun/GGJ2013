@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Input;
 
-namespace Platformer
+namespace Dozer
 {
     static class Util
     {
@@ -56,7 +56,7 @@ namespace Platformer
             return OFFSET + input;
         }
 
-        public static void GotoRandomMinigame(PlatformerGame game)
+        public static void GotoRandomMinigame(Main game)
         {
             GameState nextGame = game.currentState;
 

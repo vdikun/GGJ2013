@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Audio;
 
-namespace Platformer
+namespace Dozer
 {
     class MenuState : GameState
     {
@@ -85,13 +85,13 @@ namespace Platformer
              * */
         };
 
-        private delegate void ButtonAction(PlatformerGame game);
+        private delegate void ButtonAction(Main game);
 
         public MenuState()
         {
-            PlatformerGame.music = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
-            if (PlatformerGame.musicIntro != null) PlatformerGame.musicIntro.Stop();
+            Main.music = music;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
+            if (Main.musicIntro != null) Main.musicIntro.Stop();
         }
 
         public static void LoadContent(ContentManager manager)
@@ -100,7 +100,7 @@ namespace Platformer
             music = manager.Load<SoundEffect>("Sounds/titlescreen");
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (Util.IsAnyKeyPressed(game.keyboard, game.prevKeyboard, cancelKeys))
             {
@@ -110,7 +110,7 @@ namespace Platformer
             if (Util.IsAnyKeyDown(game.keyboard, acceptKeys))
             {
                 //buttons[selectedButton].action.BeginInvoke(game, null, null);
-                game.currentState = new FreePlatformState();
+                game.currentState = new PlatformingState();
             }
 
             /*
@@ -128,10 +128,10 @@ namespace Platformer
              * */
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
-            float scale = 1000 / PlatformerGame.SCREEN_WIDTH;
-            spriteBatch.Draw(background, new Rectangle(0, 50, (int)PlatformerGame.SCREEN_WIDTH, (int)(PlatformerGame.SCREEN_HEIGHT * scale)), Color.White);
+            float scale = 1000 / Main.SCREEN_WIDTH;
+            spriteBatch.Draw(background, new Rectangle(0, 50, (int)Main.SCREEN_WIDTH, (int)(Main.SCREEN_HEIGHT * scale)), Color.White);
 
             // Draw title with white outline
             spriteBatch.DrawString(game.headerFont, TITLE_TEXT, POSITION_TITLE + new Vector2(-2, -2), Color.White, 0, ORIGIN, 1, SpriteEffects.None, 1f);

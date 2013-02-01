@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platformer
+namespace Dozer
 {
     class MiniGame2State : GameState
     {
@@ -20,8 +20,6 @@ namespace Platformer
         static Texture2D heartDirty1Texture;
         static Texture2D heartDirty2Texture;
         static Texture2D currentHeartTexture;
-
-        static SoundEffect music;
 
         Vector2 tapPosition = new Vector2(1000, 10);
         Vector2 waterPosition;
@@ -41,11 +39,9 @@ namespace Platformer
         public MiniGame2State()
         {
             waterPosition = new Vector2(tapPosition.X - 23, tapPosition.Y + 200);
-            PlatformerGame.minigameMusic = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            Main.music = Main.minigameMusic;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
         }
-
-
 
         public static void LoadContent(ContentManager manager)
         {
@@ -57,7 +53,7 @@ namespace Platformer
             currentHeartTexture = heartDirty2Texture;
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (countdown != 0)
             {
@@ -74,7 +70,6 @@ namespace Platformer
                 heartPosition.X += posDiff * 0.1f;
                 if (heartPosition.X < 0) heartPosition.X = 0;
                 if (heartPosition.X > 1280 - heartTexture.Width) heartPosition.X = 1280 - heartTexture.Width;
-
 
                 if (Math.Abs(tapPosition.X - tapGoal) >= 10)
                 {
@@ -106,14 +101,14 @@ namespace Platformer
                 if (quitTimer == 0)
                 {
                    Util.gamesWon++;
-                        if (Util.gamesWon < Util.GAMES_TO_WIN)
-                        {
-                            Util.GotoRandomMinigame(game);
-                        }
-                        else
-                        {
-                            game.currentState = new CutsceneState();
-                        }        
+                    if (Util.gamesWon < Util.GAMES_TO_WIN)
+                    {
+                        Util.GotoRandomMinigame(game);
+                    }
+                    else
+                    {
+                        game.currentState = new CutsceneState();
+                    }
                 }
             }
 
@@ -121,7 +116,7 @@ namespace Platformer
             if (currentFrame > 7) currentFrame = 0;
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(currentHeartTexture, heartPosition, Color.White);
             if (!hittingHeart)

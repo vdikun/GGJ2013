@@ -17,10 +17,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platformer
+namespace Dozer
 {
-    public class PlatformerGame : Microsoft.Xna.Framework.Game
+    public class Main : Microsoft.Xna.Framework.Game
     {
+        public readonly static string GGL_TITLE = "Dr Dozer XMD";
+
         public readonly static float SCREEN_WIDTH;
         public readonly static float SCREEN_HEIGHT = 720.0f;
 
@@ -68,13 +70,13 @@ namespace Platformer
         private MouseState prevMouseState;
         public MouseState prevMouse { get { return prevMouseState; } }
 
-        static PlatformerGame()
+        static Main()
         {
             SCREEN_WIDTH = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             SCREEN_HEIGHT = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
         }
 
-        public PlatformerGame()
+        public Main()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferHeight = 720;
@@ -102,8 +104,7 @@ namespace Platformer
             // Load minigame music
             minigameMusic = Content.Load<SoundEffect>("Sounds/main_theme_loop_minigames");
 
-            FreePlatformState.LoadContent(Content);
-            PlatformState.LoadContent(Content);
+            PlatformingState.LoadContent(Content);
             MenuState.LoadContent(Content);
             MiniGame1State.LoadContent(Content);
             MiniGame2State.LoadContent(Content);
@@ -153,6 +154,11 @@ namespace Platformer
             spriteBatch.Begin();
             currentState.Draw(this, spriteBatch);
             spriteBatch.End();
+        }
+
+        public static void SubmitResult(string levelname, int score)
+        {
+            GlobalGameMonitor.SubmitResult(GGL_TITLE, levelname, GlobalGameMonitor.DefaultUserName, score);
         }
     }
 }

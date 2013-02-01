@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 
-namespace Platformer
+namespace Dozer
 {
     class CutsceneState : GameState
     {
@@ -24,11 +24,13 @@ namespace Platformer
 
         public CutsceneState()
         {
-            PlatformerGame.music = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            Main.music = music;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
+
+            Main.SubmitResult("Victory", 1);
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (game.keyboard.IsKeyDown(Keys.Space))
             {
@@ -36,11 +38,10 @@ namespace Platformer
             }
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
-            float scale = 1000 / PlatformerGame.SCREEN_WIDTH;
-            spriteBatch.Draw(background, new Rectangle(0, 0, (int)PlatformerGame.SCREEN_WIDTH, (int)(PlatformerGame.SCREEN_HEIGHT * scale)), Color.White);
-
+            float scale = 1000 / Main.SCREEN_WIDTH;
+            spriteBatch.Draw(background, new Rectangle(0, 0, (int)Main.SCREEN_WIDTH, (int)(Main.SCREEN_HEIGHT * scale)), Color.White);
         }
     }
 }

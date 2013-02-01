@@ -10,12 +10,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace Platformer
+namespace Dozer
 {
     class MiniGame1State : GameState
     {
-        static SoundEffect music;
-
         static Texture2D heartTexture;
         static Texture2D syringeTexture;
 
@@ -35,8 +33,8 @@ namespace Platformer
 
         public MiniGame1State()
         {
-            PlatformerGame.minigameMusic = music;
-            if (PlatformerGame.musicLoop != null) PlatformerGame.musicLoop.Stop();
+            Main.music = Main.minigameMusic;
+            if (Main.musicLoop != null) Main.musicLoop.Stop();
         }
 
         public static void LoadContent(ContentManager manager)
@@ -45,7 +43,7 @@ namespace Platformer
             syringeTexture = manager.Load<Texture2D>("Minigames/syringe");
         }
 
-        void GameState.Update(PlatformerGame game, GameTime gameTime)
+        void GameState.Update(Main game, GameTime gameTime)
         {
             if (countdown <= 1)
             {
@@ -118,7 +116,7 @@ namespace Platformer
             }
         }
 
-        void GameState.Draw(PlatformerGame game, SpriteBatch spriteBatch)
+        void GameState.Draw(Main game, SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(heartTexture, heartPosition, Color.White);
             spriteBatch.Draw(syringeTexture, syringePosition, Color.White);

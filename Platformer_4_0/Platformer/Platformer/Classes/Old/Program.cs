@@ -9,7 +9,7 @@
 
 using System;
 
-namespace Platformer
+namespace Dozer
 {
     static class Program
     {
@@ -18,7 +18,7 @@ namespace Platformer
         /// </summary>
         static void Main(string[] args)
         {
-            using (PlatformerGame game = new PlatformerGame())
+            using (Main game = new Main())
             {
                 game.Run();
             }
